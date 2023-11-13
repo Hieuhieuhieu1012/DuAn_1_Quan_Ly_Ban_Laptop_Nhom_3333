@@ -1,0 +1,99 @@
+﻿								   ========================QUY ƯỚC VIẾT CODE CỦA TEAM====================
+
+									         ===============NÉT CODE NẾT NGƯỜI================
+
+
+   Mọi người cần tuân thủ quy tắc code của nhóm để dễ kiểm soát, kiểm tra hay đọc lại code
+
+
+-+-  Không đặt tên biến chung chung, vô nghĩa: SanPham a, NhanVien b, Guid id
+
+
+ 	Đọc éo ai biết "a, b" là cái cc gì , id của cái gì  @_@
+
+
+ =====> Trừ tên biến trong biểu thức Lamda truy vấn, vòng For, Forech có thể đặt là a, x, i cho ngắn
+
+
+-+-  Đặt tên biến sử dụng danh từ, nói lên nó chứa cái gì, đặt theo Cú pháp CamelCase: ký tự đầu tiên viết thường, 
+          những ký tự đầu tiên của chữ cái tiếp theo viết hoa
+
+ 	Ví dụ:  SanPham sanPham, NhanVien nhanVien, Guid idSanPham;
+
+-+- Không đặt : hOaDon, lAPTOP   ====>  nghiêm cấm
+
+-+-  Biến toàn cục thì thêm "_" trước tên biến 
+
+	Ví dụ: Guid _idKhachHang;
+
+
+-+- Tên phương thức sử dụng động từ đặt theo cú pháp Pascal Case: Chữ cái đầu tiên viết hoa
+
+	Ví dụ: AddNhanVien()  UpdateNhanVien() 
+
+
+-+-  Đặt tên tiếng Việt, Anh đều được, dài cũng được (đừng dài quá)  
+
+
+=====> Viết xong nhớ kiểm tra lại trước khi Commit code lên Git.
+
+=====> T kiểm tra thấy không đúng quy tắc xóa đi viết lại + Phạt 3 đít  à nhầm  Phạt 5 lít   8==D
+
+
+
+=================Tips viết code cho dễ nhìn (không cần tuân theo, éo cần đọc cũng được toàn xạo lol thôi)================
+
+-+- Không xuống dòng bừa bãi
+
+-+- Khai báo các biến xong nên cách ra 1 dòng 
+
+-+- Biến toàn cục khai báo trên cùng của Class
+
+-+- Khởi tạo đối tượng nên cho vào trong Contructor
+
+-+- Trên các lệnh như For, if, forech mà có code thì nên cách ra 1 dòng
+	
+   Ví dụ: 
+
+	var student = _daoTaoContext.Students.FirstOrDefault(c => c.Id == obj.Id);
+
+	if(student != null){}
+
+ 
+-+-  trong câu điều kiện If cần trả về True hoặc False nếu cần lấy True thì giữ nguyên k cần thêm gì cả mặc định là True còn cần lấy  False thì nên thêm dấu phủ định "!" ở trước  
+
+
+	Ví dụ:
+	thay vì viết
+
+	if(Long ngừng hút thuốc lào == true){}
+hoặc
+	if(Long ngừng hút thuốc lào == false){}
+
+có thể viết
+
+	if(Long ngừng hút thuốc lào){}
+hoặc
+	if(!Long ngừng hút thuốc lào){}
+
+---> viết kiểu gì cũng dc nhưng kiểu dưới nó ngầu hơn thế thôi  ^_^
+
+
+-+-  Trước lệnh Return cũng nên cách ra 1 dòng
+
+
+-+-  Trong tầng Winfom : 
+	-+-  Nên để các phương thức xử lý sự kiện của các Control gom lại với nhau 
+	Ví dụ:  btn_Add_Click, btn_Update_Click, btn_Delete_Click	các sự kiện này nên để gần nhau
+
+	
+	-+- Nếu có viết thêm phương thức thì nên viết ngay dưới hoặc trên phương thức cần dùng nó
+
+Thế đã nhớ ra thì nhắc thêm nhiều quá quên rồi
+
+
+=======> Bouns: Sau khi viết xong 1 phương thức hoặc 1 đoạn code nhấn    "Crlt + K + D" 	để  Visual nó format lại code 
+
+
+============Một vài phím tắt giúp code nhanh hơn=======
+   Dài lắm  Lên Youtube + Google hỏi
