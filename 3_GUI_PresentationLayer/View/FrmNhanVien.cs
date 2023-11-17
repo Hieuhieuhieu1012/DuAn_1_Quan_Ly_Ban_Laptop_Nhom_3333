@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class Form1 : Form
+    public partial class FrmNhanVien : Form
     {
-        public Form1()
+        public FrmNhanVien()
         {
             InitializeComponent();
         }
 
+        private void txtMaNhanVien_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
