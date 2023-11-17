@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            SuspendLayout();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Location = new Point(7, 7);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 16);
-            textBox1.TabIndex = 0;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(7, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(236, 16);
+            this.textBox1.TabIndex = 0;
             // 
             // TextBoxCustom
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            Controls.Add(textBox1);
-            Name = "TextBoxCustom";
-            Padding = new Padding(7);
-            Size = new Size(250, 30);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.textBox1);
+            this.Name = "TextBoxCustom";
+            this.Padding = new System.Windows.Forms.Padding(7);
+            this.Size = new System.Drawing.Size(250, 30);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
