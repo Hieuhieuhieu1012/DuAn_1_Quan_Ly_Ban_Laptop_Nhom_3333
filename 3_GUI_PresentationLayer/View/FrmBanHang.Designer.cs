@@ -53,7 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.radioButtonCustom5 = new _3_GUI_PresentationLayer.CustomControl.RadioButtonCustom();
             this.radioButtonCustom7 = new _3_GUI_PresentationLayer.CustomControl.RadioButtonCustom();
             this.radioButtonCustom4 = new _3_GUI_PresentationLayer.CustomControl.RadioButtonCustom();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -328,7 +327,7 @@
             this.radioButtonCustom3.BackColor = System.Drawing.Color.White;
             this.radioButtonCustom3.CheckedColor = System.Drawing.Color.Blue;
             this.radioButtonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCustom3.Location = new System.Drawing.Point(280, 363);
+            this.radioButtonCustom3.Location = new System.Drawing.Point(272, 363);
             this.radioButtonCustom3.MinimumSize = new System.Drawing.Size(0, 21);
             this.radioButtonCustom3.Name = "radioButtonCustom3";
             this.radioButtonCustom3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -345,14 +344,14 @@
             this.radioButtonCustom6.BackColor = System.Drawing.Color.White;
             this.radioButtonCustom6.CheckedColor = System.Drawing.Color.Blue;
             this.radioButtonCustom6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCustom6.Location = new System.Drawing.Point(138, 363);
+            this.radioButtonCustom6.Location = new System.Drawing.Point(129, 363);
             this.radioButtonCustom6.MinimumSize = new System.Drawing.Size(0, 21);
             this.radioButtonCustom6.Name = "radioButtonCustom6";
             this.radioButtonCustom6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonCustom6.Size = new System.Drawing.Size(64, 21);
+            this.radioButtonCustom6.Size = new System.Drawing.Size(117, 21);
             this.radioButtonCustom6.TabIndex = 42;
             this.radioButtonCustom6.TabStop = true;
-            this.radioButtonCustom6.Text = "Card";
+            this.radioButtonCustom6.Text = "Chuyển khoản";
             this.radioButtonCustom6.UnCheckedColor = System.Drawing.Color.Black;
             this.radioButtonCustom6.UseVisualStyleBackColor = false;
             // 
@@ -428,37 +427,20 @@
             this.label11.Text = "Tổng Tiền:     0 VNĐ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // radioButtonCustom5
-            // 
-            this.radioButtonCustom5.AutoSize = true;
-            this.radioButtonCustom5.BackColor = System.Drawing.Color.White;
-            this.radioButtonCustom5.CheckedColor = System.Drawing.Color.Blue;
-            this.radioButtonCustom5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCustom5.Location = new System.Drawing.Point(165, 311);
-            this.radioButtonCustom5.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radioButtonCustom5.Name = "radioButtonCustom5";
-            this.radioButtonCustom5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonCustom5.Size = new System.Drawing.Size(132, 21);
-            this.radioButtonCustom5.TabIndex = 32;
-            this.radioButtonCustom5.TabStop = true;
-            this.radioButtonCustom5.Text = "Giao thành công";
-            this.radioButtonCustom5.UnCheckedColor = System.Drawing.Color.Black;
-            this.radioButtonCustom5.UseVisualStyleBackColor = false;
-            // 
             // radioButtonCustom7
             // 
             this.radioButtonCustom7.AutoSize = true;
             this.radioButtonCustom7.BackColor = System.Drawing.Color.White;
             this.radioButtonCustom7.CheckedColor = System.Drawing.Color.Blue;
             this.radioButtonCustom7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCustom7.Location = new System.Drawing.Point(125, 284);
+            this.radioButtonCustom7.Location = new System.Drawing.Point(125, 297);
             this.radioButtonCustom7.MinimumSize = new System.Drawing.Size(0, 21);
             this.radioButtonCustom7.Name = "radioButtonCustom7";
             this.radioButtonCustom7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonCustom7.Size = new System.Drawing.Size(97, 21);
+            this.radioButtonCustom7.Size = new System.Drawing.Size(132, 21);
             this.radioButtonCustom7.TabIndex = 30;
             this.radioButtonCustom7.TabStop = true;
-            this.radioButtonCustom7.Text = "Chưa Giao";
+            this.radioButtonCustom7.Text = "Chưa thanh toán";
             this.radioButtonCustom7.UnCheckedColor = System.Drawing.Color.Black;
             this.radioButtonCustom7.UseVisualStyleBackColor = false;
             // 
@@ -468,14 +450,14 @@
             this.radioButtonCustom4.BackColor = System.Drawing.Color.White;
             this.radioButtonCustom4.CheckedColor = System.Drawing.Color.Blue;
             this.radioButtonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCustom4.Location = new System.Drawing.Point(241, 284);
+            this.radioButtonCustom4.Location = new System.Drawing.Point(269, 297);
             this.radioButtonCustom4.MinimumSize = new System.Drawing.Size(0, 21);
             this.radioButtonCustom4.Name = "radioButtonCustom4";
             this.radioButtonCustom4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonCustom4.Size = new System.Drawing.Size(97, 21);
+            this.radioButtonCustom4.Size = new System.Drawing.Size(118, 21);
             this.radioButtonCustom4.TabIndex = 30;
             this.radioButtonCustom4.TabStop = true;
-            this.radioButtonCustom4.Text = "Đang giao";
+            this.radioButtonCustom4.Text = "Đã thanh toán";
             this.radioButtonCustom4.UnCheckedColor = System.Drawing.Color.Black;
             this.radioButtonCustom4.UseVisualStyleBackColor = false;
             // 
@@ -523,7 +505,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label10.Location = new System.Drawing.Point(15, 285);
+            this.label10.Location = new System.Drawing.Point(15, 298);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 20);
             this.label10.TabIndex = 29;
@@ -682,7 +664,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.radioButtonCustom5);
             this.panel1.Controls.Add(this.radioButtonCustom7);
             this.panel1.Controls.Add(this.radioButtonCustom4);
             this.panel1.Controls.Add(this.label10);
@@ -748,7 +729,6 @@
         private Label label7;
         private Label label4;
         private Label label11;
-        private CustomControl.RadioButtonCustom radioButtonCustom5;
         private CustomControl.RadioButtonCustom radioButtonCustom7;
         private CustomControl.RadioButtonCustom radioButtonCustom4;
         private FontAwesome.Sharp.IconButton iconButton8;
