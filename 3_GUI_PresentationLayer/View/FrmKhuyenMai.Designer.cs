@@ -91,7 +91,7 @@
             dgvKhuyenMai.Name = "dgvKhuyenMai";
             dgvKhuyenMai.RowHeadersVisible = false;
             dgvKhuyenMai.RowTemplate.Height = 25;
-            dgvKhuyenMai.Size = new Size(957, 291);
+            dgvKhuyenMai.Size = new Size(957, 290);
             dgvKhuyenMai.TabIndex = 4;
             // 
             // label4

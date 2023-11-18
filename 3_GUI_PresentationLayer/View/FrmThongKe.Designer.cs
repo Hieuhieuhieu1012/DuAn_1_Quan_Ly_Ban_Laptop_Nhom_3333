@@ -42,6 +42,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
+            btnTimKiemKM = new FontAwesome.Sharp.IconButton();
+            btnAll = new CustomControl.ButtonCustom();
             dateTimePickerCustom2 = new CustomControl.DateTimePickerCustom();
             dateTimePickerCustom1 = new CustomControl.DateTimePickerCustom();
             label1 = new Label();
@@ -93,23 +95,57 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnTimKiemKM);
+            panel1.Controls.Add(btnAll);
             panel1.Controls.Add(dateTimePickerCustom2);
             panel1.Controls.Add(dateTimePickerCustom1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(20, 12);
+            panel1.Location = new Point(-40, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1476, 72);
+            panel1.Size = new Size(1126, 72);
             panel1.TabIndex = 0;
+            // 
+            // btnTimKiemKM
+            // 
+            btnTimKiemKM.BackColor = Color.MediumSlateBlue;
+            btnTimKiemKM.FlatAppearance.BorderSize = 0;
+            btnTimKiemKM.FlatStyle = FlatStyle.Flat;
+            btnTimKiemKM.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnTimKiemKM.IconColor = Color.White;
+            btnTimKiemKM.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTimKiemKM.IconSize = 23;
+            btnTimKiemKM.Location = new Point(945, 26);
+            btnTimKiemKM.Name = "btnTimKiemKM";
+            btnTimKiemKM.Size = new Size(32, 25);
+            btnTimKiemKM.TabIndex = 55;
+            btnTimKiemKM.UseVisualStyleBackColor = false;
+            // 
+            // btnAll
+            // 
+            btnAll.BackColor = Color.MediumSlateBlue;
+            btnAll.BackgroundColor = Color.MediumSlateBlue;
+            btnAll.BorderColor = Color.PaleVioletRed;
+            btnAll.BorderRadius = 10;
+            btnAll.BorderSize = 0;
+            btnAll.FlatAppearance.BorderSize = 0;
+            btnAll.FlatStyle = FlatStyle.Flat;
+            btnAll.ForeColor = Color.White;
+            btnAll.Location = new Point(906, 20);
+            btnAll.Name = "btnAll";
+            btnAll.Size = new Size(111, 35);
+            btnAll.TabIndex = 24;
+            btnAll.TextColor = Color.White;
+            btnAll.UseVisualStyleBackColor = false;
             // 
             // dateTimePickerCustom2
             // 
             dateTimePickerCustom2.BorderColor = Color.PaleVioletRed;
             dateTimePickerCustom2.BorderSize = 0;
             dateTimePickerCustom2.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom2.Location = new Point(257, 17);
+            dateTimePickerCustom2.Location = new Point(524, 20);
             dateTimePickerCustom2.MinimumSize = new Size(0, 35);
             dateTimePickerCustom2.Name = "dateTimePickerCustom2";
-            dateTimePickerCustom2.Size = new Size(200, 35);
+            dateTimePickerCustom2.Size = new Size(320, 35);
             dateTimePickerCustom2.SkinColor = Color.MediumSlateBlue;
             dateTimePickerCustom2.TabIndex = 6;
             dateTimePickerCustom2.TextColor = Color.White;
@@ -119,10 +155,10 @@
             dateTimePickerCustom1.BorderColor = Color.PaleVioletRed;
             dateTimePickerCustom1.BorderSize = 0;
             dateTimePickerCustom1.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom1.Location = new Point(23, 17);
+            dateTimePickerCustom1.Location = new Point(99, 20);
             dateTimePickerCustom1.MinimumSize = new Size(0, 35);
             dateTimePickerCustom1.Name = "dateTimePickerCustom1";
-            dateTimePickerCustom1.Size = new Size(200, 35);
+            dateTimePickerCustom1.Size = new Size(326, 35);
             dateTimePickerCustom1.SkinColor = Color.MediumSlateBlue;
             dateTimePickerCustom1.TabIndex = 5;
             dateTimePickerCustom1.TextColor = Color.White;
@@ -131,9 +167,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(229, 30);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(451, 21);
             label1.Name = "label1";
-            label1.Size = new Size(22, 15);
+            label1.Size = new Size(37, 30);
             label1.TabIndex = 3;
             label1.Text = "---";
             // 
@@ -452,9 +489,9 @@
             // 
             panel_Top5.BackColor = Color.White;
             panel_Top5.Controls.Add(Chart_Top5);
-            panel_Top5.Location = new Point(1113, 97);
+            panel_Top5.Location = new Point(1113, 12);
             panel_Top5.Name = "panel_Top5";
-            panel_Top5.Size = new Size(383, 572);
+            panel_Top5.Size = new Size(383, 657);
             panel_Top5.TabIndex = 3;
             // 
             // Chart_Top5
@@ -496,7 +533,7 @@
             series2.ShadowColor = SystemColors.ActiveCaptionText;
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             Chart_Top5.Series.Add(series2);
-            Chart_Top5.Size = new Size(380, 566);
+            Chart_Top5.Size = new Size(380, 654);
             Chart_Top5.SuppressExceptions = true;
             Chart_Top5.TabIndex = 4;
             Chart_Top5.Text = "Top 5 Laptop bán chạy";
@@ -604,5 +641,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private CustomControl.DateTimePickerCustom dateTimePickerCustom2;
         private CustomControl.DateTimePickerCustom dateTimePickerCustom1;
+        private CustomControl.ButtonCustom btnAll;
+        private FontAwesome.Sharp.IconButton btnTimKiemKM;
     }
 }

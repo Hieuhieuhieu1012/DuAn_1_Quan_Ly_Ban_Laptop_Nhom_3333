@@ -174,8 +174,8 @@ namespace _3_GUI_PresentationLayer.View
                     KhuyenMai khuyenMai = new KhuyenMai()
                     {
                         Id = Guid.NewGuid(),
-                        Ten = txtTenCT.Texts,
                         Ma = RandomMa(),
+                        Ten = txtTenCT.Texts,    
                         LoaiKhuyenMai = cbbLoaiKhuyenMai.Text,
                         GiaTri = decimal.Parse(txtMucGia.Texts),
                         NgayBatDau = dtBatDau.Value,
@@ -279,6 +279,7 @@ namespace _3_GUI_PresentationLayer.View
                 lblLoai.Text = "VND";
             }
         }
+
         private void txtMucGia_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
