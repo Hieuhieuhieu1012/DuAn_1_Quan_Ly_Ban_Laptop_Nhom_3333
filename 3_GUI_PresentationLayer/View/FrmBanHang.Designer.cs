@@ -39,7 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvChoThanhToan = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbbGiamGia = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChoThanhToan)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -216,7 +216,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvChoThanhToan);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(493, 436);
             this.groupBox1.Name = "groupBox1";
@@ -225,19 +225,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chờ thanh toán";
             // 
-            // dataGridView1
+            // dgvChoThanhToan
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 212);
-            this.dataGridView1.TabIndex = 12;
+            this.dgvChoThanhToan.AllowUserToResizeColumns = false;
+            this.dgvChoThanhToan.AllowUserToResizeRows = false;
+            this.dgvChoThanhToan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChoThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChoThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChoThanhToan.Location = new System.Drawing.Point(3, 23);
+            this.dgvChoThanhToan.Name = "dgvChoThanhToan";
+            this.dgvChoThanhToan.RowHeadersVisible = false;
+            this.dgvChoThanhToan.RowTemplate.Height = 25;
+            this.dgvChoThanhToan.Size = new System.Drawing.Size(482, 212);
+            this.dgvChoThanhToan.TabIndex = 12;
             // 
             // panel1
             // 
@@ -641,7 +641,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChoThanhToan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -663,7 +663,7 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvChoThanhToan;
         private Panel panel1;
         private ComboBox cbbGiamGia;
         private Label label3;
