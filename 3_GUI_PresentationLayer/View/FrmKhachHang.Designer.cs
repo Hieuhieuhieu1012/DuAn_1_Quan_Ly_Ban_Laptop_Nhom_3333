@@ -177,7 +177,7 @@
             iconButtonThem.Size = new Size(97, 43);
             iconButtonThem.TabIndex = 42;
             iconButtonThem.UseVisualStyleBackColor = false;
-            iconButtonThem.Click += iconButtonThem_Click;
+           // iconButtonThem.Click += iconButtonThem_Click;
             // 
             rbtNu.AutoSize = true;
             rbtNu.CheckedColor = Color.MediumSlateBlue;
