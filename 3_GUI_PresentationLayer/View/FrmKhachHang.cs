@@ -22,7 +22,7 @@ namespace _3_GUI_PresentationLayer.View
 
         }
 
-        private void iconButtonThem_Click(object sender, EventArgs e)
+        private void txtMa_Load(object sender, EventArgs e)
         {
 
         }

@@ -179,6 +179,53 @@
             iconButtonThem.UseVisualStyleBackColor = false;
             iconButtonThem.Click += iconButtonThem_Click;
             // 
+            rbtNu.AutoSize = true;
+            rbtNu.CheckedColor = Color.MediumSlateBlue;
+            rbtNu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            rbtNu.Location = new Point(308, 332);
+            rbtNu.MinimumSize = new Size(0, 21);
+            rbtNu.Name = "rbtNu";
+            rbtNu.Padding = new Padding(10, 0, 0, 0);
+            rbtNu.Size = new Size(62, 25);
+            rbtNu.TabIndex = 41;
+            rbtNu.TabStop = true;
+            rbtNu.Text = "Nữ";
+            rbtNu.UnCheckedColor = Color.Gray;
+            rbtNu.UseVisualStyleBackColor = true;
+            // 
+            // txtMa
+            // 
+            txtMa.BackColor = Color.White;
+            txtMa.BorderColor = Color.MediumSlateBlue;
+            txtMa.BorderFocusColor = Color.HotPink;
+            txtMa.BorderSize = 2;
+            txtMa.Location = new Point(154, 25);
+            txtMa.Multiline = false;
+            txtMa.Name = "txtMa";
+            txtMa.Padding = new Padding(7);
+            txtMa.PasswordChar = false;
+            txtMa.Size = new Size(229, 30);
+            txtMa.TabIndex = 29;
+            txtMa.Texts = "";
+            txtMa.UnderlinedStyle = true;
+            txtMa.Load += txtMa_Load;
+            // 
+            // rbtNam
+            // 
+            rbtNam.AutoSize = true;
+            rbtNam.CheckedColor = Color.MediumSlateBlue;
+            rbtNam.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            rbtNam.Location = new Point(164, 332);
+            rbtNam.MinimumSize = new Size(0, 21);
+            rbtNam.Name = "rbtNam";
+            rbtNam.Padding = new Padding(10, 0, 0, 0);
+            rbtNam.Size = new Size(75, 25);
+            rbtNam.TabIndex = 40;
+            rbtNam.TabStop = true;
+            rbtNam.Text = "Nam";
+            rbtNam.UnCheckedColor = Color.Gray;
+            rbtNam.UseVisualStyleBackColor = true;
+            // 
             // label3
             // 
             label3.AutoSize = true;

@@ -40,6 +40,8 @@
             Column9 = new DataGridViewTextBoxColumn();
             Column11 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
+            txtMaNhanVien = new CustomControl.TextBoxCustom();
+            ptbAnh = new PictureBox();
             panel5 = new Panel();
             rbtQuanLy = new CustomControl.RadioButtonCustom();
             rbtNhanVien = new CustomControl.RadioButtonCustom();
@@ -65,8 +67,6 @@
             txtSoDienThoai = new CustomControl.TextBoxCustom();
             label4 = new Label();
             label3 = new Label();
-            ptbAnh = new PictureBox();
-            txtMaNhanVien = new CustomControl.TextBoxCustom();
             panel1 = new Panel();
             rbtDaNghiViec = new CustomControl.RadioButtonCustom();
             rbtDangLam = new CustomControl.RadioButtonCustom();
@@ -76,9 +76,9 @@
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -177,6 +177,34 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(650, 631);
             panel2.TabIndex = 5;
+            // 
+            // txtMaNhanVien
+            // 
+            txtMaNhanVien.BorderColor = Color.MediumSlateBlue;
+            txtMaNhanVien.BorderFocusColor = Color.HotPink;
+            txtMaNhanVien.BorderSize = 2;
+            txtMaNhanVien.Location = new Point(341, 18);
+            txtMaNhanVien.Multiline = false;
+            txtMaNhanVien.Name = "txtMaNhanVien";
+            txtMaNhanVien.Padding = new Padding(7);
+            txtMaNhanVien.PasswordChar = false;
+            txtMaNhanVien.Size = new Size(225, 30);
+            txtMaNhanVien.TabIndex = 36;
+            txtMaNhanVien.Texts = "";
+            txtMaNhanVien.UnderlinedStyle = true;
+            txtMaNhanVien.Load += txtMaNhanVien_Load;
+            // 
+            // ptbAnh
+            // 
+            ptbAnh.BackColor = Color.DarkGray;
+            ptbAnh.BackgroundImageLayout = ImageLayout.None;
+            ptbAnh.BorderStyle = BorderStyle.Fixed3D;
+            ptbAnh.Location = new Point(20, 30);
+            ptbAnh.Name = "ptbAnh";
+            ptbAnh.Size = new Size(164, 170);
+            ptbAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbAnh.TabIndex = 6;
+            ptbAnh.TabStop = false;
             // 
             // panel5
             // 
@@ -317,6 +345,7 @@
             iconButtonThem.Size = new Size(83, 53);
             iconButtonThem.TabIndex = 22;
             iconButtonThem.UseVisualStyleBackColor = false;
+            iconButtonThem.Click += iconButtonThem_Click;
             // 
             // iconButtonSua
             // 
@@ -504,34 +533,6 @@
             label3.TabIndex = 5;
             label3.Text = "Mã nhân viên";
             // 
-            // ptbAnh
-            // 
-            ptbAnh.BackColor = Color.DarkGray;
-            ptbAnh.BackgroundImageLayout = ImageLayout.None;
-            ptbAnh.BorderStyle = BorderStyle.Fixed3D;
-            ptbAnh.Location = new Point(20, 30);
-            ptbAnh.Name = "ptbAnh";
-            ptbAnh.Size = new Size(164, 170);
-            ptbAnh.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptbAnh.TabIndex = 6;
-            ptbAnh.TabStop = false;
-            // 
-            // txtMaNhanVien
-            // 
-            txtMaNhanVien.BorderColor = Color.MediumSlateBlue;
-            txtMaNhanVien.BorderFocusColor = Color.HotPink;
-            txtMaNhanVien.BorderSize = 2;
-            txtMaNhanVien.Location = new Point(341, 18);
-            txtMaNhanVien.Multiline = false;
-            txtMaNhanVien.Name = "txtMaNhanVien";
-            txtMaNhanVien.Padding = new Padding(7);
-            txtMaNhanVien.PasswordChar = false;
-            txtMaNhanVien.Size = new Size(225, 30);
-            txtMaNhanVien.TabIndex = 36;
-            txtMaNhanVien.Texts = "";
-            txtMaNhanVien.UnderlinedStyle = true;
-            txtMaNhanVien.Load += txtMaNhanVien_Load;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
@@ -644,11 +645,11 @@
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
