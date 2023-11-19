@@ -466,6 +466,7 @@
             this.rbtnCash.Text = "Tiền mặt";
             this.rbtnCash.UnCheckedColor = System.Drawing.Color.Black;
             this.rbtnCash.UseVisualStyleBackColor = false;
+            //this.rbtnCash.UseVisualStyleBackColor = false;
             // 
             // rbtnTransfer
             // 
