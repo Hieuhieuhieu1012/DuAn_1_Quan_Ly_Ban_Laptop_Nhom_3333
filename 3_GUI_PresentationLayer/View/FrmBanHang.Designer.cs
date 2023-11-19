@@ -757,7 +757,206 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Khách hàng";
+            this.label6.Text = "Số điện thoại";
+            // 
+            // btnThemKH
+            // 
+            this.btnThemKH.BackColor = System.Drawing.Color.White;
+            this.btnThemKH.FlatAppearance.BorderSize = 0;
+            this.btnThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemKH.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnThemKH.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(122)))), ((int)(((byte)(228)))));
+            this.btnThemKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThemKH.IconSize = 35;
+            this.btnThemKH.Location = new System.Drawing.Point(361, 14);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.Size = new System.Drawing.Size(46, 46);
+            this.btnThemKH.TabIndex = 13;
+            this.btnThemKH.UseVisualStyleBackColor = false;
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongTien.ForeColor = System.Drawing.Color.Red;
+            this.lblTongTien.Location = new System.Drawing.Point(177, 540);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(0, 25);
+            this.lblTongTien.TabIndex = 50;
+            this.lblTongTien.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(185)))), ((int)(((byte)(229)))));
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(225)))), ((int)(((byte)(197)))));
+            this.btnThanhToan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.btnThanhToan.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
+            this.btnThanhToan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.btnThanhToan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThanhToan.IconSize = 38;
+            this.btnThanhToan.Location = new System.Drawing.Point(81, 596);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(143, 55);
+            this.btnThanhToan.TabIndex = 49;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtGhiChu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtGhiChu.BorderRadius = 10;
+            this.txtGhiChu.BorderSize = 1;
+            this.txtGhiChu.Location = new System.Drawing.Point(168, 330);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Padding = new System.Windows.Forms.Padding(7);
+            this.txtGhiChu.PasswordChar = false;
+            this.txtGhiChu.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtGhiChu.PlaceholderText = "";
+            this.txtGhiChu.Size = new System.Drawing.Size(241, 97);
+            this.txtGhiChu.TabIndex = 47;
+            this.txtGhiChu.Texts = "";
+            this.txtGhiChu.UnderlinedStyle = false;
+            // 
+            // rbtnCash
+            // 
+            this.rbtnCash.AutoSize = true;
+            this.rbtnCash.BackColor = System.Drawing.Color.White;
+            this.rbtnCash.CheckedColor = System.Drawing.Color.Blue;
+            this.rbtnCash.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnCash.Location = new System.Drawing.Point(332, 258);
+            this.rbtnCash.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rbtnCash.Name = "rbtnCash";
+            this.rbtnCash.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rbtnCash.Size = new System.Drawing.Size(86, 21);
+            this.rbtnCash.TabIndex = 43;
+            this.rbtnCash.TabStop = true;
+            this.rbtnCash.Text = "Tiền mặt";
+            this.rbtnCash.UnCheckedColor = System.Drawing.Color.Black;
+            this.rbtnCash.UseVisualStyleBackColor = false;
+            //this.rbtnCash.UseVisualStyleBackColor = false;
+            // 
+            // rbtnTransfer
+            // 
+            this.rbtnTransfer.AutoSize = true;
+            this.rbtnTransfer.BackColor = System.Drawing.Color.White;
+            this.rbtnTransfer.CheckedColor = System.Drawing.Color.Blue;
+            this.rbtnTransfer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnTransfer.Location = new System.Drawing.Point(168, 258);
+            this.rbtnTransfer.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rbtnTransfer.Name = "rbtnTransfer";
+            this.rbtnTransfer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rbtnTransfer.Size = new System.Drawing.Size(117, 21);
+            this.rbtnTransfer.TabIndex = 42;
+            this.rbtnTransfer.TabStop = true;
+            this.rbtnTransfer.Text = "Chuyển khoản";
+            this.rbtnTransfer.UnCheckedColor = System.Drawing.Color.Black;
+            this.rbtnTransfer.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(23, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 20);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "HT thanh toán";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(60, 340);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 20);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Ghi chú";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(30, 540);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 25);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Tổng Tiền: ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(10, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Loại sản phẩm";
+            // 
+            // comboBoxCustom3
+            // 
+            this.comboBoxCustom3.BackColor = System.Drawing.Color.White;
+            this.comboBoxCustom3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.BorderSize = 1;
+            this.comboBoxCustom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxCustom3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxCustom3.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxCustom3.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.Location = new System.Drawing.Point(10, 88);
+            this.comboBoxCustom3.MinimumSize = new System.Drawing.Size(150, 30);
+            this.comboBoxCustom3.Name = "comboBoxCustom3";
+            this.comboBoxCustom3.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxCustom3.Size = new System.Drawing.Size(244, 30);
+            this.comboBoxCustom3.TabIndex = 48;
+            this.comboBoxCustom3.Texts = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(311, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Lọc theo khoảng giá";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(421, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 15);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "--";
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnCheck.IconColor = System.Drawing.Color.White;
+            this.btnCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheck.IconSize = 25;
+            this.btnCheck.Location = new System.Drawing.Point(559, 76);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(40, 30);
+            this.btnCheck.TabIndex = 58;
+            this.btnCheck.UseVisualStyleBackColor = false;
             // 
             // txtGiaCuoi
             // 
