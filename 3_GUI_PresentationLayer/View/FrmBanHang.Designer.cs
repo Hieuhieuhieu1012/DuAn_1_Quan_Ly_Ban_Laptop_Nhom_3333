@@ -28,209 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvSanPham = new DataGridView();
-            iconButton7 = new FontAwesome.Sharp.IconButton();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBoxCustom2_03 = new CustomControl.TextBoxCustom2_0();
-            textBoxCustom2_02 = new CustomControl.TextBoxCustom2_0();
-            textBoxCustom2_01 = new CustomControl.TextBoxCustom2_0();
-            label13 = new Label();
-            label9 = new Label();
-            textBoxCustom2_04 = new CustomControl.TextBoxCustom2_0();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            label1 = new Label();
-            label2 = new Label();
-            label12 = new Label();
-            label8 = new Label();
-            radioButtonCustom3 = new CustomControl.RadioButtonCustom();
-            radioButtonCustom6 = new CustomControl.RadioButtonCustom();
-            panel3 = new Panel();
-            label3 = new Label();
-            comboBoxCustom3 = new CustomControl.ComboBoxCustom();
-            label7 = new Label();
-            label4 = new Label();
-            label11 = new Label();
-            radioButtonCustom5 = new CustomControl.RadioButtonCustom();
-            radioButtonCustom7 = new CustomControl.RadioButtonCustom();
-            radioButtonCustom4 = new CustomControl.RadioButtonCustom();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
-            groupBox2 = new GroupBox();
-            dgvGioHang = new DataGridView();
-            label10 = new Label();
-            buttonCustom1 = new CustomControl.ButtonCustom();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            radioButtonCustom2 = new CustomControl.RadioButtonCustom();
-            radioButtonCustom1 = new CustomControl.RadioButtonCustom();
-            label5 = new Label();
-            comboBoxCustom1 = new CustomControl.ComboBoxCustom();
-            label6 = new Label();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
-            panel3.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.textBoxCustom2_04 = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvGioHang = new System.Windows.Forms.DataGridView();
+            this.buttonCustom1 = new _3_GUI_PresentationLayer.CustomControl.ButtonCustom();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvChoThanhToan = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbGiamGia = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnRefresh = new FontAwesome.Sharp.IconButton();
+            this.txtMaHD = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbbSdtKH = new System.Windows.Forms.ComboBox();
+            this.lblHoTen = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnThemKH = new FontAwesome.Sharp.IconButton();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.btnThanhToan = new FontAwesome.Sharp.IconButton();
+            this.txtGhiChu = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.rbtnCash = new _3_GUI_PresentationLayer.CustomControl.RadioButtonCustom();
+            this.rbtnTransfer = new _3_GUI_PresentationLayer.CustomControl.RadioButtonCustom();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxCustom3 = new _3_GUI_PresentationLayer.CustomControl.ComboBoxCustom();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnCheck = new FontAwesome.Sharp.IconButton();
+            this.txtGiaCuoi = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.txtGiaDau = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChoThanhToan)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // dgvSanPham
             // 
-            dgvSanPham.AllowUserToAddRows = false;
-            dgvSanPham.AllowUserToResizeRows = false;
-            dgvSanPham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSanPham.Location = new Point(1, 3);
-            dgvSanPham.Name = "dgvSanPham";
-            dgvSanPham.RowHeadersVisible = false;
-            dgvSanPham.RowTemplate.Height = 25;
-            dgvSanPham.Size = new Size(971, 262);
-            dgvSanPham.TabIndex = 23;
+            this.dgvSanPham.AllowUserToAddRows = false;
+            this.dgvSanPham.AllowUserToResizeRows = false;
+            this.dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Location = new System.Drawing.Point(1, 3);
+            this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.RowHeadersVisible = false;
+            this.dgvSanPham.RowTemplate.Height = 25;
+            this.dgvSanPham.Size = new System.Drawing.Size(971, 262);
+            this.dgvSanPham.TabIndex = 23;
             // 
             // iconButton7
             // 
-            iconButton7.FlatAppearance.BorderSize = 0;
-            iconButton7.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
-            iconButton7.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton7.FlatStyle = FlatStyle.Flat;
-            iconButton7.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
-            iconButton7.IconColor = Color.FromArgb(148, 105, 215);
-            iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton7.IconSize = 38;
-            iconButton7.Location = new Point(289, 599);
-            iconButton7.Name = "iconButton7";
-            iconButton7.Size = new Size(66, 55);
-            iconButton7.TabIndex = 49;
-            iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(225)))), ((int)(((byte)(197)))));
+            this.iconButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.IconSize = 38;
+            this.iconButton7.Location = new System.Drawing.Point(289, 599);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Size = new System.Drawing.Size(66, 55);
+            this.iconButton7.TabIndex = 49;
+            this.iconButton7.UseVisualStyleBackColor = true;
             // 
             // iconButton6
             // 
-            iconButton6.FlatAppearance.BorderSize = 0;
-            iconButton6.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
-            iconButton6.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton6.FlatStyle = FlatStyle.Flat;
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            iconButton6.IconColor = Color.FromArgb(148, 105, 215);
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 38;
-            iconButton6.Location = new Point(208, 599);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(66, 55);
-            iconButton6.TabIndex = 49;
-            iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(225)))), ((int)(((byte)(197)))));
+            this.iconButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.PenClip;
+            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 38;
+            this.iconButton6.Location = new System.Drawing.Point(208, 599);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(66, 55);
+            this.iconButton6.TabIndex = 49;
+            this.iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
-            iconButton5.FlatAppearance.BorderSize = 0;
-            iconButton5.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
-            iconButton5.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            iconButton5.IconColor = Color.FromArgb(148, 105, 215);
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 38;
-            iconButton5.Location = new Point(127, 599);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(66, 55);
-            iconButton5.TabIndex = 49;
-            iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(225)))), ((int)(((byte)(197)))));
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 38;
+            this.iconButton5.Location = new System.Drawing.Point(127, 599);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(66, 55);
+            this.iconButton5.TabIndex = 49;
+            this.iconButton5.UseVisualStyleBackColor = true;
             // 
             // iconButton4
             // 
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
-            iconButton4.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            iconButton4.IconColor = Color.FromArgb(148, 105, 215);
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 38;
-            iconButton4.Location = new Point(34, 599);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(66, 55);
-            iconButton4.TabIndex = 49;
-            iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(225)))), ((int)(((byte)(197)))));
+            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
+            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(105)))), ((int)(((byte)(215)))));
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 38;
+            this.iconButton4.Location = new System.Drawing.Point(34, 599);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(66, 55);
+            this.iconButton4.TabIndex = 49;
+            this.iconButton4.UseVisualStyleBackColor = true;
             // 
             // textBoxCustom2_03
             // 
-            textBoxCustom2_03.BorderColor = Color.MediumSlateBlue;
-            textBoxCustom2_03.BorderFocusColor = Color.HotPink;
-            textBoxCustom2_03.BorderRadius = 0;
-            textBoxCustom2_03.BorderSize = 2;
-            textBoxCustom2_03.Location = new Point(126, 471);
-            textBoxCustom2_03.Multiline = false;
-            textBoxCustom2_03.Name = "textBoxCustom2_03";
-            textBoxCustom2_03.Padding = new Padding(7);
-            textBoxCustom2_03.PasswordChar = false;
-            textBoxCustom2_03.PlaceholderColor = Color.DarkGray;
-            textBoxCustom2_03.PlaceholderText = "";
-            textBoxCustom2_03.Size = new Size(240, 30);
-            textBoxCustom2_03.TabIndex = 48;
-            textBoxCustom2_03.Texts = "";
-            textBoxCustom2_03.UnderlinedStyle = true;
+            this.textBoxCustom2_03.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.textBoxCustom2_03.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.textBoxCustom2_03.BorderRadius = 0;
+            this.textBoxCustom2_03.BorderSize = 2;
+            this.textBoxCustom2_03.Location = new System.Drawing.Point(126, 471);
+            this.textBoxCustom2_03.Multiline = false;
+            this.textBoxCustom2_03.Name = "textBoxCustom2_03";
+            this.textBoxCustom2_03.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxCustom2_03.PasswordChar = false;
+            this.textBoxCustom2_03.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCustom2_03.PlaceholderText = "";
+            this.textBoxCustom2_03.Size = new System.Drawing.Size(240, 30);
+            this.textBoxCustom2_03.TabIndex = 48;
+            this.textBoxCustom2_03.Texts = "";
+            this.textBoxCustom2_03.UnderlinedStyle = true;
             // 
             // textBoxCustom2_02
             // 
-            textBoxCustom2_02.BorderColor = Color.MediumSlateBlue;
-            textBoxCustom2_02.BorderFocusColor = Color.HotPink;
-            textBoxCustom2_02.BorderRadius = 10;
-            textBoxCustom2_02.BorderSize = 1;
-            textBoxCustom2_02.Location = new Point(125, 57);
-            textBoxCustom2_02.Multiline = true;
-            textBoxCustom2_02.Name = "textBoxCustom2_02";
-            textBoxCustom2_02.Padding = new Padding(7);
-            textBoxCustom2_02.PasswordChar = false;
-            textBoxCustom2_02.PlaceholderColor = Color.DarkGray;
-            textBoxCustom2_02.PlaceholderText = "";
-            textBoxCustom2_02.Size = new Size(241, 63);
-            textBoxCustom2_02.TabIndex = 47;
-            textBoxCustom2_02.Texts = "";
-            textBoxCustom2_02.UnderlinedStyle = false;
+            this.textBoxCustom2_02.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.textBoxCustom2_02.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.textBoxCustom2_02.BorderRadius = 10;
+            this.textBoxCustom2_02.BorderSize = 1;
+            this.textBoxCustom2_02.Location = new System.Drawing.Point(125, 57);
+            this.textBoxCustom2_02.Multiline = true;
+            this.textBoxCustom2_02.Name = "textBoxCustom2_02";
+            this.textBoxCustom2_02.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxCustom2_02.PasswordChar = false;
+            this.textBoxCustom2_02.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCustom2_02.PlaceholderText = "";
+            this.textBoxCustom2_02.Size = new System.Drawing.Size(241, 63);
+            this.textBoxCustom2_02.TabIndex = 47;
+            this.textBoxCustom2_02.Texts = "";
+            this.textBoxCustom2_02.UnderlinedStyle = false;
             // 
             // textBoxCustom2_01
             // 
-            textBoxCustom2_01.BorderColor = Color.MediumSlateBlue;
-            textBoxCustom2_01.BorderFocusColor = Color.HotPink;
-            textBoxCustom2_01.BorderRadius = 10;
-            textBoxCustom2_01.BorderSize = 1;
-            textBoxCustom2_01.Location = new Point(125, 187);
-            textBoxCustom2_01.Multiline = true;
-            textBoxCustom2_01.Name = "textBoxCustom2_01";
-            textBoxCustom2_01.Padding = new Padding(7);
-            textBoxCustom2_01.PasswordChar = false;
-            textBoxCustom2_01.PlaceholderColor = Color.DarkGray;
-            textBoxCustom2_01.PlaceholderText = "";
-            textBoxCustom2_01.Size = new Size(241, 75);
-            textBoxCustom2_01.TabIndex = 47;
-            textBoxCustom2_01.Texts = "";
-            textBoxCustom2_01.UnderlinedStyle = false;
+            this.textBoxCustom2_01.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.textBoxCustom2_01.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.textBoxCustom2_01.BorderRadius = 10;
+            this.textBoxCustom2_01.BorderSize = 1;
+            this.textBoxCustom2_01.Location = new System.Drawing.Point(125, 187);
+            this.textBoxCustom2_01.Multiline = true;
+            this.textBoxCustom2_01.Name = "textBoxCustom2_01";
+            this.textBoxCustom2_01.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxCustom2_01.PasswordChar = false;
+            this.textBoxCustom2_01.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCustom2_01.PlaceholderText = "";
+            this.textBoxCustom2_01.Size = new System.Drawing.Size(241, 75);
+            this.textBoxCustom2_01.TabIndex = 47;
+            this.textBoxCustom2_01.Texts = "";
+            this.textBoxCustom2_01.UnderlinedStyle = false;
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = SystemColors.HotTrack;
-            label13.Location = new Point(138, 530);
-            label13.Name = "label13";
-            label13.Size = new Size(46, 20);
-            label13.TabIndex = 46;
-            label13.Text = "Label";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label13.Location = new System.Drawing.Point(138, 530);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 20);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Label";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.HotTrack;
-            label9.Location = new Point(23, 530);
-            label9.Name = "label9";
-            label9.Size = new Size(79, 20);
-            label9.TabIndex = 46;
-            label9.Text = "Tiền Thừa";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label9.Location = new System.Drawing.Point(23, 530);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 20);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Tiền Thừa";
             // 
             // textBoxCustom2_04
             // 
@@ -252,42 +252,42 @@
             // 
             // iconButton2
             // 
-            iconButton2.BackColor = Color.White;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown;
-            iconButton2.IconColor = Color.FromArgb(187, 92, 119);
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(471, 38);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(56, 46);
-            iconButton2.TabIndex = 45;
-            iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.BackColor = System.Drawing.Color.White;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(92)))), ((int)(((byte)(119)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(471, 38);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(56, 46);
+            this.iconButton2.TabIndex = 45;
+            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton1
             // 
-            iconButton1.BackColor = Color.White;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowUpShortWide;
-            iconButton1.IconColor = Color.FromArgb(187, 92, 119);
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(406, 38);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(59, 47);
-            iconButton1.TabIndex = 44;
-            iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.BackColor = System.Drawing.Color.White;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowUpShortWide;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(92)))), ((int)(((byte)(119)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(406, 38);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(59, 47);
+            this.iconButton1.TabIndex = 44;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(10, 67);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 17);
-            label1.TabIndex = 43;
-            label1.Text = "Loại sản phẩm";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(10, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Loại sản phẩm";
             // 
             // label2
             // 
@@ -302,59 +302,59 @@
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = SystemColors.HotTrack;
-            label12.Location = new Point(15, 418);
-            label12.Name = "label12";
-            label12.Size = new Size(95, 20);
-            label12.TabIndex = 44;
-            label12.Text = "Mã giảm giá";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label12.Location = new System.Drawing.Point(15, 418);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 20);
+            this.label12.TabIndex = 44;
+            this.label12.Text = "Mã giảm giá";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.HotTrack;
-            label8.Location = new Point(19, 481);
-            label8.Name = "label8";
-            label8.Size = new Size(83, 20);
-            label8.TabIndex = 44;
-            label8.Text = "Khách đưa";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(19, 481);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 20);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Khách đưa";
             // 
             // radioButtonCustom3
             // 
-            radioButtonCustom3.AutoSize = true;
-            radioButtonCustom3.BackColor = Color.White;
-            radioButtonCustom3.CheckedColor = Color.Blue;
-            radioButtonCustom3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom3.Location = new Point(280, 363);
-            radioButtonCustom3.MinimumSize = new Size(0, 21);
-            radioButtonCustom3.Name = "radioButtonCustom3";
-            radioButtonCustom3.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom3.Size = new Size(86, 21);
-            radioButtonCustom3.TabIndex = 43;
-            radioButtonCustom3.TabStop = true;
-            radioButtonCustom3.Text = "Tiền mặt";
-            radioButtonCustom3.UnCheckedColor = Color.Black;
-            radioButtonCustom3.UseVisualStyleBackColor = false;
+            this.radioButtonCustom3.AutoSize = true;
+            this.radioButtonCustom3.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom3.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom3.Location = new System.Drawing.Point(280, 363);
+            this.radioButtonCustom3.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom3.Name = "radioButtonCustom3";
+            this.radioButtonCustom3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom3.Size = new System.Drawing.Size(86, 21);
+            this.radioButtonCustom3.TabIndex = 43;
+            this.radioButtonCustom3.TabStop = true;
+            this.radioButtonCustom3.Text = "Tiền mặt";
+            this.radioButtonCustom3.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom3.UseVisualStyleBackColor = false;
             // 
             // radioButtonCustom6
             // 
-            radioButtonCustom6.AutoSize = true;
-            radioButtonCustom6.BackColor = Color.White;
-            radioButtonCustom6.CheckedColor = Color.Blue;
-            radioButtonCustom6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom6.Location = new Point(138, 363);
-            radioButtonCustom6.MinimumSize = new Size(0, 21);
-            radioButtonCustom6.Name = "radioButtonCustom6";
-            radioButtonCustom6.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom6.Size = new Size(64, 21);
-            radioButtonCustom6.TabIndex = 42;
-            radioButtonCustom6.TabStop = true;
-            radioButtonCustom6.Text = "Card";
-            radioButtonCustom6.UnCheckedColor = Color.Black;
-            radioButtonCustom6.UseVisualStyleBackColor = false;
+            this.radioButtonCustom6.AutoSize = true;
+            this.radioButtonCustom6.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom6.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom6.Location = new System.Drawing.Point(138, 363);
+            this.radioButtonCustom6.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom6.Name = "radioButtonCustom6";
+            this.radioButtonCustom6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom6.Size = new System.Drawing.Size(64, 21);
+            this.radioButtonCustom6.TabIndex = 42;
+            this.radioButtonCustom6.TabStop = true;
+            this.radioButtonCustom6.Text = "Card";
+            this.radioButtonCustom6.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom6.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -366,118 +366,118 @@
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.HotTrack;
-            label3.Location = new Point(3, 363);
-            label3.Name = "label3";
-            label3.Size = new Size(110, 20);
-            label3.TabIndex = 41;
-            label3.Text = "HT thanh toán";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(3, 363);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "HT thanh toán";
             // 
             // comboBoxCustom3
             // 
-            comboBoxCustom3.BackColor = Color.White;
-            comboBoxCustom3.BorderColor = Color.MediumSlateBlue;
-            comboBoxCustom3.BorderSize = 1;
-            comboBoxCustom3.DropDownStyle = ComboBoxStyle.DropDown;
-            comboBoxCustom3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxCustom3.ForeColor = Color.DimGray;
-            comboBoxCustom3.IconColor = Color.MediumSlateBlue;
-            comboBoxCustom3.ListBackColor = Color.FromArgb(230, 228, 245);
-            comboBoxCustom3.ListTextColor = Color.DimGray;
-            comboBoxCustom3.Location = new Point(10, 88);
-            comboBoxCustom3.MinimumSize = new Size(150, 30);
-            comboBoxCustom3.Name = "comboBoxCustom3";
-            comboBoxCustom3.Padding = new Padding(1);
-            comboBoxCustom3.Size = new Size(244, 30);
-            comboBoxCustom3.TabIndex = 48;
-            comboBoxCustom3.Texts = "";
+            this.comboBoxCustom3.BackColor = System.Drawing.Color.White;
+            this.comboBoxCustom3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.BorderSize = 1;
+            this.comboBoxCustom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxCustom3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxCustom3.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxCustom3.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.Location = new System.Drawing.Point(10, 88);
+            this.comboBoxCustom3.MinimumSize = new System.Drawing.Size(150, 30);
+            this.comboBoxCustom3.Name = "comboBoxCustom3";
+            this.comboBoxCustom3.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxCustom3.Size = new System.Drawing.Size(244, 30);
+            this.comboBoxCustom3.TabIndex = 48;
+            this.comboBoxCustom3.Texts = "";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.HotTrack;
-            label7.Location = new Point(29, 208);
-            label7.Name = "label7";
-            label7.Size = new Size(58, 20);
-            label7.TabIndex = 38;
-            label7.Text = "Địa Chỉ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(29, 208);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 20);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Địa Chỉ";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.HotTrack;
-            label4.Location = new Point(29, 81);
-            label4.Name = "label4";
-            label4.Size = new Size(62, 20);
-            label4.TabIndex = 36;
-            label4.Text = "Ghi chú";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(29, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Ghi chú";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.Red;
-            label11.Location = new Point(11, 564);
-            label11.Name = "label11";
-            label11.Size = new Size(190, 25);
-            label11.TabIndex = 33;
-            label11.Text = "Tổng Tiền:     0 VNĐ";
-            label11.TextAlign = ContentAlignment.TopCenter;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(11, 564);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(190, 25);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Tổng Tiền:     0 VNĐ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // radioButtonCustom5
             // 
-            radioButtonCustom5.AutoSize = true;
-            radioButtonCustom5.BackColor = Color.White;
-            radioButtonCustom5.CheckedColor = Color.Blue;
-            radioButtonCustom5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom5.Location = new Point(165, 311);
-            radioButtonCustom5.MinimumSize = new Size(0, 21);
-            radioButtonCustom5.Name = "radioButtonCustom5";
-            radioButtonCustom5.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom5.Size = new Size(132, 21);
-            radioButtonCustom5.TabIndex = 32;
-            radioButtonCustom5.TabStop = true;
-            radioButtonCustom5.Text = "Giao thành công";
-            radioButtonCustom5.UnCheckedColor = Color.Black;
-            radioButtonCustom5.UseVisualStyleBackColor = false;
+            this.radioButtonCustom5.AutoSize = true;
+            this.radioButtonCustom5.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom5.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom5.Location = new System.Drawing.Point(165, 311);
+            this.radioButtonCustom5.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom5.Name = "radioButtonCustom5";
+            this.radioButtonCustom5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom5.Size = new System.Drawing.Size(132, 21);
+            this.radioButtonCustom5.TabIndex = 32;
+            this.radioButtonCustom5.TabStop = true;
+            this.radioButtonCustom5.Text = "Giao thành công";
+            this.radioButtonCustom5.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom5.UseVisualStyleBackColor = false;
             // 
             // radioButtonCustom7
             // 
-            radioButtonCustom7.AutoSize = true;
-            radioButtonCustom7.BackColor = Color.White;
-            radioButtonCustom7.CheckedColor = Color.Blue;
-            radioButtonCustom7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom7.Location = new Point(125, 284);
-            radioButtonCustom7.MinimumSize = new Size(0, 21);
-            radioButtonCustom7.Name = "radioButtonCustom7";
-            radioButtonCustom7.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom7.Size = new Size(97, 21);
-            radioButtonCustom7.TabIndex = 30;
-            radioButtonCustom7.TabStop = true;
-            radioButtonCustom7.Text = "Chưa Giao";
-            radioButtonCustom7.UnCheckedColor = Color.Black;
-            radioButtonCustom7.UseVisualStyleBackColor = false;
+            this.radioButtonCustom7.AutoSize = true;
+            this.radioButtonCustom7.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom7.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom7.Location = new System.Drawing.Point(125, 284);
+            this.radioButtonCustom7.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom7.Name = "radioButtonCustom7";
+            this.radioButtonCustom7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom7.Size = new System.Drawing.Size(97, 21);
+            this.radioButtonCustom7.TabIndex = 30;
+            this.radioButtonCustom7.TabStop = true;
+            this.radioButtonCustom7.Text = "Chưa Giao";
+            this.radioButtonCustom7.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom7.UseVisualStyleBackColor = false;
             // 
             // radioButtonCustom4
             // 
-            radioButtonCustom4.AutoSize = true;
-            radioButtonCustom4.BackColor = Color.White;
-            radioButtonCustom4.CheckedColor = Color.Blue;
-            radioButtonCustom4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom4.Location = new Point(241, 284);
-            radioButtonCustom4.MinimumSize = new Size(0, 21);
-            radioButtonCustom4.Name = "radioButtonCustom4";
-            radioButtonCustom4.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom4.Size = new Size(97, 21);
-            radioButtonCustom4.TabIndex = 30;
-            radioButtonCustom4.TabStop = true;
-            radioButtonCustom4.Text = "Đang giao";
-            radioButtonCustom4.UnCheckedColor = Color.Black;
-            radioButtonCustom4.UseVisualStyleBackColor = false;
+            this.radioButtonCustom4.AutoSize = true;
+            this.radioButtonCustom4.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom4.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom4.Location = new System.Drawing.Point(241, 284);
+            this.radioButtonCustom4.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom4.Name = "radioButtonCustom4";
+            this.radioButtonCustom4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom4.Size = new System.Drawing.Size(97, 21);
+            this.radioButtonCustom4.TabIndex = 30;
+            this.radioButtonCustom4.TabStop = true;
+            this.radioButtonCustom4.Text = "Đang giao";
+            this.radioButtonCustom4.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom4.UseVisualStyleBackColor = false;
             // 
             // iconButton8
             // 
@@ -495,39 +495,39 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dgvGioHang);
-            groupBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(9, 435);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(975, 238);
-            groupBox2.TabIndex = 46;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Giỏ Hàng";
+            this.groupBox2.Controls.Add(this.dgvGioHang);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(9, 435);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(975, 238);
+            this.groupBox2.TabIndex = 46;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Giỏ Hàng";
             // 
             // dgvGioHang
             // 
-            dgvGioHang.AllowUserToResizeColumns = false;
-            dgvGioHang.AllowUserToResizeRows = false;
-            dgvGioHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvGioHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGioHang.Dock = DockStyle.Fill;
-            dgvGioHang.Location = new Point(3, 23);
-            dgvGioHang.Name = "dgvGioHang";
-            dgvGioHang.RowHeadersVisible = false;
-            dgvGioHang.RowTemplate.Height = 25;
-            dgvGioHang.Size = new Size(969, 212);
-            dgvGioHang.TabIndex = 12;
+            this.dgvGioHang.AllowUserToResizeColumns = false;
+            this.dgvGioHang.AllowUserToResizeRows = false;
+            this.dgvGioHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGioHang.Location = new System.Drawing.Point(3, 23);
+            this.dgvGioHang.Name = "dgvGioHang";
+            this.dgvGioHang.RowHeadersVisible = false;
+            this.dgvGioHang.RowTemplate.Height = 25;
+            this.dgvGioHang.Size = new System.Drawing.Size(969, 212);
+            this.dgvGioHang.TabIndex = 12;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.HotTrack;
-            label10.Location = new Point(15, 285);
-            label10.Name = "label10";
-            label10.Size = new Size(80, 20);
-            label10.TabIndex = 29;
-            label10.Text = "Trạng thái";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(15, 285);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Trạng thái";
             // 
             // buttonCustom1
             // 
@@ -549,20 +549,20 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(buttonCustom1);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(comboBoxCustom3);
-            panel2.Controls.Add(iconButton8);
-            panel2.Controls.Add(textBoxCustom2_04);
-            panel2.Controls.Add(iconButton2);
-            panel2.Controls.Add(iconButton1);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(9, 15);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(972, 140);
-            panel2.TabIndex = 47;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.buttonCustom1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.comboBoxCustom3);
+            this.panel2.Controls.Add(this.iconButton8);
+            this.panel2.Controls.Add(this.textBoxCustom2_04);
+            this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(9, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(972, 140);
+            this.panel2.TabIndex = 47;
             // 
             // pictureBox1
             // 
@@ -572,198 +572,307 @@
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
-            // radioButtonCustom2
+            // groupBox1
             // 
-            radioButtonCustom2.AutoSize = true;
-            radioButtonCustom2.BackColor = Color.White;
-            radioButtonCustom2.CheckedColor = Color.Blue;
-            radioButtonCustom2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom2.Location = new Point(272, 145);
-            radioButtonCustom2.MinimumSize = new Size(0, 21);
-            radioButtonCustom2.Name = "radioButtonCustom2";
-            radioButtonCustom2.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom2.Size = new Size(94, 21);
-            radioButtonCustom2.TabIndex = 24;
-            radioButtonCustom2.TabStop = true;
-            radioButtonCustom2.Text = "Ship hàng";
-            radioButtonCustom2.UnCheckedColor = Color.Black;
-            radioButtonCustom2.UseVisualStyleBackColor = false;
+            this.groupBox1.Controls.Add(this.dgvChoThanhToan);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(493, 436);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(488, 238);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chờ thanh toán";
             // 
-            // radioButtonCustom1
+            // dgvChoThanhToan
             // 
-            radioButtonCustom1.AutoSize = true;
-            radioButtonCustom1.BackColor = Color.White;
-            radioButtonCustom1.CheckedColor = Color.Blue;
-            radioButtonCustom1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonCustom1.Location = new Point(125, 146);
-            radioButtonCustom1.MinimumSize = new Size(0, 21);
-            radioButtonCustom1.Name = "radioButtonCustom1";
-            radioButtonCustom1.Padding = new Padding(10, 0, 0, 0);
-            radioButtonCustom1.Size = new Size(111, 21);
-            radioButtonCustom1.TabIndex = 23;
-            radioButtonCustom1.TabStop = true;
-            radioButtonCustom1.Text = "Tại cửa hàng";
-            radioButtonCustom1.UnCheckedColor = Color.Black;
-            radioButtonCustom1.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.HotTrack;
-            label5.Location = new Point(6, 146);
-            label5.Name = "label5";
-            label5.Size = new Size(86, 20);
-            label5.TabIndex = 19;
-            label5.Text = "Nhận hàng";
-            // 
-            // comboBoxCustom1
-            // 
-            comboBoxCustom1.BackColor = Color.White;
-            comboBoxCustom1.BorderColor = Color.Black;
-            comboBoxCustom1.BorderSize = 1;
-            comboBoxCustom1.DropDownStyle = ComboBoxStyle.DropDown;
-            comboBoxCustom1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxCustom1.ForeColor = Color.DimGray;
-            comboBoxCustom1.IconColor = Color.Black;
-            comboBoxCustom1.ListBackColor = Color.FromArgb(230, 228, 245);
-            comboBoxCustom1.ListTextColor = Color.DimGray;
-            comboBoxCustom1.Location = new Point(125, 11);
-            comboBoxCustom1.MinimumSize = new Size(200, 30);
-            comboBoxCustom1.Name = "comboBoxCustom1";
-            comboBoxCustom1.Padding = new Padding(1);
-            comboBoxCustom1.Size = new Size(200, 30);
-            comboBoxCustom1.TabIndex = 14;
-            comboBoxCustom1.Texts = "";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.HotTrack;
-            label6.Location = new Point(11, 15);
-            label6.Name = "label6";
-            label6.Size = new Size(91, 20);
-            label6.TabIndex = 13;
-            label6.Text = "Khách hàng";
-            // 
-            // iconButton3
-            // 
-            iconButton3.BackColor = Color.White;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            iconButton3.IconColor = Color.FromArgb(86, 122, 228);
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 35;
-            iconButton3.Location = new Point(331, 3);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(46, 46);
-            iconButton3.TabIndex = 13;
-            iconButton3.UseVisualStyleBackColor = false;
+            this.dgvChoThanhToan.AllowUserToResizeColumns = false;
+            this.dgvChoThanhToan.AllowUserToResizeRows = false;
+            this.dgvChoThanhToan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChoThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChoThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChoThanhToan.Location = new System.Drawing.Point(3, 23);
+            this.dgvChoThanhToan.Name = "dgvChoThanhToan";
+            this.dgvChoThanhToan.RowHeadersVisible = false;
+            this.dgvChoThanhToan.RowTemplate.Height = 25;
+            this.dgvChoThanhToan.Size = new System.Drawing.Size(482, 212);
+            this.dgvChoThanhToan.TabIndex = 12;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(iconButton7);
-            panel1.Controls.Add(iconButton6);
-            panel1.Controls.Add(iconButton5);
-            panel1.Controls.Add(iconButton4);
-            panel1.Controls.Add(textBoxCustom2_03);
-            panel1.Controls.Add(textBoxCustom2_02);
-            panel1.Controls.Add(textBoxCustom2_01);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(radioButtonCustom3);
-            panel1.Controls.Add(radioButtonCustom6);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(radioButtonCustom5);
-            panel1.Controls.Add(radioButtonCustom7);
-            panel1.Controls.Add(radioButtonCustom4);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(radioButtonCustom2);
-            panel1.Controls.Add(radioButtonCustom1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(comboBoxCustom1);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(iconButton3);
-            panel1.Location = new Point(1007, 15);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(393, 655);
-            panel1.TabIndex = 45;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbbGiamGia);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnRefresh);
+            this.panel1.Controls.Add(this.txtMaHD);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.lblTongTien);
+            this.panel1.Controls.Add(this.btnThanhToan);
+            this.panel1.Controls.Add(this.txtGhiChu);
+            this.panel1.Controls.Add(this.rbtnCash);
+            this.panel1.Controls.Add(this.rbtnTransfer);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(990, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(453, 656);
+            this.panel1.TabIndex = 20;
+            // 
+            // cbbGiamGia
+            // 
+            this.cbbGiamGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbGiamGia.FormattingEnabled = true;
+            this.cbbGiamGia.Location = new System.Drawing.Point(168, 472);
+            this.cbbGiamGia.Name = "cbbGiamGia";
+            this.cbbGiamGia.Size = new System.Drawing.Size(241, 23);
+            this.cbbGiamGia.TabIndex = 52;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(60, 475);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Giảm giá";
+            // 
+            // btnRefresh
+            // 
+            this.radioButtonCustom2.AutoSize = true;
+            this.radioButtonCustom2.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom2.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom2.Location = new System.Drawing.Point(272, 145);
+            this.radioButtonCustom2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom2.Name = "radioButtonCustom2";
+            this.radioButtonCustom2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom2.Size = new System.Drawing.Size(94, 21);
+            this.radioButtonCustom2.TabIndex = 24;
+            this.radioButtonCustom2.TabStop = true;
+            this.radioButtonCustom2.Text = "Ship hàng";
+            this.radioButtonCustom2.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom2.UseVisualStyleBackColor = false;
+            // 
+            // txtMaHD
+            // 
+            this.radioButtonCustom1.AutoSize = true;
+            this.radioButtonCustom1.BackColor = System.Drawing.Color.White;
+            this.radioButtonCustom1.CheckedColor = System.Drawing.Color.Blue;
+            this.radioButtonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonCustom1.Location = new System.Drawing.Point(125, 146);
+            this.radioButtonCustom1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonCustom1.Name = "radioButtonCustom1";
+            this.radioButtonCustom1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonCustom1.Size = new System.Drawing.Size(111, 21);
+            this.radioButtonCustom1.TabIndex = 23;
+            this.radioButtonCustom1.TabStop = true;
+            this.radioButtonCustom1.Text = "Tại cửa hàng";
+            this.radioButtonCustom1.UnCheckedColor = System.Drawing.Color.Black;
+            this.radioButtonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(30, 185);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 20);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Mã hóa đơn";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbbSdtKH);
+            this.groupBox3.Controls.Add(this.lblHoTen);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.btnThemKH);
+            this.groupBox3.Location = new System.Drawing.Point(11, 9);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(420, 142);
+            this.groupBox3.TabIndex = 51;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin khách hàng";
+            // 
+            // cbbSdtKH
+            // 
+            this.cbbSdtKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbSdtKH.FormattingEnabled = true;
+            this.cbbSdtKH.Location = new System.Drawing.Point(157, 27);
+            this.cbbSdtKH.Name = "cbbSdtKH";
+            this.cbbSdtKH.Size = new System.Drawing.Size(198, 23);
+            this.cbbSdtKH.TabIndex = 51;
+            // 
+            // lblHoTen
+            // 
+            this.lblHoTen.AutoSize = true;
+            this.lblHoTen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHoTen.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblHoTen.Location = new System.Drawing.Point(157, 87);
+            this.lblHoTen.Name = "lblHoTen";
+            this.lblHoTen.Size = new System.Drawing.Size(56, 20);
+            this.lblHoTen.TabIndex = 16;
+            this.lblHoTen.Text = "Họ tên";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(6, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Nhận hàng";
+            // 
+            // comboBoxCustom1
+            // 
+            this.comboBoxCustom1.BackColor = System.Drawing.Color.White;
+            this.comboBoxCustom1.BorderColor = System.Drawing.Color.Black;
+            this.comboBoxCustom1.BorderSize = 1;
+            this.comboBoxCustom1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxCustom1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxCustom1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom1.IconColor = System.Drawing.Color.Black;
+            this.comboBoxCustom1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxCustom1.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom1.Location = new System.Drawing.Point(125, 11);
+            this.comboBoxCustom1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBoxCustom1.Name = "comboBoxCustom1";
+            this.comboBoxCustom1.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxCustom1.Size = new System.Drawing.Size(200, 30);
+            this.comboBoxCustom1.TabIndex = 14;
+            this.comboBoxCustom1.Texts = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(11, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Khách hàng";
+            // 
+            // txtGiaCuoi
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.White;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(122)))), ((int)(((byte)(228)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.Location = new System.Drawing.Point(331, 3);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(46, 46);
+            this.iconButton3.TabIndex = 13;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // txtGiaDau
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.iconButton7);
+            this.panel1.Controls.Add(this.iconButton6);
+            this.panel1.Controls.Add(this.iconButton5);
+            this.panel1.Controls.Add(this.iconButton4);
+            this.panel1.Controls.Add(this.textBoxCustom2_03);
+            this.panel1.Controls.Add(this.textBoxCustom2_02);
+            this.panel1.Controls.Add(this.textBoxCustom2_01);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.radioButtonCustom3);
+            this.panel1.Controls.Add(this.radioButtonCustom6);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.radioButtonCustom5);
+            this.panel1.Controls.Add(this.radioButtonCustom7);
+            this.panel1.Controls.Add(this.radioButtonCustom4);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.radioButtonCustom2);
+            this.panel1.Controls.Add(this.radioButtonCustom1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.comboBoxCustom1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Location = new System.Drawing.Point(1007, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(393, 655);
+            this.panel1.TabIndex = 45;
             // 
             // FrmBanHang
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1508, 684);
-            Controls.Add(panel3);
-            Controls.Add(groupBox2);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmBanHang";
-            Text = "FrmBanHang";
-            ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
-            panel3.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1508, 684);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "FrmBanHang";
+            this.Text = "FrmBanHang";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private DataGridView dgvSanPham;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private CustomControl.TextBoxCustom2_0 textBoxCustom2_03;
-        private CustomControl.TextBoxCustom2_0 textBoxCustom2_02;
-        private CustomControl.TextBoxCustom2_0 textBoxCustom2_01;
-        private Label label13;
-        private Label label9;
         private CustomControl.TextBoxCustom2_0 textBoxCustom2_04;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private Label label1;
         private Label label2;
-        private Label label12;
-        private Label label8;
-        private CustomControl.RadioButtonCustom radioButtonCustom3;
-        private CustomControl.RadioButtonCustom radioButtonCustom6;
         private Panel panel3;
-        private Label label3;
-        private CustomControl.ComboBoxCustom comboBoxCustom3;
-        private Label label7;
-        private Label label4;
-        private Label label11;
-        private CustomControl.RadioButtonCustom radioButtonCustom5;
-        private CustomControl.RadioButtonCustom radioButtonCustom7;
-        private CustomControl.RadioButtonCustom radioButtonCustom4;
         private FontAwesome.Sharp.IconButton iconButton8;
         private GroupBox groupBox2;
         private DataGridView dgvGioHang;
-        private Label label10;
         private CustomControl.ButtonCustom buttonCustom1;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private CustomControl.RadioButtonCustom radioButtonCustom2;
-        private CustomControl.RadioButtonCustom radioButtonCustom1;
-        private Label label5;
-        private CustomControl.ComboBoxCustom comboBoxCustom1;
-        private Label label6;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private GroupBox groupBox1;
+        private DataGridView dgvChoThanhToan;
         private Panel panel1;
+        private ComboBox cbbGiamGia;
+        private Label label3;
+        private FontAwesome.Sharp.IconButton btnRefresh;
+        private CustomControl.TextBoxCustom2_0 txtMaHD;
+        private Label label10;
+        private GroupBox groupBox3;
+        private ComboBox cbbSdtKH;
+        private Label lblHoTen;
+        private Label label5;
+        private Label label6;
+        private FontAwesome.Sharp.IconButton btnThemKH;
+        private Label lblTongTien;
+        private FontAwesome.Sharp.IconButton btnThanhToan;
+        private CustomControl.TextBoxCustom2_0 txtGhiChu;
+        private CustomControl.RadioButtonCustom rbtnCash;
+        private CustomControl.RadioButtonCustom rbtnTransfer;
+        private Label label4;
+        private Label label7;
+        private Label label11;
+        private Label label8;
+        private Label label9;
+        private FontAwesome.Sharp.IconButton btnCheck;
+        private CustomControl.TextBoxCustom2_0 txtGiaCuoi;
+        private CustomControl.TextBoxCustom2_0 txtGiaDau;
+        private CustomControl.ComboBoxCustom comboBoxCustom3;
+        private Label label1;
     }
 }
