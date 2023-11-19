@@ -258,6 +258,7 @@
             txtMa.TabIndex = 29;
             txtMa.Texts = "";
             txtMa.UnderlinedStyle = true;
+            txtMa.Load += txtMa_Load;
             // 
             // rbtNam
             // 

@@ -21,5 +21,10 @@ namespace _3_GUI_PresentationLayer.View
         {
 
         }
+
+        private void txtMa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
