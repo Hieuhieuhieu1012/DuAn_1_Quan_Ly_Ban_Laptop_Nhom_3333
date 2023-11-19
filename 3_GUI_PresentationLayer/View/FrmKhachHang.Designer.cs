@@ -37,24 +37,16 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
-            txtEmail = new CustomControl.TextBoxCustom();
             label2 = new Label();
             iconButtonClear = new FontAwesome.Sharp.IconButton();
-            txtDiaChi = new CustomControl.TextBoxCustom2_0();
             iconButtonSua = new FontAwesome.Sharp.IconButton();
             iconButtonThem = new FontAwesome.Sharp.IconButton();
-            rbtNu = new CustomControl.RadioButtonCustom();
-            txtMa = new CustomControl.TextBoxCustom();
-            rbtNam = new CustomControl.RadioButtonCustom();
             label3 = new Label();
             label12 = new Label();
             label4 = new Label();
-            txtHoTen = new CustomControl.TextBoxCustom();
             label5 = new Label();
-            txtSoDienThoai = new CustomControl.TextBoxCustom();
             label6 = new Label();
             iconButton8 = new FontAwesome.Sharp.IconButton();
-            txtTimKiem = new CustomControl.TextBoxCustom2_0();
             labelTimKiem = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvKhachHang).BeginInit();
             panel1.SuspendLayout();
@@ -116,42 +108,19 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(txtEmail);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(iconButtonClear);
-            panel1.Controls.Add(txtDiaChi);
             panel1.Controls.Add(iconButtonSua);
             panel1.Controls.Add(iconButtonThem);
-            panel1.Controls.Add(rbtNu);
-            panel1.Controls.Add(txtMa);
-            panel1.Controls.Add(rbtNam);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label12);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtHoTen);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(txtSoDienThoai);
             panel1.Controls.Add(label6);
             panel1.Location = new Point(928, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(421, 624);
             panel1.TabIndex = 10;
-            // 
-            // txtEmail
-            // 
-            txtEmail.BackColor = Color.White;
-            txtEmail.BorderColor = Color.MediumSlateBlue;
-            txtEmail.BorderFocusColor = Color.HotPink;
-            txtEmail.BorderSize = 2;
-            txtEmail.Location = new Point(154, 249);
-            txtEmail.Multiline = false;
-            txtEmail.Name = "txtEmail";
-            txtEmail.Padding = new Padding(7);
-            txtEmail.PasswordChar = false;
-            txtEmail.Size = new Size(229, 30);
-            txtEmail.TabIndex = 55;
-            txtEmail.Texts = "";
-            txtEmail.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -178,24 +147,6 @@
             iconButtonClear.Size = new Size(97, 43);
             iconButtonClear.TabIndex = 53;
             iconButtonClear.UseVisualStyleBackColor = false;
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.BorderColor = Color.MediumSlateBlue;
-            txtDiaChi.BorderFocusColor = Color.HotPink;
-            txtDiaChi.BorderRadius = 10;
-            txtDiaChi.BorderSize = 1;
-            txtDiaChi.Location = new Point(154, 407);
-            txtDiaChi.Multiline = true;
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Padding = new Padding(7);
-            txtDiaChi.PasswordChar = false;
-            txtDiaChi.PlaceholderColor = Color.DarkGray;
-            txtDiaChi.PlaceholderText = "";
-            txtDiaChi.Size = new Size(229, 85);
-            txtDiaChi.TabIndex = 44;
-            txtDiaChi.Texts = "";
-            txtDiaChi.UnderlinedStyle = false;
             // 
             // iconButtonSua
             // 
@@ -226,54 +177,7 @@
             iconButtonThem.Size = new Size(97, 43);
             iconButtonThem.TabIndex = 42;
             iconButtonThem.UseVisualStyleBackColor = false;
-            // 
-            // rbtNu
-            // 
-            rbtNu.AutoSize = true;
-            rbtNu.CheckedColor = Color.MediumSlateBlue;
-            rbtNu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            rbtNu.Location = new Point(308, 332);
-            rbtNu.MinimumSize = new Size(0, 21);
-            rbtNu.Name = "rbtNu";
-            rbtNu.Padding = new Padding(10, 0, 0, 0);
-            rbtNu.Size = new Size(62, 25);
-            rbtNu.TabIndex = 41;
-            rbtNu.TabStop = true;
-            rbtNu.Text = "Nữ";
-            rbtNu.UnCheckedColor = Color.Gray;
-            rbtNu.UseVisualStyleBackColor = true;
-            // 
-            // txtMa
-            // 
-            txtMa.BackColor = Color.White;
-            txtMa.BorderColor = Color.MediumSlateBlue;
-            txtMa.BorderFocusColor = Color.HotPink;
-            txtMa.BorderSize = 2;
-            txtMa.Location = new Point(154, 25);
-            txtMa.Multiline = false;
-            txtMa.Name = "txtMa";
-            txtMa.Padding = new Padding(7);
-            txtMa.PasswordChar = false;
-            txtMa.Size = new Size(229, 30);
-            txtMa.TabIndex = 29;
-            txtMa.Texts = "";
-            txtMa.UnderlinedStyle = true;
-            // 
-            // rbtNam
-            // 
-            rbtNam.AutoSize = true;
-            rbtNam.CheckedColor = Color.MediumSlateBlue;
-            rbtNam.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            rbtNam.Location = new Point(164, 332);
-            rbtNam.MinimumSize = new Size(0, 21);
-            rbtNam.Name = "rbtNam";
-            rbtNam.Padding = new Padding(10, 0, 0, 0);
-            rbtNam.Size = new Size(75, 25);
-            rbtNam.TabIndex = 40;
-            rbtNam.TabStop = true;
-            rbtNam.Text = "Nam";
-            rbtNam.UnCheckedColor = Color.Gray;
-            rbtNam.UseVisualStyleBackColor = true;
+            iconButtonThem.Click += iconButtonThem_Click;
             // 
             // label3
             // 
@@ -308,22 +212,6 @@
             label4.TabIndex = 32;
             label4.Text = "Họ tên";
             // 
-            // txtHoTen
-            // 
-            txtHoTen.BackColor = Color.White;
-            txtHoTen.BorderColor = Color.MediumSlateBlue;
-            txtHoTen.BorderFocusColor = Color.HotPink;
-            txtHoTen.BorderSize = 2;
-            txtHoTen.Location = new Point(154, 99);
-            txtHoTen.Multiline = false;
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Padding = new Padding(7);
-            txtHoTen.PasswordChar = false;
-            txtHoTen.Size = new Size(229, 30);
-            txtHoTen.TabIndex = 31;
-            txtHoTen.Texts = "";
-            txtHoTen.UnderlinedStyle = true;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -334,22 +222,6 @@
             label5.Size = new Size(111, 21);
             label5.TabIndex = 34;
             label5.Text = "Số điện thoại";
-            // 
-            // txtSoDienThoai
-            // 
-            txtSoDienThoai.BackColor = Color.White;
-            txtSoDienThoai.BorderColor = Color.MediumSlateBlue;
-            txtSoDienThoai.BorderFocusColor = Color.HotPink;
-            txtSoDienThoai.BorderSize = 2;
-            txtSoDienThoai.Location = new Point(154, 173);
-            txtSoDienThoai.Multiline = false;
-            txtSoDienThoai.Name = "txtSoDienThoai";
-            txtSoDienThoai.Padding = new Padding(7);
-            txtSoDienThoai.PasswordChar = false;
-            txtSoDienThoai.Size = new Size(229, 30);
-            txtSoDienThoai.TabIndex = 33;
-            txtSoDienThoai.Texts = "";
-            txtSoDienThoai.UnderlinedStyle = true;
             // 
             // label6
             // 
@@ -376,24 +248,6 @@
             iconButton8.TabIndex = 53;
             iconButton8.UseVisualStyleBackColor = true;
             // 
-            // txtTimKiem
-            // 
-            txtTimKiem.BorderColor = Color.MediumOrchid;
-            txtTimKiem.BorderFocusColor = Color.Purple;
-            txtTimKiem.BorderRadius = 10;
-            txtTimKiem.BorderSize = 1;
-            txtTimKiem.Location = new Point(26, 93);
-            txtTimKiem.Multiline = false;
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Padding = new Padding(42, 7, 7, 7);
-            txtTimKiem.PasswordChar = false;
-            txtTimKiem.PlaceholderColor = Color.DarkGray;
-            txtTimKiem.PlaceholderText = "Tìm kiếm";
-            txtTimKiem.Size = new Size(250, 30);
-            txtTimKiem.TabIndex = 52;
-            txtTimKiem.Texts = "";
-            txtTimKiem.UnderlinedStyle = false;
-            // 
             // labelTimKiem
             // 
             labelTimKiem.AutoSize = true;
@@ -410,7 +264,6 @@
             ClientSize = new Size(1361, 646);
             Controls.Add(labelTimKiem);
             Controls.Add(iconButton8);
-            Controls.Add(txtTimKiem);
             Controls.Add(panel1);
             Controls.Add(dgvKhachHang);
             Name = "FrmKhachHang";

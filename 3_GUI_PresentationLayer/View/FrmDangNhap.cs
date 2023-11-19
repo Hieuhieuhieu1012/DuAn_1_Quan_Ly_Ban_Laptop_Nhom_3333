@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmKhachHang : Form
+    public partial class FrmDangNhap : Form
     {
-        public FrmKhachHang()
+        public FrmDangNhap()
         {
             InitializeComponent();
         }
 
-        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void iconButtonThem_Click(object sender, EventArgs e)
-        {
-
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
         }
     }
 }
