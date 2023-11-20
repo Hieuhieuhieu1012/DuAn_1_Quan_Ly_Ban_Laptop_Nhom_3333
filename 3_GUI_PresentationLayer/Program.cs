@@ -16,8 +16,6 @@ namespace _3_GUI_PresentationLayer
             //FrmDangNhap f = new FrmDangNhap();
             //Application.Run(f);
             Application.Run(new FrmBanHang());
-
-           
         }
     }
 }
