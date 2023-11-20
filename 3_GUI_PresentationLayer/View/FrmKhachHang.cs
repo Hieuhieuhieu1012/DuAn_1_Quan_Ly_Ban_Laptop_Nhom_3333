@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmBBanHang : Form
+    public partial class FrmKhachHang : Form
     {
-        public FrmBBanHang()
+        public FrmKhachHang()
         {
             InitializeComponent();
+        }
+
+        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtMa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

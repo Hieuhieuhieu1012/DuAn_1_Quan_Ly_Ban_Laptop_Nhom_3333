@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmBBanHang : Form
+    public partial class FrmDangNhap : Form
     {
-        public FrmBBanHang()
+        public FrmDangNhap()
         {
             InitializeComponent();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
         }
     }
 }

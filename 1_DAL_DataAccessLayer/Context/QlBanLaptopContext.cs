@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _1_DAL_DataAccessLayer.Configurations;
 using _1_DAL_DataAccessLayer.Models;
+using _1_DAL_DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace _1_DAL_DataAccessLayer.Context
@@ -49,7 +50,7 @@ namespace _1_DAL_DataAccessLayer.Context
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Data Source=DESKTOP-HVLFK5F\SQLEXPRESS;Initial Catalog=Duan1_Group3;Integrated Security=True");
+                    @"Data Source=AC918S\SQLEXPRESS;Initial Catalog=Duan1_Group3;Integrated Security=True");
             }
         }
 

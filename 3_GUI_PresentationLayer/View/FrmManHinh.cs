@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmBBanHang : Form
+    public partial class FrmManHinh : Form
     {
-        public FrmBBanHang()
+        public FrmManHinh()
         {
             InitializeComponent();
         }
