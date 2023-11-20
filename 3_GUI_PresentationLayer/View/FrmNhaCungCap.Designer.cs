@@ -1,6 +1,6 @@
 ﻿namespace _3_GUI_PresentationLayer.View
 {
-    partial class FrmNCC
+    partial class FrmNhaCungCap
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtTenNhaCungCap = new CustomControl.TextBoxCustom2_0();
             label2 = new Label();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).BeginInit();
@@ -44,12 +45,13 @@
             // 
             dgvNhaCungCap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNhaCungCap.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNhaCungCap.Location = new Point(9, 12);
+            dgvNhaCungCap.Location = new Point(12, 12);
             dgvNhaCungCap.Name = "dgvNhaCungCap";
             dgvNhaCungCap.RowHeadersVisible = false;
             dgvNhaCungCap.RowTemplate.Height = 25;
             dgvNhaCungCap.Size = new Size(265, 232);
-            dgvNhaCungCap.TabIndex = 12;
+            dgvNhaCungCap.TabIndex = 10;
+            dgvNhaCungCap.CellClick += dgvNhaCungCap_CellClick;
             // 
             // panel2
             // 
@@ -58,12 +60,13 @@
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtTenNhaCungCap);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(289, 12);
+            panel2.Location = new Point(292, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 13;
+            panel2.TabIndex = 11;
             // 
             // lbMa
             // 
@@ -89,6 +92,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -103,6 +107,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -117,6 +122,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtTenNhaCungCap
+            // 
+            txtTenNhaCungCap.BorderColor = Color.MediumSlateBlue;
+            txtTenNhaCungCap.BorderFocusColor = Color.HotPink;
+            txtTenNhaCungCap.BorderRadius = 10;
+            txtTenNhaCungCap.BorderSize = 1;
+            txtTenNhaCungCap.Location = new Point(13, 112);
+            txtTenNhaCungCap.Multiline = false;
+            txtTenNhaCungCap.Name = "txtTenNhaCungCap";
+            txtTenNhaCungCap.Padding = new Padding(7);
+            txtTenNhaCungCap.PasswordChar = false;
+            txtTenNhaCungCap.PlaceholderColor = Color.DarkGray;
+            txtTenNhaCungCap.PlaceholderText = "";
+            txtTenNhaCungCap.Size = new Size(211, 30);
+            txtTenNhaCungCap.TabIndex = 1;
+            txtTenNhaCungCap.Texts = "";
+            txtTenNhaCungCap.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -139,15 +163,15 @@
             label1.TabIndex = 0;
             label1.Text = "Tên nhà cung cấp";
             // 
-            // FrmNCC
+            // FrmNhaCungCap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(542, 251);
+            ClientSize = new Size(545, 253);
             Controls.Add(dgvNhaCungCap);
             Controls.Add(panel2);
-            Name = "FrmNCC";
-            Text = "FrmNCC";
+            Name = "FrmNhaCungCap";
+            Text = "FrmNhaCungCap";
             ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -162,6 +186,7 @@
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTenNhaCungCap;
         private Label label2;
         private Label label1;
     }

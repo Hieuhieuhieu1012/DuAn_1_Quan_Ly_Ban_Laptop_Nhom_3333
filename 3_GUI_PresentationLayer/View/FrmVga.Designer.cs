@@ -1,6 +1,6 @@
 ﻿namespace _3_GUI_PresentationLayer.View
 {
-    partial class FrmDongLaptop
+    partial class FrmVga
     {
         /// <summary>
         /// Required designer variable.
@@ -28,57 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvDong = new DataGridView();
             panel2 = new Panel();
-            cbbHang = new ComboBox();
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
-            txtDong = new CustomControl.TextBoxCustom2_0();
+            txtCard = new CustomControl.TextBoxCustom2_0();
             lbMa = new Label();
             label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvDong).BeginInit();
+            panel1 = new Panel();
+            dtgVga = new DataGridView();
             panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgVga).BeginInit();
             SuspendLayout();
-            // 
-            // dgvDong
-            // 
-            dgvDong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvDong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDong.Location = new Point(12, 12);
-            dgvDong.Name = "dgvDong";
-            dgvDong.RowHeadersVisible = false;
-            dgvDong.RowTemplate.Height = 25;
-            dgvDong.Size = new Size(265, 232);
-            dgvDong.TabIndex = 4;
-            dgvDong.CellClick += dgvDong_CellClick;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(cbbHang);
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
-            panel2.Controls.Add(txtDong);
+            panel2.Controls.Add(txtCard);
             panel2.Controls.Add(lbMa);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(292, 12);
+            panel2.Location = new Point(294, 15);
             panel2.Name = "panel2";
-            panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 5;
-            // 
-            // cbbHang
-            // 
-            cbbHang.FormattingEnabled = true;
-            cbbHang.Location = new Point(18, 77);
-            cbbHang.Name = "cbbHang";
-            cbbHang.Size = new Size(203, 23);
-            cbbHang.TabIndex = 20;
+            panel2.Size = new Size(244, 235);
+            panel2.TabIndex = 1;
             // 
             // btnLamMoi
             // 
@@ -103,7 +81,7 @@
             btnSua.IconColor = Color.FromArgb(61, 39, 76);
             btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSua.IconSize = 45;
-            btnSua.Location = new Point(86, 177);
+            btnSua.Location = new Point(85, 177);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
@@ -125,23 +103,23 @@
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
             // 
-            // txtDong
+            // txtCard
             // 
-            txtDong.BorderColor = Color.MediumSlateBlue;
-            txtDong.BorderFocusColor = Color.HotPink;
-            txtDong.BorderRadius = 10;
-            txtDong.BorderSize = 1;
-            txtDong.Location = new Point(13, 131);
-            txtDong.Multiline = false;
-            txtDong.Name = "txtDong";
-            txtDong.Padding = new Padding(7);
-            txtDong.PasswordChar = false;
-            txtDong.PlaceholderColor = Color.DarkGray;
-            txtDong.PlaceholderText = "";
-            txtDong.Size = new Size(211, 30);
-            txtDong.TabIndex = 1;
-            txtDong.Texts = "";
-            txtDong.UnderlinedStyle = false;
+            txtCard.BorderColor = Color.MediumSlateBlue;
+            txtCard.BorderFocusColor = Color.HotPink;
+            txtCard.BorderRadius = 10;
+            txtCard.BorderSize = 1;
+            txtCard.Location = new Point(13, 112);
+            txtCard.Multiline = false;
+            txtCard.Name = "txtCard";
+            txtCard.Padding = new Padding(7);
+            txtCard.PasswordChar = false;
+            txtCard.PlaceholderColor = Color.DarkGray;
+            txtCard.PlaceholderText = "";
+            txtCard.Size = new Size(211, 30);
+            txtCard.TabIndex = 1;
+            txtCard.Texts = "";
+            txtCard.UnderlinedStyle = false;
             // 
             // lbMa
             // 
@@ -169,49 +147,60 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(13, 104);
+            label1.Location = new Point(13, 72);
             label1.Name = "label1";
-            label1.Size = new Size(126, 20);
+            label1.Size = new Size(136, 20);
             label1.TabIndex = 0;
-            label1.Text = "Tên Dòng Laptop";
+            label1.Text = "Tên card màn hình";
             // 
-            // label3
+            // panel1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(13, 47);
-            label3.Name = "label3";
-            label3.Size = new Size(125, 20);
-            label3.TabIndex = 21;
-            label3.Text = "Tên Hãng Laptop";
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(dtgVga);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(265, 238);
+            panel1.TabIndex = 2;
             // 
-            // FrmDongLaptop
+            // dtgVga
+            // 
+            dtgVga.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgVga.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgVga.Location = new Point(0, 3);
+            dtgVga.Name = "dtgVga";
+            dtgVga.RowHeadersVisible = false;
+            dtgVga.RowTemplate.Height = 25;
+            dtgVga.Size = new Size(265, 232);
+            dtgVga.TabIndex = 0;
+            dtgVga.CellClick += dtgVga_CellClick;
+            // 
+            // FrmVga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(540, 248);
-            Controls.Add(dgvDong);
+            ClientSize = new Size(545, 257);
             Controls.Add(panel2);
-            Name = "FrmDongLaptop";
-            Text = "FrmDongLaptop";
-            ((System.ComponentModel.ISupportInitialize)dgvDong).EndInit();
+            Controls.Add(panel1);
+            Name = "FrmVga";
+            Text = "FrmVga";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgVga).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dgvDong;
         private Panel panel2;
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
-        private CustomControl.TextBoxCustom2_0 txtDong;
+        private CustomControl.TextBoxCustom2_0 txtCard;
         private Label lbMa;
         private Label label2;
         private Label label1;
-        private ComboBox cbbHang;
-        private Label label3;
+        private Panel panel1;
+        private DataGridView dtgVga;
     }
 }

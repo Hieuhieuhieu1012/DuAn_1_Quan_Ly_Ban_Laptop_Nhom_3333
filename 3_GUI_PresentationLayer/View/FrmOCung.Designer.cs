@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            txtDungLuong = new CustomControl.TextBoxCustom2_0();
+            rbtnSdd = new CustomControl.RadioButtonCustom();
+            rbtnHdd = new CustomControl.RadioButtonCustom();
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtTenOCung = new CustomControl.TextBoxCustom2_0();
             lbMa = new Label();
             label2 = new Label();
             label5 = new Label();
@@ -48,19 +52,72 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(txtDungLuong);
+            panel2.Controls.Add(rbtnSdd);
+            panel2.Controls.Add(rbtnHdd);
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtTenOCung);
             panel2.Controls.Add(lbMa);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(285, 12);
+            panel2.Location = new Point(286, 15);
             panel2.Name = "panel2";
             panel2.Size = new Size(250, 237);
-            panel2.TabIndex = 6;
+            panel2.TabIndex = 4;
+            // 
+            // txtDungLuong
+            // 
+            txtDungLuong.BorderColor = Color.DarkOrchid;
+            txtDungLuong.BorderFocusColor = Color.HotPink;
+            txtDungLuong.BorderRadius = 10;
+            txtDungLuong.BorderSize = 2;
+            txtDungLuong.Location = new Point(99, 142);
+            txtDungLuong.Multiline = false;
+            txtDungLuong.Name = "txtDungLuong";
+            txtDungLuong.Padding = new Padding(7);
+            txtDungLuong.PasswordChar = false;
+            txtDungLuong.PlaceholderColor = Color.DarkGray;
+            txtDungLuong.PlaceholderText = "";
+            txtDungLuong.Size = new Size(95, 30);
+            txtDungLuong.TabIndex = 21;
+            txtDungLuong.Texts = "";
+            txtDungLuong.UnderlinedStyle = true;
+            txtDungLuong.KeyPress += txtDungLuong_KeyPress;
+            // 
+            // rbtnSdd
+            // 
+            rbtnSdd.AutoSize = true;
+            rbtnSdd.CheckedColor = Color.MediumSlateBlue;
+            rbtnSdd.Location = new Point(158, 107);
+            rbtnSdd.MinimumSize = new Size(0, 21);
+            rbtnSdd.Name = "rbtnSdd";
+            rbtnSdd.Padding = new Padding(10, 0, 0, 0);
+            rbtnSdd.Size = new Size(55, 21);
+            rbtnSdd.TabIndex = 20;
+            rbtnSdd.TabStop = true;
+            rbtnSdd.Text = "SSD";
+            rbtnSdd.UnCheckedColor = Color.Gray;
+            rbtnSdd.UseVisualStyleBackColor = true;
+            // 
+            // rbtnHdd
+            // 
+            rbtnHdd.AutoSize = true;
+            rbtnHdd.CheckedColor = Color.MediumSlateBlue;
+            rbtnHdd.Location = new Point(77, 107);
+            rbtnHdd.MinimumSize = new Size(0, 21);
+            rbtnHdd.Name = "rbtnHdd";
+            rbtnHdd.Padding = new Padding(10, 0, 0, 0);
+            rbtnHdd.Size = new Size(60, 21);
+            rbtnHdd.TabIndex = 20;
+            rbtnHdd.TabStop = true;
+            rbtnHdd.Text = "HDD";
+            rbtnHdd.UnCheckedColor = Color.Gray;
+            rbtnHdd.UseVisualStyleBackColor = true;
             // 
             // btnLamMoi
             // 
@@ -75,6 +132,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -89,6 +147,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -103,6 +162,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtTenOCung
+            // 
+            txtTenOCung.BorderColor = Color.DarkOrchid;
+            txtTenOCung.BorderFocusColor = Color.HotPink;
+            txtTenOCung.BorderRadius = 10;
+            txtTenOCung.BorderSize = 2;
+            txtTenOCung.Location = new Point(13, 68);
+            txtTenOCung.Multiline = false;
+            txtTenOCung.Name = "txtTenOCung";
+            txtTenOCung.Padding = new Padding(7);
+            txtTenOCung.PasswordChar = false;
+            txtTenOCung.PlaceholderColor = Color.DarkGray;
+            txtTenOCung.PlaceholderText = "";
+            txtTenOCung.Size = new Size(221, 30);
+            txtTenOCung.TabIndex = 1;
+            txtTenOCung.Texts = "";
+            txtTenOCung.UnderlinedStyle = true;
             // 
             // lbMa
             // 
@@ -170,10 +248,10 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(dgvOCung);
-            panel1.Location = new Point(11, 9);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(265, 240);
-            panel1.TabIndex = 5;
+            panel1.TabIndex = 3;
             // 
             // dgvOCung
             // 
@@ -185,12 +263,13 @@
             dgvOCung.RowTemplate.Height = 25;
             dgvOCung.Size = new Size(259, 232);
             dgvOCung.TabIndex = 0;
+            dgvOCung.CellClick += dgvOCung_CellClick;
             // 
             // FrmOCung
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(549, 260);
+            ClientSize = new Size(548, 259);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FrmOCung";
@@ -203,18 +282,21 @@
         }
 
         #endregion
-
         private Panel panel2;
+        private CustomControl.RadioButtonCustom rbtnSdd;
+        private CustomControl.RadioButtonCustom rbtnHdd;
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTenOCung;
         private Label lbMa;
         private Label label2;
-        private Label label5;
-        private Label label6;
         private Label label4;
         private Label label1;
         private Panel panel1;
         private DataGridView dgvOCung;
+        private CustomControl.TextBoxCustom2_0 txtDungLuong;
+        private Label label5;
+        private Label label6;
     }
 }

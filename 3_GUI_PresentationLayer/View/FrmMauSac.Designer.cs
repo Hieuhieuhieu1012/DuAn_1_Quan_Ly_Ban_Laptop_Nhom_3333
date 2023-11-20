@@ -34,6 +34,7 @@
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtTenMauSac = new CustomControl.TextBoxCustom2_0();
             label2 = new Label();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvMauSac).BeginInit();
@@ -44,12 +45,13 @@
             // 
             dgvMauSac.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMauSac.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMauSac.Location = new Point(11, 12);
+            dgvMauSac.Location = new Point(12, 12);
             dgvMauSac.Name = "dgvMauSac";
             dgvMauSac.RowHeadersVisible = false;
             dgvMauSac.RowTemplate.Height = 25;
             dgvMauSac.Size = new Size(265, 232);
-            dgvMauSac.TabIndex = 10;
+            dgvMauSac.TabIndex = 8;
+            dgvMauSac.CellClick += dgvMauSac_CellClick;
             // 
             // panel2
             // 
@@ -58,12 +60,13 @@
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtTenMauSac);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(291, 12);
+            panel2.Location = new Point(292, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 11;
+            panel2.TabIndex = 9;
             // 
             // lbMa
             // 
@@ -89,6 +92,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -103,6 +107,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -117,6 +122,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtTenMauSac
+            // 
+            txtTenMauSac.BorderColor = Color.MediumSlateBlue;
+            txtTenMauSac.BorderFocusColor = Color.HotPink;
+            txtTenMauSac.BorderRadius = 10;
+            txtTenMauSac.BorderSize = 1;
+            txtTenMauSac.Location = new Point(13, 112);
+            txtTenMauSac.Multiline = false;
+            txtTenMauSac.Name = "txtTenMauSac";
+            txtTenMauSac.Padding = new Padding(7);
+            txtTenMauSac.PasswordChar = false;
+            txtTenMauSac.PlaceholderColor = Color.DarkGray;
+            txtTenMauSac.PlaceholderText = "";
+            txtTenMauSac.Size = new Size(211, 30);
+            txtTenMauSac.TabIndex = 1;
+            txtTenMauSac.Texts = "";
+            txtTenMauSac.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -143,7 +167,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(540, 252);
+            ClientSize = new Size(546, 253);
             Controls.Add(dgvMauSac);
             Controls.Add(panel2);
             Name = "FrmMauSac";
@@ -162,6 +186,7 @@
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTenMauSac;
         private Label label2;
         private Label label1;
     }

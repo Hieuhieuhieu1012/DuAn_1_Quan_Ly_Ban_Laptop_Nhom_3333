@@ -9,43 +9,46 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmHangLaptop : Form
+    public partial class FrmVga : Form
     {
-        IHangLaptopServices _hangLaptopServices;
-        Guid _idHangLapTop;
-        public FrmHangLaptop(List<HangLaptop> _lstHangLaptop)
+        IVgaServices _vgaServices;
+        Guid _idVga;
+        public FrmVga(List<Vga> _lstVga)
         {
             InitializeComponent();
-            _hangLaptopServices = new HangLaptopServices();
-            LoadDgv();
+            _vgaServices = new VgaServices();
             txtFalse();
+            LoadDgv();
         }
-        private void LoadDgv()
+        void LoadDgv()
         {
-            dgvHang.ColumnCount = 3;
-            dgvHang.Columns[0].Visible = false;
-            dgvHang.Columns[1].Name = "Mã";
-            dgvHang.Columns[2].Name = "Tên";
-            dgvHang.Rows.Clear();
-            foreach (var x in _hangLaptopServices.GetAllHangLaptops())
+            dtgVga.ColumnCount = 3;
+            dtgVga.Columns[0].Visible = false;
+            dtgVga.Columns[1].Name = "Ma";
+            dtgVga.Columns[2].Name = "Ten";
+            dtgVga.Rows.Clear();
+            foreach (var x in _vgaServices.GetAllVga())
             {
-                dgvHang.Rows.Add(x.Id, x.Ma, x.Ten);
+                dtgVga.Rows.Add(x.Id, x.Ma, x.Ten);
             }
         }
-        private void txtTrue()
+        void txtFalse()
         {
-            btnSua.Enabled = true;
-            txtTen.Enabled = true;
-        }
-        private void txtFalse()
-        {
-            btnSua.Enabled = false;
+            lbMa.Enabled = false;
+            txtCard.Enabled = false;
             btnThem.Enabled = false;
-            txtTen.Enabled = false;
+            btnSua.Enabled = false;
+        }
+        void txtTrue()
+        {
+            txtCard.Enabled = true;
+            lbMa.Enabled = true;
+            btnSua.Enabled = true;
         }
         private string RandomMa()
         {
@@ -55,7 +58,7 @@ namespace _3_GUI_PresentationLayer.View
         }
         private bool checkNhap()
         {
-            if (txtTen.Texts == "") return true;
+            if (txtCard.Texts == "") return true;
             return false;
         }
 
@@ -64,17 +67,17 @@ namespace _3_GUI_PresentationLayer.View
             lbMa.Text = RandomMa();
             if (checkNhap())
             {
-                MessageBox.Show("Không được rỗng");
+                MessageBox.Show("Không được để rỗng");
                 return;
             }
-            HangLaptop hangLaptop = new HangLaptop()
+            Vga vga = new Vga()
             {
                 Ma = lbMa.Text,
-                Ten = txtTen.Texts
+                Ten = txtCard.Texts
             };
             if (MessageBox.Show("Bạn có chắc chắn", "Thêm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show(_hangLaptopServices.AddHangLaptop(hangLaptop));
+                MessageBox.Show(_vgaServices.AddVga(vga));
             }
             LoadDgv();
         }
@@ -87,15 +90,15 @@ namespace _3_GUI_PresentationLayer.View
                 MessageBox.Show("Không được để rỗng");
                 return;
             }
-            HangLaptop hangLaptop = new HangLaptop()
+            Vga vga = new Vga()
             {
-                Id = _idHangLapTop,
+                Id = _idVga,
                 Ma = lbMa.Text,
-                Ten = txtTen.Texts
+                Ten = txtCard.Texts
             };
             if (MessageBox.Show("Bạn có chắc chắn", "Sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show(_hangLaptopServices.UpdateHangLaptop(hangLaptop));
+                MessageBox.Show(_vgaServices.UpdateVga(vga));
             }
             LoadDgv();
         }
@@ -104,22 +107,22 @@ namespace _3_GUI_PresentationLayer.View
         {
             txtFalse();
             btnThem.Enabled = true;
-            txtTen.Enabled = true;
-            txtTen.Texts = "";
+            txtCard.Enabled = true;
+            txtCard.Texts = "";
             lbMa.Text = "";
         }
 
-        private void dgvHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgVga_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowindex = e.RowIndex;
-            if (rowindex == -1||rowindex == _hangLaptopServices.GetAllHangLaptops().Count)
+            if (rowindex == -1 || rowindex == _vgaServices.GetAllVga().Count)
             {
                 return;
             }
-            _idHangLapTop = Guid.Parse(dgvHang.Rows[rowindex].Cells[0].Value.ToString());
-            var hangLapTop = _hangLaptopServices.GetAllHangLaptops().FirstOrDefault(c=>c.Id == _idHangLapTop);
-            txtTen.Texts = hangLapTop.Ten;
-            lbMa.Text = hangLapTop.Ma;
+            _idVga = Guid.Parse(dtgVga.Rows[rowindex].Cells[0].Value.ToString());
+            var cpu = _vgaServices.GetAllVga().FirstOrDefault(c => c.Id == _idVga);
+            lbMa.Text = cpu.Ma;
+            txtCard.Texts = cpu.Ten;
             btnThem.Enabled = false;
             txtTrue();
         }

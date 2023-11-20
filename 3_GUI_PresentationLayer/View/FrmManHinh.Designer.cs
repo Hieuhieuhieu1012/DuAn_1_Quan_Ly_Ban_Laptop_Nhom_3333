@@ -33,6 +33,7 @@
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtManHinh = new CustomControl.TextBoxCustom2_0();
             lbMa = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -49,7 +50,8 @@
             dgvManHinh.RowHeadersVisible = false;
             dgvManHinh.RowTemplate.Height = 25;
             dgvManHinh.Size = new Size(265, 232);
-            dgvManHinh.TabIndex = 6;
+            dgvManHinh.TabIndex = 4;
+            dgvManHinh.CellClick += dgvManHinh_CellClick;
             // 
             // panel2
             // 
@@ -57,13 +59,14 @@
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtManHinh);
             panel2.Controls.Add(lbMa);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Location = new Point(283, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 7;
+            panel2.TabIndex = 5;
             // 
             // btnLamMoi
             // 
@@ -78,6 +81,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -92,6 +96,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -106,6 +111,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtManHinh
+            // 
+            txtManHinh.BorderColor = Color.MediumSlateBlue;
+            txtManHinh.BorderFocusColor = Color.HotPink;
+            txtManHinh.BorderRadius = 10;
+            txtManHinh.BorderSize = 1;
+            txtManHinh.Location = new Point(13, 112);
+            txtManHinh.Multiline = false;
+            txtManHinh.Name = "txtManHinh";
+            txtManHinh.Padding = new Padding(7);
+            txtManHinh.PasswordChar = false;
+            txtManHinh.PlaceholderColor = Color.DarkGray;
+            txtManHinh.PlaceholderText = "";
+            txtManHinh.Size = new Size(211, 30);
+            txtManHinh.TabIndex = 1;
+            txtManHinh.Texts = "";
+            txtManHinh.UnderlinedStyle = false;
             // 
             // lbMa
             // 
@@ -143,7 +167,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(537, 255);
+            ClientSize = new Size(535, 251);
             Controls.Add(dgvManHinh);
             Controls.Add(panel2);
             Name = "FrmManHinh";
@@ -161,6 +185,7 @@
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtManHinh;
         private Label lbMa;
         private Label label2;
         private Label label1;

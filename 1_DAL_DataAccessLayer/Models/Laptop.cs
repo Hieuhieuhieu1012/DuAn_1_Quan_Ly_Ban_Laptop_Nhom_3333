@@ -5,7 +5,6 @@ using System.Reflection.Metadata.Ecma335;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
-using _1_DAL_DataAccessLayer.Repositories;
 
 namespace _1_DAL_DataAccessLayer.Models
 {

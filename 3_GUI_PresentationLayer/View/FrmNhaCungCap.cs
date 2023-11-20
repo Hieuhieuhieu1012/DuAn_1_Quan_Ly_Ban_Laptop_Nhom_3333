@@ -13,49 +13,41 @@ using System.Windows.Forms;
 
 namespace _3_GUI_PresentationLayer.View
 {
-    public partial class FrmRam : Form
+    public partial class FrmNhaCungCap : Form
     {
-        IRamServices _ramServices;
-        Guid _idRam;
-        public FrmRam(List<Ram> _lstRam)
+        INhaCungCapServices _nhaCungCapServices;
+        Guid _idNhaCungCap;
+        public FrmNhaCungCap(List<NhaCungCap> _lstNhaCungCap)
         {
             InitializeComponent();
-            _ramServices = new RamServices();
+            _nhaCungCapServices = new NhaCungCapServices();
             LoadDgv();
             txtFalse();
         }
         private void LoadDgv()
         {
-            dgvRam.ColumnCount = 4;
-            dgvRam.Columns[0].Visible = false;
-            dgvRam.Columns[1].Name = "Mã";
-            dgvRam.Columns[2].Name = "Tên";
-            dgvRam.Columns[3].Name = "Dung Lượng";
-            dgvRam.Rows.Clear();
-            foreach (var x in _ramServices.GetAllRam())
+            dgvNhaCungCap.ColumnCount = 3;
+            dgvNhaCungCap.Columns[0].Visible = false;
+            dgvNhaCungCap.Columns[1].Name = "Mã";
+            dgvNhaCungCap.Columns[2].Name = "Tên";
+            dgvNhaCungCap.Rows.Clear();
+            foreach (var x in _nhaCungCapServices.GetAllNhaCungCap())
             {
-                dgvRam.Rows.Add(x.Id, x.Ma, x.Ten, x.DungLuong);
+                dgvNhaCungCap.Rows.Add(x.Id, x.Ma, x.Ten);
             }
         }
         private void txtTrue()
         {
-            txtTenRam.Enabled = true;
-            txtDungLuong.Enabled = true;
-            lbMa.Enabled = true;
             btnSua.Enabled = true;
+            txtTenNhaCungCap.Enabled = true;
+            lbMa.Enabled = true;
         }
         private void txtFalse()
         {
-            txtTenRam.Enabled = false;
-            txtDungLuong.Enabled = false;
-            lbMa.Enabled = false;
             btnSua.Enabled = false;
             btnThem.Enabled = false;
-        }
-        private bool checkNhap()
-        {
-            if (txtTenRam.Texts == "") return true;
-            return false;
+            txtTenNhaCungCap.Enabled = false;
+            lbMa.Enabled = false;
         }
         private string RandomMa()
         {
@@ -63,24 +55,28 @@ namespace _3_GUI_PresentationLayer.View
             int randomNumber = random.Next(10000, 100000); // Sinh ra một số nguyên ngẫu nhiên từ 10000 đến 99999
             return randomNumber.ToString(); // Chuyển đổi giá trị số nguyên thành chuỗi và trả về chuỗi đó
         }
+        private bool checkNhap()
+        {
+            if (txtTenNhaCungCap.Texts == "") return true;
+            return false;
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             lbMa.Text = RandomMa();
             if (checkNhap())
             {
-                MessageBox.Show("Không được để trống");
+                MessageBox.Show("Không được để rỗng");
                 return;
             }
-            Ram ram = new Ram()
+            NhaCungCap nhaCungCap = new NhaCungCap()
             {
                 Ma = lbMa.Text,
-                Ten = txtTenRam.Texts,
-                DungLuong = Convert.ToInt32(txtDungLuong.Texts)
+                Ten = txtTenNhaCungCap.Texts,
             };
             if (MessageBox.Show("Bạn có chắc chắn", "Thêm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show(_ramServices.AddRam(ram));
+                MessageBox.Show(_nhaCungCapServices.AddNhaCungCap(nhaCungCap));
             }
             LoadDgv();
         }
@@ -93,18 +89,15 @@ namespace _3_GUI_PresentationLayer.View
                 MessageBox.Show("Không được để rỗng");
                 return;
             }
-            Ram ram = new Ram()
+            NhaCungCap nhaCungCap = new NhaCungCap()
             {
-                Id = _idRam,
+                Id = _idNhaCungCap,
                 Ma = lbMa.Text,
-                Ten = txtTenRam.Texts,
-                DungLuong = Convert.ToInt32(txtDungLuong.Texts)
-                // dung lượng ram
+                Ten = txtTenNhaCungCap.Texts
             };
-
             if (MessageBox.Show("Bạn có chắc chắn", "Sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show(_ramServices.UpdateRam(ram));
+                MessageBox.Show(_nhaCungCapServices.UpdateNhaCungCap(nhaCungCap));
             }
             LoadDgv();
         }
@@ -112,36 +105,26 @@ namespace _3_GUI_PresentationLayer.View
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             txtFalse();
+            txtTenNhaCungCap.Enabled = true;
             btnThem.Enabled = true;
-            txtTenRam.Enabled = true;
-            txtDungLuong.Enabled = true;
-            txtTenRam.Texts = "";
+            txtTenNhaCungCap.Texts = "";
             lbMa.Text = "";
-            txtDungLuong.Texts = "";
         }
 
-        private void dgvRam_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowindex = e.RowIndex;
-            if (rowindex == -1 || rowindex == _ramServices.GetAllRam().Count)
+            int rowindex;
+            rowindex = e.RowIndex;
+            if(rowindex == -1 || rowindex == _nhaCungCapServices.GetAllNhaCungCap().Count)
             {
                 return;
             }
-            _idRam = Guid.Parse(dgvRam.Rows[rowindex].Cells[0].Value.ToString());
-            var ram = _ramServices.GetAllRam().FirstOrDefault(c => c.Id == _idRam);
-            txtTenRam.Texts = ram.Ten;
-            lbMa.Text = ram.Ma;
-            txtDungLuong.Texts = ram.DungLuong.ToString();
+            _idNhaCungCap = Guid.Parse(dgvNhaCungCap.Rows[rowindex].Cells[0].Value.ToString());
+            var nhaCungCap = _nhaCungCapServices.GetAllNhaCungCap().FirstOrDefault(c=>c.Id == _idNhaCungCap);
+            txtTenNhaCungCap.Texts = nhaCungCap.Ten;
+            lbMa.Text = nhaCungCap.Ma;
             btnThem.Enabled = false;
             txtTrue();
-        }
-
-        private void txtDungLuong_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
         }
     }
 }

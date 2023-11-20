@@ -44,12 +44,13 @@
             // 
             dgvCpu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCpu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCpu.Location = new Point(9, 12);
+            dgvCpu.Location = new Point(12, 12);
             dgvCpu.Name = "dgvCpu";
             dgvCpu.RowHeadersVisible = false;
             dgvCpu.RowTemplate.Height = 25;
             dgvCpu.Size = new Size(265, 232);
-            dgvCpu.TabIndex = 8;
+            dgvCpu.TabIndex = 6;
+            dgvCpu.CellClick += dgvCpu_CellClick;
             // 
             // panel2
             // 
@@ -60,10 +61,10 @@
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(291, 12);
+            panel2.Location = new Point(294, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 9;
+            panel2.TabIndex = 7;
             // 
             // lbMa
             // 
@@ -89,6 +90,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -103,6 +105,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -117,6 +120,7 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // label2
             // 
@@ -143,9 +147,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(538, 251);
+            ClientSize = new Size(550, 257);
             Controls.Add(dgvCpu);
             Controls.Add(panel2);
+            Location = new Point(915, 67);
             Name = "FrmCpu";
             Text = "FrmCpu";
             ((System.ComponentModel.ISupportInitialize)dgvCpu).EndInit();
@@ -158,11 +163,12 @@
 
         private DataGridView dgvCpu;
         private Panel panel2;
-        private Label lbMa;
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTenCpu;
         private Label label2;
         private Label label1;
+        private Label lbMa;
     }
 }

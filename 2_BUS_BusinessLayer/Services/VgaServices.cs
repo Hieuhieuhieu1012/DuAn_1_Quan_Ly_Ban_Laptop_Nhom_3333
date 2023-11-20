@@ -1,4 +1,5 @@
 ﻿using _1_DAL_DataAccessLayer.IRepositories;
+using _1_DAL_DataAccessLayer.Models;
 using _1_DAL_DataAccessLayer.Repositories;
 using _2_BUS_BusinessLayer.IServices;
 using System;

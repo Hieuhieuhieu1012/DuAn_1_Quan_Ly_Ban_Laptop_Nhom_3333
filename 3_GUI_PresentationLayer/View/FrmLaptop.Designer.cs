@@ -1,4 +1,7 @@
-﻿namespace _3_GUI_PresentationLayer.View
+﻿using _3_GUI_PresentationLayer.Utilities;
+using System.Windows.Media.Media3D;
+
+namespace _3_GUI_PresentationLayer.View
 {
     partial class FrmLaptop
     {
@@ -30,12 +33,20 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            dgvLaptop = new DataGridView();
-            panel6 = new Panel();
-            panel3 = new Panel();
+            panel1 = new Panel();
+            txtTimKiem = new TextBox();
+            btnGiam = new FontAwesome.Sharp.IconButton();
+            btnTang = new FontAwesome.Sharp.IconButton();
+            rdbtnNgungBan = new CustomControl.RadioButtonCustom();
+            rdbtnDangBan = new CustomControl.RadioButtonCustom();
+            label19 = new Label();
+            label9 = new Label();
             panel2 = new Panel();
+            txtTrongLuong = new CustomControl.TextBoxCustom2_0();
             label2 = new Label();
+            txtNamBh = new CustomControl.TextBoxCustom2_0();
             label1 = new Label();
+            txtMoTa = new CustomControl.TextBoxCustom2_0();
             btnClearForm = new FontAwesome.Sharp.IconButton();
             btnDoiTT = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
@@ -45,15 +56,14 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
+            txtGiaBan = new CustomControl.TextBoxCustom2_0();
+            txtGiaNhap = new CustomControl.TextBoxCustom2_0();
+            txtTen = new CustomControl.TextBoxCustom2_0();
             label3 = new Label();
             lb = new Label();
             pcbHinhAnh = new PictureBox();
-            panel1 = new Panel();
-            txtTimKiem = new TextBox();
-            btnGiam = new FontAwesome.Sharp.IconButton();
-            btnTang = new FontAwesome.Sharp.IconButton();
-            label19 = new Label();
             panel4 = new Panel();
+            radioButtonCustom1 = new CustomControl.RadioButtonCustom();
             cbbSerial = new ComboBox();
             cbbMauSac = new ComboBox();
             cbbManHinh = new ComboBox();
@@ -83,84 +93,138 @@
             label16 = new Label();
             label15 = new Label();
             label14 = new Label();
-            label9 = new Label();
             panel5 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dgvLaptop).BeginInit();
-            panel6.SuspendLayout();
-            panel3.SuspendLayout();
+            panel6 = new Panel();
+            panel3 = new Panel();
+            dgvLaptop = new DataGridView();
+            panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbHinhAnh).BeginInit();
-            panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLaptop).BeginInit();
             SuspendLayout();
             // 
-            // dgvLaptop
+            // panel1
             // 
-            dgvLaptop.AllowUserToAddRows = false;
-            dgvLaptop.AllowUserToDeleteRows = false;
-            dgvLaptop.AllowUserToResizeRows = false;
-            dgvLaptop.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvLaptop.BackgroundColor = Color.FromArgb(214, 248, 248);
-            dgvLaptop.BorderStyle = BorderStyle.None;
-            dgvLaptop.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvLaptop.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvLaptop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(241, 122, 133);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvLaptop.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvLaptop.Dock = DockStyle.Fill;
-            dgvLaptop.EnableHeadersVisualStyles = false;
-            dgvLaptop.GridColor = Color.FromArgb(145, 158, 194);
-            dgvLaptop.Location = new Point(0, 0);
-            dgvLaptop.Name = "dgvLaptop";
-            dgvLaptop.ReadOnly = true;
-            dgvLaptop.RowHeadersVisible = false;
-            dgvLaptop.RowTemplate.Height = 25;
-            dgvLaptop.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvLaptop.Size = new Size(1078, 299);
-            dgvLaptop.TabIndex = 0;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(txtTimKiem);
+            panel1.Controls.Add(btnGiam);
+            panel1.Controls.Add(btnTang);
+            panel1.Controls.Add(rdbtnNgungBan);
+            panel1.Controls.Add(rdbtnDangBan);
+            panel1.Controls.Add(label19);
+            panel1.Location = new Point(12, 14);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1078, 69);
+            panel1.TabIndex = 0;
             // 
-            // panel6
+            // txtTimKiem
             // 
-            panel6.BackColor = Color.FromArgb(244, 245, 255);
-            panel6.Controls.Add(panel3);
-            panel6.Controls.Add(panel2);
-            panel6.Controls.Add(panel1);
-            panel6.Controls.Add(panel4);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1513, 654);
-            panel6.TabIndex = 0;
+            txtTimKiem.Location = new Point(16, 28);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(178, 23);
+            txtTimKiem.TabIndex = 24;
+            txtTimKiem.Text = "Tìm kiếm .....";
+            txtTimKiem.MouseClick += txtTimKiem_MouseClick;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
-            // panel3
+            // btnGiam
             // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(dgvLaptop);
-            panel3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            panel3.Location = new Point(12, 103);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1078, 299);
-            panel3.TabIndex = 2;
+            btnGiam.FlatAppearance.BorderSize = 0;
+            btnGiam.FlatStyle = FlatStyle.Flat;
+            btnGiam.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown;
+            btnGiam.IconColor = Color.FromArgb(255, 181, 174);
+            btnGiam.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGiam.Location = new Point(998, 6);
+            btnGiam.Name = "btnGiam";
+            btnGiam.Padding = new Padding(0, 5, 0, 0);
+            btnGiam.Size = new Size(63, 55);
+            btnGiam.TabIndex = 21;
+            btnGiam.UseVisualStyleBackColor = true;
+            btnGiam.Click += btnGiam_Click;
+            // 
+            // btnTang
+            // 
+            btnTang.FlatAppearance.BorderSize = 0;
+            btnTang.FlatStyle = FlatStyle.Flat;
+            btnTang.IconChar = FontAwesome.Sharp.IconChar.ArrowUpWideShort;
+            btnTang.IconColor = Color.FromArgb(255, 181, 174);
+            btnTang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTang.Location = new Point(929, 7);
+            btnTang.Name = "btnTang";
+            btnTang.Padding = new Padding(0, 5, 0, 0);
+            btnTang.Size = new Size(63, 55);
+            btnTang.TabIndex = 21;
+            btnTang.UseVisualStyleBackColor = true;
+            btnTang.Click += btnTang_Click;
+            // 
+            // rdbtnNgungBan
+            // 
+            rdbtnNgungBan.AutoSize = true;
+            rdbtnNgungBan.CheckedColor = Color.MediumSlateBlue;
+            rdbtnNgungBan.ForeColor = Color.FromArgb(3, 22, 73);
+            rdbtnNgungBan.Location = new Point(436, 29);
+            rdbtnNgungBan.MinimumSize = new Size(0, 21);
+            rdbtnNgungBan.Name = "rdbtnNgungBan";
+            rdbtnNgungBan.Padding = new Padding(10, 0, 0, 0);
+            rdbtnNgungBan.Size = new Size(95, 21);
+            rdbtnNgungBan.TabIndex = 20;
+            rdbtnNgungBan.TabStop = true;
+            rdbtnNgungBan.Text = "Ngừng bán";
+            rdbtnNgungBan.UnCheckedColor = Color.FromArgb(79, 175, 156);
+            rdbtnNgungBan.UseVisualStyleBackColor = true;
+            rdbtnNgungBan.Click += rdbtnNgungBan_Click;
+            // 
+            // rdbtnDangBan
+            // 
+            rdbtnDangBan.AutoSize = true;
+            rdbtnDangBan.CheckedColor = Color.MediumSlateBlue;
+            rdbtnDangBan.ForeColor = Color.FromArgb(3, 22, 73);
+            rdbtnDangBan.Location = new Point(314, 29);
+            rdbtnDangBan.MinimumSize = new Size(0, 21);
+            rdbtnDangBan.Name = "rdbtnDangBan";
+            rdbtnDangBan.Padding = new Padding(10, 0, 0, 0);
+            rdbtnDangBan.Size = new Size(86, 21);
+            rdbtnDangBan.TabIndex = 20;
+            rdbtnDangBan.TabStop = true;
+            rdbtnDangBan.Text = "Đang bán";
+            rdbtnDangBan.UnCheckedColor = Color.FromArgb(79, 175, 156);
+            rdbtnDangBan.UseVisualStyleBackColor = true;
+            rdbtnDangBan.Click += rdbtnDangBan_Click;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = Color.FromArgb(3, 22, 73);
+            label19.Location = new Point(3, 2);
+            label19.Name = "label19";
+            label19.Size = new Size(71, 20);
+            label19.TabIndex = 17;
+            label19.Text = "Tìm kiếm";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(3, 22, 73);
+            label9.Location = new Point(17, 12);
+            label9.Name = "label9";
+            label9.Size = new Size(107, 20);
+            label9.TabIndex = 17;
+            label9.Text = "Hãng sản xuất";
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(txtTrongLuong);
             panel2.Controls.Add(label2);
+            panel2.Controls.Add(txtNamBh);
             panel2.Controls.Add(label1);
+            panel2.Controls.Add(txtMoTa);
             panel2.Controls.Add(btnClearForm);
             panel2.Controls.Add(btnDoiTT);
             panel2.Controls.Add(btnSua);
@@ -170,6 +234,9 @@
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
+            panel2.Controls.Add(txtGiaBan);
+            panel2.Controls.Add(txtGiaNhap);
+            panel2.Controls.Add(txtTen);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(lb);
             panel2.Controls.Add(pcbHinhAnh);
@@ -177,6 +244,25 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(399, 630);
             panel2.TabIndex = 1;
+            // 
+            // txtTrongLuong
+            // 
+            txtTrongLuong.BackColor = Color.White;
+            txtTrongLuong.BorderColor = Color.CornflowerBlue;
+            txtTrongLuong.BorderFocusColor = Color.HotPink;
+            txtTrongLuong.BorderRadius = 5;
+            txtTrongLuong.BorderSize = 2;
+            txtTrongLuong.Location = new Point(20, 320);
+            txtTrongLuong.Multiline = false;
+            txtTrongLuong.Name = "txtTrongLuong";
+            txtTrongLuong.Padding = new Padding(7);
+            txtTrongLuong.PasswordChar = false;
+            txtTrongLuong.PlaceholderColor = Color.DarkGray;
+            txtTrongLuong.PlaceholderText = "";
+            txtTrongLuong.Size = new Size(122, 30);
+            txtTrongLuong.TabIndex = 21;
+            txtTrongLuong.Texts = "";
+            txtTrongLuong.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -189,6 +275,25 @@
             label2.TabIndex = 20;
             label2.Text = "Trọng lượng";
             // 
+            // txtNamBh
+            // 
+            txtNamBh.BackColor = Color.White;
+            txtNamBh.BorderColor = Color.CornflowerBlue;
+            txtNamBh.BorderFocusColor = Color.HotPink;
+            txtNamBh.BorderRadius = 5;
+            txtNamBh.BorderSize = 2;
+            txtNamBh.Location = new Point(219, 320);
+            txtNamBh.Multiline = false;
+            txtNamBh.Name = "txtNamBh";
+            txtNamBh.Padding = new Padding(7);
+            txtNamBh.PasswordChar = false;
+            txtNamBh.PlaceholderColor = Color.DarkGray;
+            txtNamBh.PlaceholderText = "";
+            txtNamBh.Size = new Size(122, 30);
+            txtNamBh.TabIndex = 19;
+            txtNamBh.Texts = "";
+            txtNamBh.UnderlinedStyle = true;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -199,6 +304,24 @@
             label1.Size = new Size(67, 21);
             label1.TabIndex = 18;
             label1.Text = "Năm Bh";
+            // 
+            // txtMoTa
+            // 
+            txtMoTa.BorderColor = Color.MediumSlateBlue;
+            txtMoTa.BorderFocusColor = Color.HotPink;
+            txtMoTa.BorderRadius = 10;
+            txtMoTa.BorderSize = 1;
+            txtMoTa.Location = new Point(25, 463);
+            txtMoTa.Multiline = true;
+            txtMoTa.Name = "txtMoTa";
+            txtMoTa.Padding = new Padding(7);
+            txtMoTa.PasswordChar = false;
+            txtMoTa.PlaceholderColor = Color.DarkGray;
+            txtMoTa.PlaceholderText = "";
+            txtMoTa.Size = new Size(319, 103);
+            txtMoTa.TabIndex = 17;
+            txtMoTa.Texts = "";
+            txtMoTa.UnderlinedStyle = false;
             // 
             // btnClearForm
             // 
@@ -214,6 +337,7 @@
             btnClearForm.Size = new Size(53, 37);
             btnClearForm.TabIndex = 16;
             btnClearForm.UseVisualStyleBackColor = false;
+            btnClearForm.Click += btnClearForm_Click;
             // 
             // btnDoiTT
             // 
@@ -229,6 +353,7 @@
             btnDoiTT.Size = new Size(53, 37);
             btnDoiTT.TabIndex = 16;
             btnDoiTT.UseVisualStyleBackColor = false;
+            btnDoiTT.Click += btnDoiTT_Click;
             // 
             // btnSua
             // 
@@ -244,6 +369,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 14;
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -259,6 +385,7 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 13;
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // label8
             // 
@@ -315,6 +442,63 @@
             label4.TabIndex = 7;
             label4.Text = "VND";
             // 
+            // txtGiaBan
+            // 
+            txtGiaBan.BackColor = Color.White;
+            txtGiaBan.BorderColor = Color.MediumSlateBlue;
+            txtGiaBan.BorderFocusColor = Color.HotPink;
+            txtGiaBan.BorderRadius = 5;
+            txtGiaBan.BorderSize = 2;
+            txtGiaBan.Location = new Point(219, 394);
+            txtGiaBan.Multiline = false;
+            txtGiaBan.Name = "txtGiaBan";
+            txtGiaBan.Padding = new Padding(7);
+            txtGiaBan.PasswordChar = false;
+            txtGiaBan.PlaceholderColor = Color.DarkGray;
+            txtGiaBan.PlaceholderText = "";
+            txtGiaBan.Size = new Size(122, 30);
+            txtGiaBan.TabIndex = 6;
+            txtGiaBan.Texts = "";
+            txtGiaBan.UnderlinedStyle = true;
+            // 
+            // txtGiaNhap
+            // 
+            txtGiaNhap.BackColor = Color.White;
+            txtGiaNhap.BorderColor = Color.MediumSlateBlue;
+            txtGiaNhap.BorderFocusColor = Color.HotPink;
+            txtGiaNhap.BorderRadius = 5;
+            txtGiaNhap.BorderSize = 2;
+            txtGiaNhap.Location = new Point(20, 394);
+            txtGiaNhap.Multiline = false;
+            txtGiaNhap.Name = "txtGiaNhap";
+            txtGiaNhap.Padding = new Padding(7);
+            txtGiaNhap.PasswordChar = false;
+            txtGiaNhap.PlaceholderColor = Color.DarkGray;
+            txtGiaNhap.PlaceholderText = "";
+            txtGiaNhap.Size = new Size(122, 30);
+            txtGiaNhap.TabIndex = 5;
+            txtGiaNhap.Texts = "";
+            txtGiaNhap.UnderlinedStyle = true;
+            // 
+            // txtTen
+            // 
+            txtTen.BackColor = Color.White;
+            txtTen.BorderColor = Color.CornflowerBlue;
+            txtTen.BorderFocusColor = Color.HotPink;
+            txtTen.BorderRadius = 5;
+            txtTen.BorderSize = 2;
+            txtTen.Location = new Point(126, 232);
+            txtTen.Multiline = false;
+            txtTen.Name = "txtTen";
+            txtTen.Padding = new Padding(7);
+            txtTen.PasswordChar = false;
+            txtTen.PlaceholderColor = Color.DarkGray;
+            txtTen.PlaceholderText = "";
+            txtTen.Size = new Size(215, 30);
+            txtTen.TabIndex = 4;
+            txtTen.Texts = "";
+            txtTen.UnderlinedStyle = true;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -346,69 +530,12 @@
             pcbHinhAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbHinhAnh.TabIndex = 0;
             pcbHinhAnh.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(txtTimKiem);
-            panel1.Controls.Add(btnGiam);
-            panel1.Controls.Add(btnTang);
-            panel1.Controls.Add(label19);
-            panel1.Location = new Point(12, 14);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1078, 69);
-            panel1.TabIndex = 0;
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.Location = new Point(16, 28);
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(178, 23);
-            txtTimKiem.TabIndex = 24;
-            txtTimKiem.Text = "Tìm kiếm .....";
-            // 
-            // btnGiam
-            // 
-            btnGiam.FlatAppearance.BorderSize = 0;
-            btnGiam.FlatStyle = FlatStyle.Flat;
-            btnGiam.IconChar = FontAwesome.Sharp.IconChar.SortAmountDown;
-            btnGiam.IconColor = Color.FromArgb(255, 181, 174);
-            btnGiam.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGiam.Location = new Point(998, 6);
-            btnGiam.Name = "btnGiam";
-            btnGiam.Padding = new Padding(0, 5, 0, 0);
-            btnGiam.Size = new Size(63, 55);
-            btnGiam.TabIndex = 21;
-            btnGiam.UseVisualStyleBackColor = true;
-            // 
-            // btnTang
-            // 
-            btnTang.FlatAppearance.BorderSize = 0;
-            btnTang.FlatStyle = FlatStyle.Flat;
-            btnTang.IconChar = FontAwesome.Sharp.IconChar.ArrowUpWideShort;
-            btnTang.IconColor = Color.FromArgb(255, 181, 174);
-            btnTang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnTang.Location = new Point(929, 7);
-            btnTang.Name = "btnTang";
-            btnTang.Padding = new Padding(0, 5, 0, 0);
-            btnTang.Size = new Size(63, 55);
-            btnTang.TabIndex = 21;
-            btnTang.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.ForeColor = Color.FromArgb(3, 22, 73);
-            label19.Location = new Point(3, 2);
-            label19.Name = "label19";
-            label19.Size = new Size(71, 20);
-            label19.TabIndex = 17;
-            label19.Text = "Tìm kiếm";
+            pcbHinhAnh.Click += pcbHinhAnh_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.Controls.Add(radioButtonCustom1);
             panel4.Controls.Add(cbbSerial);
             panel4.Controls.Add(cbbMauSac);
             panel4.Controls.Add(cbbManHinh);
@@ -443,6 +570,21 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1078, 236);
             panel4.TabIndex = 3;
+            // 
+            // radioButtonCustom1
+            // 
+            radioButtonCustom1.AutoSize = true;
+            radioButtonCustom1.CheckedColor = Color.MediumSlateBlue;
+            radioButtonCustom1.Location = new Point(497, 234);
+            radioButtonCustom1.MinimumSize = new Size(0, 21);
+            radioButtonCustom1.Name = "radioButtonCustom1";
+            radioButtonCustom1.Padding = new Padding(10, 0, 0, 0);
+            radioButtonCustom1.Size = new Size(146, 21);
+            radioButtonCustom1.TabIndex = 32;
+            radioButtonCustom1.TabStop = true;
+            radioButtonCustom1.Text = "radioButtonCustom1";
+            radioButtonCustom1.UnCheckedColor = Color.Gray;
+            radioButtonCustom1.UseVisualStyleBackColor = true;
             // 
             // cbbSerial
             // 
@@ -538,6 +680,7 @@
             btnSerial.Size = new Size(150, 36);
             btnSerial.TabIndex = 20;
             btnSerial.UseVisualStyleBackColor = false;
+            btnSerial.Click += btnSerial_Click;
             // 
             // btnMauSac
             // 
@@ -553,6 +696,7 @@
             btnMauSac.Size = new Size(150, 36);
             btnMauSac.TabIndex = 20;
             btnMauSac.UseVisualStyleBackColor = false;
+            btnMauSac.Click += btnMauSac_Click;
             // 
             // btnManHinh
             // 
@@ -568,6 +712,7 @@
             btnManHinh.Size = new Size(150, 36);
             btnManHinh.TabIndex = 20;
             btnManHinh.UseVisualStyleBackColor = false;
+            btnManHinh.Click += btnManHinh_Click;
             // 
             // btnOCung
             // 
@@ -583,6 +728,7 @@
             btnOCung.Size = new Size(150, 36);
             btnOCung.TabIndex = 20;
             btnOCung.UseVisualStyleBackColor = false;
+            btnOCung.Click += btnOCung_Click;
             // 
             // btnRam
             // 
@@ -598,6 +744,7 @@
             btnRam.Size = new Size(150, 36);
             btnRam.TabIndex = 20;
             btnRam.UseVisualStyleBackColor = false;
+            btnRam.Click += btnRam_Click;
             // 
             // btnVga
             // 
@@ -778,57 +925,109 @@
             label14.TabIndex = 17;
             label14.Text = "Ram";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(3, 22, 73);
-            label9.Location = new Point(17, 12);
-            label9.Name = "label9";
-            label9.Size = new Size(107, 20);
-            label9.TabIndex = 17;
-            label9.Text = "Hãng sản xuất";
-            // 
             // panel5
             // 
             panel5.Controls.Add(panel6);
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1513, 654);
-            panel5.TabIndex = 5;
+            panel5.Size = new Size(1521, 647);
+            panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(244, 245, 255);
+            panel6.Controls.Add(panel3);
+            panel6.Controls.Add(panel2);
+            panel6.Controls.Add(panel1);
+            panel6.Controls.Add(panel4);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1521, 647);
+            panel6.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(dgvLaptop);
+            panel3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            panel3.Location = new Point(12, 103);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1078, 299);
+            panel3.TabIndex = 2;
+            // 
+            // dgvLaptop
+            // 
+            dgvLaptop.AllowUserToAddRows = false;
+            dgvLaptop.AllowUserToDeleteRows = false;
+            dgvLaptop.AllowUserToResizeRows = false;
+            dgvLaptop.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvLaptop.BackgroundColor = Color.FromArgb(214, 248, 248);
+            dgvLaptop.BorderStyle = BorderStyle.None;
+            dgvLaptop.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvLaptop.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvLaptop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(241, 122, 133);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvLaptop.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvLaptop.Dock = DockStyle.Fill;
+            dgvLaptop.EnableHeadersVisualStyles = false;
+            dgvLaptop.GridColor = Color.FromArgb(145, 158, 194);
+            dgvLaptop.Location = new Point(0, 0);
+            dgvLaptop.Name = "dgvLaptop";
+            dgvLaptop.ReadOnly = true;
+            dgvLaptop.RowHeadersVisible = false;
+            dgvLaptop.RowTemplate.Height = 25;
+            dgvLaptop.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvLaptop.Size = new Size(1078, 299);
+            dgvLaptop.TabIndex = 0;
+            dgvLaptop.CellClick += dgvLaptop_CellClick;
             // 
             // FrmLaptop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1513, 654);
+            BackColor = Color.FromArgb(241, 247, 255);
+            ClientSize = new Size(1521, 647);
             Controls.Add(panel5);
+            FormBorderStyle = FormBorderStyle.None;
+            MinimumSize = new Size(1521, 647);
             Name = "FrmLaptop";
             Text = "FrmLaptop";
-            ((System.ComponentModel.ISupportInitialize)dgvLaptop).EndInit();
-            panel6.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbHinhAnh).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvLaptop).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dgvLaptop;
-        private Panel panel6;
-        private Panel panel3;
+        private Panel panel1;
         private Panel panel2;
-        private Label label2;
-        private Label label1;
-        private FontAwesome.Sharp.IconButton btnClearForm;
+        private Panel panel4;
+        private Label lb;
+        private PictureBox pcbHinhAnh;
         private FontAwesome.Sharp.IconButton btnDoiTT;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
@@ -837,25 +1036,20 @@
         private Label label6;
         private Label label5;
         private Label label4;
+        private CustomControl.TextBoxCustom2_0 txtGiaBan;
+        private CustomControl.TextBoxCustom2_0 txtGiaNhap;
         private Label label3;
-        private Label lb;
-        private PictureBox pcbHinhAnh;
-        private Panel panel1;
-        private TextBox txtTimKiem;
-        private FontAwesome.Sharp.IconButton btnGiam;
-        private FontAwesome.Sharp.IconButton btnTang;
-        private Label label19;
-        private Panel panel4;
-        private ComboBox cbbSerial;
-        private ComboBox cbbMauSac;
-        private ComboBox cbbManHinh;
-        private ComboBox cbbOCung;
-        private ComboBox cbbRam;
-        private ComboBox cbbVga;
-        private ComboBox cbbCpu;
-        private ComboBox cbbNhaCungCap;
-        private ComboBox cbbDong;
-        private ComboBox cbbHangSanXuat;
+        private Label label9;
+        private Panel panel5;
+        private Panel panel6;
+        private CustomControl.RadioButtonCustom rdbtnNgungBan;
+        private CustomControl.RadioButtonCustom rdbtnDangBan;
+        private Label label13;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private FontAwesome.Sharp.IconButton btnHangSanXuat;
+        private Label label14;
         private FontAwesome.Sharp.IconButton btnSerial;
         private FontAwesome.Sharp.IconButton btnMauSac;
         private FontAwesome.Sharp.IconButton btnManHinh;
@@ -865,17 +1059,33 @@
         private FontAwesome.Sharp.IconButton btnCpu;
         private FontAwesome.Sharp.IconButton btnNhaCungCap;
         private FontAwesome.Sharp.IconButton btnDongLaptop;
-        private FontAwesome.Sharp.IconButton btnHangSanXuat;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
         private Label label18;
         private Label label17;
         private Label label16;
         private Label label15;
-        private Label label14;
-        private Label label9;
-        private Panel panel5;
+        private Label label19;
+        private CustomControl.TextBoxCustom2_0 txtTen;
+        private CustomControl.TextBoxCustom2_0 txtMoTa;
+        private FontAwesome.Sharp.IconButton btnClearForm;
+        private ComboBox cbbMauSac;
+        private ComboBox cbbManHinh;
+        private ComboBox cbbOCung;
+        private ComboBox cbbRam;
+        private ComboBox cbbVga;
+        private ComboBox cbbCpu;
+        private ComboBox cbbNhaCungCap;
+        private ComboBox cbbDong;
+        private ComboBox cbbHangSanXuat;
+        private CustomControl.TextBoxCustom2_0 txtNamBh;
+        private Label label1;
+        private ComboBox cbbSerial;
+        private CustomControl.TextBoxCustom2_0 txtTrongLuong;
+        private Label label2;
+        private Panel panel3;
+        private DataGridView dgvLaptop;
+        private TextBox txtTimKiem;
+        private CustomControl.RadioButtonCustom radioButtonCustom1;
+        private FontAwesome.Sharp.IconButton btnGiam;
+        private FontAwesome.Sharp.IconButton btnTang;
     }
 }

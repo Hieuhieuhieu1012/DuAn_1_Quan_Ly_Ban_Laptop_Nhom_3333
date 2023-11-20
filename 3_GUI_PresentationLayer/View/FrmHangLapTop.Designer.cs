@@ -1,6 +1,6 @@
 ﻿namespace _3_GUI_PresentationLayer.View
 {
-    partial class FrmHangLapTop
+    partial class FrmHangLaptop
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
+            dgvHang = new DataGridView();
             panel2 = new Panel();
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtTen = new CustomControl.TextBoxCustom2_0();
             lbMa = new Label();
             label2 = new Label();
             label1 = new Label();
-            panel1 = new Panel();
-            dgvHang = new DataGridView();
-            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHang).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(dgvHang);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(265, 238);
+            panel1.TabIndex = 0;
+            // 
+            // dgvHang
+            // 
+            dgvHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHang.Location = new Point(6, 3);
+            dgvHang.Name = "dgvHang";
+            dgvHang.RowHeadersVisible = false;
+            dgvHang.RowTemplate.Height = 25;
+            dgvHang.Size = new Size(259, 232);
+            dgvHang.TabIndex = 0;
+            dgvHang.CellClick += dgvHang_CellClick;
             // 
             // panel2
             // 
@@ -48,13 +70,14 @@
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtTen);
             panel2.Controls.Add(lbMa);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(289, 12);
+            panel2.Location = new Point(294, 15);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 235);
-            panel2.TabIndex = 3;
+            panel2.TabIndex = 1;
             // 
             // btnLamMoi
             // 
@@ -69,6 +92,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -83,6 +107,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -97,6 +122,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtTen
+            // 
+            txtTen.BorderColor = Color.MediumSlateBlue;
+            txtTen.BorderFocusColor = Color.HotPink;
+            txtTen.BorderRadius = 10;
+            txtTen.BorderSize = 1;
+            txtTen.Location = new Point(13, 113);
+            txtTen.Multiline = false;
+            txtTen.Name = "txtTen";
+            txtTen.Padding = new Padding(7);
+            txtTen.PasswordChar = false;
+            txtTen.PlaceholderColor = Color.DarkGray;
+            txtTen.PlaceholderText = "";
+            txtTen.Size = new Size(200, 30);
+            txtTen.TabIndex = 1;
+            txtTen.Texts = "";
+            txtTen.UnderlinedStyle = false;
             // 
             // lbMa
             // 
@@ -130,52 +174,34 @@
             label1.TabIndex = 0;
             label1.Text = "Tên hãng";
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(dgvHang);
-            panel1.Location = new Point(7, 9);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(265, 238);
-            panel1.TabIndex = 2;
-            // 
-            // dgvHang
-            // 
-            dgvHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHang.Location = new Point(6, 3);
-            dgvHang.Name = "dgvHang";
-            dgvHang.RowHeadersVisible = false;
-            dgvHang.RowTemplate.Height = 25;
-            dgvHang.Size = new Size(259, 232);
-            dgvHang.TabIndex = 0;
-            // 
-            // FrmHangLapTop
+            // FrmHangLaptop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(546, 258);
+            BackColor = Color.FromArgb(244, 245, 255);
+            ClientSize = new Size(550, 262);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "FrmHangLapTop";
-            Text = "FrmHangLapTop";
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            Name = "FrmHangLaptop";
+            Text = "FrmHangLaptop";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHang).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private Panel panel1;
+        private DataGridView dgvHang;
         private Panel panel2;
-        private FontAwesome.Sharp.IconButton btnLamMoi;
-        private FontAwesome.Sharp.IconButton btnSua;
-        private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTen;
         private Label lbMa;
         private Label label2;
         private Label label1;
-        private Panel panel1;
-        private DataGridView dgvHang;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnThem;
+        private FontAwesome.Sharp.IconButton btnLamMoi;
     }
 }

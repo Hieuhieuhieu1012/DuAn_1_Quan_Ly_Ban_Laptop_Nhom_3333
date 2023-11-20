@@ -30,14 +30,16 @@
         {
             dgvRam = new DataGridView();
             panel2 = new Panel();
-            label6 = new Label();
+            txtDungLuong = new CustomControl.TextBoxCustom2_0();
             label3 = new Label();
             lbMa = new Label();
             btnLamMoi = new FontAwesome.Sharp.IconButton();
             btnSua = new FontAwesome.Sharp.IconButton();
             btnThem = new FontAwesome.Sharp.IconButton();
+            txtTenRam = new CustomControl.TextBoxCustom2_0();
             label2 = new Label();
             label1 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvRam).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -51,33 +53,45 @@
             dgvRam.RowHeadersVisible = false;
             dgvRam.RowTemplate.Height = 25;
             dgvRam.Size = new Size(265, 232);
-            dgvRam.TabIndex = 10;
+            dgvRam.TabIndex = 8;
+            dgvRam.CellClick += dgvRam_CellClick;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(label6);
+            panel2.Controls.Add(txtDungLuong);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(lbMa);
             panel2.Controls.Add(btnLamMoi);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
+            panel2.Controls.Add(txtTenRam);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Location = new Point(292, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(244, 232);
-            panel2.TabIndex = 11;
+            panel2.TabIndex = 9;
             // 
-            // label6
+            // txtDungLuong
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(199, 147);
-            label6.Name = "label6";
-            label6.Size = new Size(25, 17);
-            label6.TabIndex = 23;
-            label6.Text = "GB";
+            txtDungLuong.BorderColor = Color.MediumSlateBlue;
+            txtDungLuong.BorderFocusColor = Color.HotPink;
+            txtDungLuong.BorderRadius = 10;
+            txtDungLuong.BorderSize = 1;
+            txtDungLuong.Location = new Point(13, 139);
+            txtDungLuong.Multiline = false;
+            txtDungLuong.Name = "txtDungLuong";
+            txtDungLuong.Padding = new Padding(7);
+            txtDungLuong.PasswordChar = false;
+            txtDungLuong.PlaceholderColor = Color.DarkGray;
+            txtDungLuong.PlaceholderText = "";
+            txtDungLuong.Size = new Size(180, 30);
+            txtDungLuong.TabIndex = 22;
+            txtDungLuong.Texts = "";
+            txtDungLuong.UnderlinedStyle = false;
+            txtDungLuong.KeyPress += txtDungLuong_KeyPress;
             // 
             // label3
             // 
@@ -113,6 +127,7 @@
             btnLamMoi.Size = new Size(53, 37);
             btnLamMoi.TabIndex = 19;
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnSua
             // 
@@ -127,6 +142,7 @@
             btnSua.Size = new Size(53, 37);
             btnSua.TabIndex = 18;
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -141,6 +157,25 @@
             btnThem.Size = new Size(53, 37);
             btnThem.TabIndex = 17;
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // txtTenRam
+            // 
+            txtTenRam.BorderColor = Color.MediumSlateBlue;
+            txtTenRam.BorderFocusColor = Color.HotPink;
+            txtTenRam.BorderRadius = 10;
+            txtTenRam.BorderSize = 1;
+            txtTenRam.Location = new Point(13, 77);
+            txtTenRam.Multiline = false;
+            txtTenRam.Name = "txtTenRam";
+            txtTenRam.Padding = new Padding(7);
+            txtTenRam.PasswordChar = false;
+            txtTenRam.PlaceholderColor = Color.DarkGray;
+            txtTenRam.PlaceholderText = "";
+            txtTenRam.Size = new Size(211, 30);
+            txtTenRam.TabIndex = 1;
+            txtTenRam.Texts = "";
+            txtTenRam.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -163,11 +198,21 @@
             label1.TabIndex = 0;
             label1.Text = "Tên ram";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(199, 147);
+            label6.Name = "label6";
+            label6.Size = new Size(25, 17);
+            label6.TabIndex = 23;
+            label6.Text = "GB";
+            // 
             // FrmRam
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(545, 251);
+            ClientSize = new Size(548, 252);
             Controls.Add(dgvRam);
             Controls.Add(panel2);
             Name = "FrmRam";
@@ -182,13 +227,15 @@
 
         private DataGridView dgvRam;
         private Panel panel2;
-        private Label label6;
-        private Label label3;
         private Label lbMa;
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private CustomControl.TextBoxCustom2_0 txtTenRam;
         private Label label2;
         private Label label1;
+        private CustomControl.TextBoxCustom2_0 txtDungLuong;
+        private Label label3;
+        private Label label6;
     }
 }
