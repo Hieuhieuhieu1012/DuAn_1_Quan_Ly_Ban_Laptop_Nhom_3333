@@ -50,7 +50,7 @@ namespace _1_DAL_DataAccessLayer.Context
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Data Source=AC918S\SQLEXPRESS;Initial Catalog=Duan1_Group3;Integrated Security=True");
+                    @"Data Source=DESKTOP-VGNG2FP\SQLEXPRESS;Initial Catalog=Du_an_1;Integrated Security=True");
             }
         }
 

@@ -270,6 +270,7 @@
             Controls.Add(btnInHoaDon);
             Name = "FrmHoaDon";
             Text = "FrmHoaDon";
+            Load += FrmHoaDon_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_CTHD).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

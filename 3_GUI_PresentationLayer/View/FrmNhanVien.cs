@@ -26,5 +26,10 @@ namespace _3_GUI_PresentationLayer.View
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
