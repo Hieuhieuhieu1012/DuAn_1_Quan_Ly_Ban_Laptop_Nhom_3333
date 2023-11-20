@@ -75,7 +75,6 @@
             dgvKhachHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKhachHang.Size = new Size(910, 494);
             dgvKhachHang.TabIndex = 9;
-            dgvKhachHang.CellContentClick += dgvKhachHang_CellContentClick;
             // 
             // Column1
             // 
@@ -226,6 +225,7 @@
             iconButtonThem.Size = new Size(97, 43);
             iconButtonThem.TabIndex = 42;
             iconButtonThem.UseVisualStyleBackColor = false;
+            iconButtonThem.Click += iconButtonThem_Click;
             // 
             // rbtNu
             // 
@@ -258,7 +258,6 @@
             txtMa.TabIndex = 29;
             txtMa.Texts = "";
             txtMa.UnderlinedStyle = true;
-            txtMa.Load += txtMa_Load;
             // 
             // rbtNam
             // 
@@ -416,6 +415,7 @@
             Controls.Add(dgvKhachHang);
             Name = "FrmKhachHang";
             Text = "FrmKhachHang";
+            Load += FrmKhachHang_Load;
             ((System.ComponentModel.ISupportInitialize)dgvKhachHang).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
