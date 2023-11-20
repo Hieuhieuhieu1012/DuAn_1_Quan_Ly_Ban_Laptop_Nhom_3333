@@ -464,6 +464,7 @@
             cbbHang.Name = "cbbHang";
             cbbHang.Size = new Size(280, 23);
             cbbHang.TabIndex = 59;
+            cbbHang.SelectedIndexChanged += cbbHang_SelectedIndexChanged;
             // 
             // label1
             // 
