@@ -37,7 +37,8 @@ namespace _2_BUS_BusinessLayer.Services
 
         public ThongKeService()
         {
-            _khachHangService = new KhachhangService();
+            // Check after code KhachHang by Dat
+            //_khachHangService = new KhachhangService();
             _hoaDonSerevice = new HoaDonService();
             _chiTietHoaDonService = new ChiTietHoaDonService();
             _laptopService = new LaptopService();

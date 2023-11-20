@@ -15,7 +15,7 @@ namespace _3_GUI_PresentationLayer
             ApplicationConfiguration.Initialize();
             //FrmDangNhap f = new FrmDangNhap();
             //Application.Run(f);
-            Application.Run(new Form1());
+            Application.Run(new FrmBanHang());
 
            
         }
