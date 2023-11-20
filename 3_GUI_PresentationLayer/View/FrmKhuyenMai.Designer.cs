@@ -91,7 +91,7 @@
             dgvKhuyenMai.Name = "dgvKhuyenMai";
             dgvKhuyenMai.RowHeadersVisible = false;
             dgvKhuyenMai.RowTemplate.Height = 25;
-            dgvKhuyenMai.Size = new Size(957, 291);
+            dgvKhuyenMai.Size = new Size(957, 290);
             dgvKhuyenMai.TabIndex = 4;
             // 
             // label4
@@ -464,6 +464,7 @@
             cbbHang.Name = "cbbHang";
             cbbHang.Size = new Size(280, 23);
             cbbHang.TabIndex = 59;
+            cbbHang.SelectedIndexChanged += cbbHang_SelectedIndexChanged;
             // 
             // label1
             // 
