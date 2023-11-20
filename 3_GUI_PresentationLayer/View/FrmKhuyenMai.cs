@@ -209,10 +209,10 @@ namespace _3_GUI_PresentationLayer.View
 
         private void ChuyenTrangThai()
         {
-            foreach (var x in _khuyenMaiServices.GetAllKhuyenMai())
+            /*foreach (var x in _khuyenMaiServices.GetAllKhuyenMai())
             {
                 _khuyenMaiServices.ChuyenTrangThai(x);
-            }
+            }*/
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
