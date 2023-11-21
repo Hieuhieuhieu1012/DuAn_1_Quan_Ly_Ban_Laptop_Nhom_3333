@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgv = new DataGridView();
+            dgv_NhanVien = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -74,7 +74,7 @@
             txtTimKiem = new CustomControl.TextBoxCustom2_0();
             label2 = new Label();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_NhanVien).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             panel5.SuspendLayout();
@@ -82,19 +82,19 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // dgv
+            // dgv_NhanVien
             // 
-            dgv.AllowUserToAddRows = false;
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column11 });
-            dgv.Location = new Point(12, 184);
-            dgv.Name = "dgv";
-            dgv.RowHeadersVisible = false;
-            dgv.RowTemplate.Height = 25;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.Size = new Size(753, 477);
-            dgv.TabIndex = 3;
+            dgv_NhanVien.AllowUserToAddRows = false;
+            dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_NhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_NhanVien.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column11 });
+            dgv_NhanVien.Location = new Point(12, 184);
+            dgv_NhanVien.Name = "dgv_NhanVien";
+            dgv_NhanVien.RowHeadersVisible = false;
+            dgv_NhanVien.RowTemplate.Height = 25;
+            dgv_NhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_NhanVien.Size = new Size(753, 477);
+            dgv_NhanVien.TabIndex = 3;
             // 
             // Column1
             // 
@@ -640,10 +640,10 @@
             ClientSize = new Size(1440, 676);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Controls.Add(dgv);
+            Controls.Add(dgv_NhanVien);
             Name = "FrmNhanVien";
             Text = "FrmNhanVien";
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_NhanVien).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
@@ -658,7 +658,7 @@
 
         #endregion
 
-        private DataGridView dgv;
+        private DataGridView dgv_NhanVien;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
