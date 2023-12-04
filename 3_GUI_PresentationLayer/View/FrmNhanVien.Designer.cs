@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgv_NhanVien = new DataGridView();
+            panel1 = new Panel();
+            rbtDaNghiViec = new CustomControl.RadioButtonCustom();
+            rbtDangLam = new CustomControl.RadioButtonCustom();
+            iconButton8 = new FontAwesome.Sharp.IconButton();
+            txtTimKiem = new CustomControl.TextBoxCustom2_0();
+            label2 = new Label();
+            label1 = new Label();
+            dgv = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -49,6 +56,7 @@
             rbtNam = new CustomControl.RadioButtonCustom();
             rbtNu = new CustomControl.RadioButtonCustom();
             txtDiaChi = new CustomControl.TextBoxCustom2_0();
+            ptbAnh = new CustomControl.PictrueBoxCustom();
             iconButtonXoa = new FontAwesome.Sharp.IconButton();
             iconButtonLoad = new FontAwesome.Sharp.IconButton();
             iconButtonThem = new FontAwesome.Sharp.IconButton();
@@ -66,35 +74,134 @@
             label6 = new Label();
             txtSoDienThoai = new CustomControl.TextBoxCustom();
             label4 = new Label();
+            txtMaNhanVien = new CustomControl.TextBoxCustom();
             label3 = new Label();
-            panel1 = new Panel();
-            rbtDaNghiViec = new CustomControl.RadioButtonCustom();
-            rbtDangLam = new CustomControl.RadioButtonCustom();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
-            txtTimKiem = new CustomControl.TextBoxCustom2_0();
-            label2 = new Label();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgv_NhanVien).BeginInit();
+            panel3 = new Panel();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
-            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // dgv_NhanVien
+            // panel1
             // 
-            dgv_NhanVien.AllowUserToAddRows = false;
-            dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv_NhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_NhanVien.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column11 });
-            dgv_NhanVien.Location = new Point(12, 184);
-            dgv_NhanVien.Name = "dgv_NhanVien";
-            dgv_NhanVien.RowHeadersVisible = false;
-            dgv_NhanVien.RowTemplate.Height = 25;
-            dgv_NhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_NhanVien.Size = new Size(753, 477);
-            dgv_NhanVien.TabIndex = 3;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(rbtDaNghiViec);
+            panel1.Controls.Add(rbtDangLam);
+            panel1.Controls.Add(iconButton8);
+            panel1.Controls.Add(txtTimKiem);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(12, 37);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(857, 78);
+            panel1.TabIndex = 1;
+            // 
+            // rbtDaNghiViec
+            // 
+            rbtDaNghiViec.AutoSize = true;
+            rbtDaNghiViec.CheckedColor = Color.MediumSlateBlue;
+            rbtDaNghiViec.Location = new Point(573, 42);
+            rbtDaNghiViec.MinimumSize = new Size(0, 21);
+            rbtDaNghiViec.Name = "rbtDaNghiViec";
+            rbtDaNghiViec.Padding = new Padding(10, 0, 0, 0);
+            rbtDaNghiViec.Size = new Size(100, 21);
+            rbtDaNghiViec.TabIndex = 52;
+            rbtDaNghiViec.TabStop = true;
+            rbtDaNghiViec.Text = "Đã nghỉ việc";
+            rbtDaNghiViec.UnCheckedColor = Color.Gray;
+            rbtDaNghiViec.UseVisualStyleBackColor = true;
+            rbtDaNghiViec.Click += rbtDaNghiViec_Click;
+            // 
+            // rbtDangLam
+            // 
+            rbtDangLam.AutoSize = true;
+            rbtDangLam.CheckedColor = Color.MediumSlateBlue;
+            rbtDangLam.Location = new Point(457, 40);
+            rbtDangLam.MinimumSize = new Size(0, 21);
+            rbtDangLam.Name = "rbtDangLam";
+            rbtDangLam.Padding = new Padding(10, 0, 0, 0);
+            rbtDangLam.Size = new Size(86, 21);
+            rbtDangLam.TabIndex = 52;
+            rbtDangLam.TabStop = true;
+            rbtDangLam.Text = "Đang làm";
+            rbtDangLam.UnCheckedColor = Color.Gray;
+            rbtDangLam.UseVisualStyleBackColor = true;
+            rbtDangLam.Click += rbtDangLam_Click;
+            // 
+            // iconButton8
+            // 
+            iconButton8.FlatAppearance.BorderSize = 0;
+            iconButton8.FlatStyle = FlatStyle.Flat;
+            iconButton8.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            iconButton8.IconColor = Color.Black;
+            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton8.IconSize = 23;
+            iconButton8.Location = new Point(30, 40);
+            iconButton8.Name = "iconButton8";
+            iconButton8.Size = new Size(32, 25);
+            iconButton8.TabIndex = 51;
+            iconButton8.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.BorderColor = Color.MediumSlateBlue;
+            txtTimKiem.BorderFocusColor = Color.HotPink;
+            txtTimKiem.BorderRadius = 10;
+            txtTimKiem.BorderSize = 1;
+            txtTimKiem.Location = new Point(24, 36);
+            txtTimKiem.Multiline = false;
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Padding = new Padding(42, 7, 7, 7);
+            txtTimKiem.PasswordChar = false;
+            txtTimKiem.PlaceholderColor = Color.DarkGray;
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.Size = new Size(250, 30);
+            txtTimKiem.TabIndex = 50;
+            txtTimKiem.Texts = "";
+            txtTimKiem.UnderlinedStyle = false;
+            txtTimKiem._TextChanged += txtTimKiem__TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Highlight;
+            label2.Location = new Point(485, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 21);
+            label2.TabIndex = 3;
+            label2.Text = "Trạng Thái";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Highlight;
+            label1.Location = new Point(15, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(82, 21);
+            label1.TabIndex = 2;
+            label1.Text = "Tìm Kiếm";
+            // 
+            // dgv
+            // 
+            dgv.AllowUserToAddRows = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column11 });
+            dgv.Location = new Point(3, 3);
+            dgv.Name = "dgv";
+            dgv.RowHeadersVisible = false;
+            dgv.RowTemplate.Height = 25;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.Size = new Size(854, 477);
+            dgv.TabIndex = 2;
+            dgv.CellClick += dgv_CellClick;
             // 
             // Column1
             // 
@@ -155,6 +262,7 @@
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(txtDiaChi);
+            panel2.Controls.Add(ptbAnh);
             panel2.Controls.Add(iconButtonXoa);
             panel2.Controls.Add(iconButtonLoad);
             panel2.Controls.Add(iconButtonThem);
@@ -172,12 +280,12 @@
             panel2.Controls.Add(label6);
             panel2.Controls.Add(txtSoDienThoai);
             panel2.Controls.Add(label4);
+            panel2.Controls.Add(txtMaNhanVien);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(778, 30);
+            panel2.Location = new Point(904, 19);
             panel2.Name = "panel2";
-            panel2.Size = new Size(650, 631);
-            panel2.TabIndex = 5;
-            panel2.Paint += panel2_Paint;
+            panel2.Size = new Size(599, 582);
+            panel2.TabIndex = 4;
             // 
             // txtMaNhanVien
             // 
@@ -213,7 +321,7 @@
             panel5.Controls.Add(rbtNhanVien);
             panel5.Location = new Point(341, 382);
             panel5.Name = "panel5";
-            panel5.Size = new Size(225, 42);
+            panel5.Size = new Size(232, 42);
             panel5.TabIndex = 34;
             // 
             // rbtQuanLy
@@ -256,7 +364,7 @@
             panel4.Controls.Add(rbtNu);
             panel4.Location = new Point(341, 238);
             panel4.Name = "panel4";
-            panel4.Size = new Size(225, 42);
+            panel4.Size = new Size(232, 42);
             panel4.TabIndex = 33;
             // 
             // rbtNam
@@ -306,42 +414,60 @@
             txtDiaChi.PasswordChar = false;
             txtDiaChi.PlaceholderColor = Color.DarkGray;
             txtDiaChi.PlaceholderText = "";
-            txtDiaChi.Size = new Size(225, 119);
+            txtDiaChi.Size = new Size(232, 119);
             txtDiaChi.TabIndex = 30;
             txtDiaChi.Texts = "";
             txtDiaChi.UnderlinedStyle = false;
             // 
+            // ptbAnh
+            // 
+            ptbAnh.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            ptbAnh.BorderColor = Color.Black;
+            ptbAnh.BorderColor2 = Color.Black;
+            ptbAnh.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            ptbAnh.BorderSize = 2;
+            ptbAnh.GradientAngle = 50F;
+            ptbAnh.Location = new Point(18, 35);
+            ptbAnh.Name = "ptbAnh";
+            ptbAnh.Size = new Size(171, 171);
+            ptbAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbAnh.TabIndex = 29;
+            ptbAnh.TabStop = false;
+            ptbAnh.Click += ptbAnh_Click;
+            // 
             // iconButtonXoa
             // 
-            iconButtonXoa.BackColor = Color.White;
+            iconButtonXoa.BackColor = Color.FromArgb(244, 245, 255);
             iconButtonXoa.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             iconButtonXoa.IconColor = Color.FromArgb(0, 0, 192);
             iconButtonXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonXoa.Location = new Point(37, 371);
+            iconButtonXoa.Location = new Point(38, 400);
             iconButtonXoa.Name = "iconButtonXoa";
             iconButtonXoa.Size = new Size(83, 53);
             iconButtonXoa.TabIndex = 25;
             iconButtonXoa.UseVisualStyleBackColor = false;
+            iconButtonXoa.Click += iconButtonXoa_Click;
             // 
             // iconButtonLoad
             // 
-            iconButtonLoad.BackColor = Color.White;
+            iconButtonLoad.BackColor = Color.FromArgb(244, 245, 255);
             iconButtonLoad.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
             iconButtonLoad.IconColor = Color.FromArgb(0, 0, 192);
             iconButtonLoad.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonLoad.Location = new Point(37, 430);
+            iconButtonLoad.Location = new Point(38, 459);
             iconButtonLoad.Name = "iconButtonLoad";
             iconButtonLoad.Size = new Size(83, 53);
             iconButtonLoad.TabIndex = 24;
             iconButtonLoad.UseVisualStyleBackColor = false;
+            iconButtonLoad.Click += iconButtonLoad_Click;
             // 
             // iconButtonThem
             // 
-            iconButtonThem.BackColor = Color.White;
+            iconButtonThem.BackColor = Color.FromArgb(244, 245, 255);
             iconButtonThem.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            iconButtonThem.IconColor = Color.FromArgb(0, 0, 192);
+            iconButtonThem.IconColor = Color.Blue;
             iconButtonThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonThem.Location = new Point(37, 253);
+            iconButtonThem.Location = new Point(38, 282);
             iconButtonThem.Name = "iconButtonThem";
             iconButtonThem.Size = new Size(83, 53);
             iconButtonThem.TabIndex = 22;
@@ -350,15 +476,16 @@
             // 
             // iconButtonSua
             // 
-            iconButtonSua.BackColor = Color.White;
+            iconButtonSua.BackColor = Color.FromArgb(244, 245, 255);
             iconButtonSua.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            iconButtonSua.IconColor = Color.Blue;
+            iconButtonSua.IconColor = Color.FromArgb(0, 0, 192);
             iconButtonSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonSua.Location = new Point(37, 312);
+            iconButtonSua.Location = new Point(38, 341);
             iconButtonSua.Name = "iconButtonSua";
             iconButtonSua.Size = new Size(83, 53);
             iconButtonSua.TabIndex = 23;
             iconButtonSua.UseVisualStyleBackColor = false;
+            iconButtonSua.Click += iconButtonSua_Click;
             // 
             // label5
             // 
@@ -381,7 +508,7 @@
             txtSoCanCuoc.Name = "txtSoCanCuoc";
             txtSoCanCuoc.Padding = new Padding(7);
             txtSoCanCuoc.PasswordChar = false;
-            txtSoCanCuoc.Size = new Size(225, 30);
+            txtSoCanCuoc.Size = new Size(232, 30);
             txtSoCanCuoc.TabIndex = 8;
             txtSoCanCuoc.Texts = "";
             txtSoCanCuoc.UnderlinedStyle = true;
@@ -407,7 +534,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Padding = new Padding(7);
             txtEmail.PasswordChar = false;
-            txtEmail.Size = new Size(225, 30);
+            txtEmail.Size = new Size(232, 30);
             txtEmail.TabIndex = 20;
             txtEmail.Texts = "";
             txtEmail.UnderlinedStyle = true;
@@ -433,7 +560,7 @@
             txtHoTen.Name = "txtHoTen";
             txtHoTen.Padding = new Padding(7);
             txtHoTen.PasswordChar = false;
-            txtHoTen.Size = new Size(225, 30);
+            txtHoTen.Size = new Size(232, 30);
             txtHoTen.TabIndex = 18;
             txtHoTen.Texts = "";
             txtHoTen.UnderlinedStyle = true;
@@ -470,7 +597,7 @@
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Padding = new Padding(7);
             txtMatKhau.PasswordChar = false;
-            txtMatKhau.Size = new Size(225, 30);
+            txtMatKhau.Size = new Size(232, 30);
             txtMatKhau.TabIndex = 12;
             txtMatKhau.Texts = "";
             txtMatKhau.UnderlinedStyle = true;
@@ -507,7 +634,7 @@
             txtSoDienThoai.Name = "txtSoDienThoai";
             txtSoDienThoai.Padding = new Padding(7);
             txtSoDienThoai.PasswordChar = false;
-            txtSoDienThoai.Size = new Size(225, 30);
+            txtSoDienThoai.Size = new Size(232, 30);
             txtSoDienThoai.TabIndex = 6;
             txtSoDienThoai.Texts = "";
             txtSoDienThoai.UnderlinedStyle = true;
@@ -523,127 +650,57 @@
             label4.TabIndex = 7;
             label4.Text = "Số điện thoại";
             // 
+            // txtMaNhanVien
+            // 
+            txtMaNhanVien.BorderColor = Color.MediumSlateBlue;
+            txtMaNhanVien.BorderFocusColor = Color.HotPink;
+            txtMaNhanVien.BorderSize = 2;
+            txtMaNhanVien.Location = new Point(341, 18);
+            txtMaNhanVien.Multiline = false;
+            txtMaNhanVien.Name = "txtMaNhanVien";
+            txtMaNhanVien.Padding = new Padding(7);
+            txtMaNhanVien.PasswordChar = false;
+            txtMaNhanVien.Size = new Size(232, 30);
+            txtMaNhanVien.TabIndex = 5;
+            txtMaNhanVien.Texts = "";
+            txtMaNhanVien.UnderlinedStyle = true;
+            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Highlight;
-            label3.Location = new Point(216, 31);
+            label3.Location = new Point(220, 31);
             label3.Name = "label3";
             label3.Size = new Size(92, 17);
             label3.TabIndex = 5;
             label3.Text = "Mã nhân viên";
             // 
-            // panel1
+            // panel3
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(rbtDaNghiViec);
-            panel1.Controls.Add(rbtDangLam);
-            panel1.Controls.Add(iconButton8);
-            panel1.Controls.Add(txtTimKiem);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(28, 61);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(714, 86);
-            panel1.TabIndex = 6;
-            // 
-            // rbtDaNghiViec
-            // 
-            rbtDaNghiViec.AutoSize = true;
-            rbtDaNghiViec.CheckedColor = Color.MediumSlateBlue;
-            rbtDaNghiViec.Location = new Point(444, 52);
-            rbtDaNghiViec.MinimumSize = new Size(0, 21);
-            rbtDaNghiViec.Name = "rbtDaNghiViec";
-            rbtDaNghiViec.Padding = new Padding(10, 0, 0, 0);
-            rbtDaNghiViec.Size = new Size(100, 21);
-            rbtDaNghiViec.TabIndex = 52;
-            rbtDaNghiViec.TabStop = true;
-            rbtDaNghiViec.Text = "Đã nghỉ việc";
-            rbtDaNghiViec.UnCheckedColor = Color.Gray;
-            rbtDaNghiViec.UseVisualStyleBackColor = true;
-            // 
-            // rbtDangLam
-            // 
-            rbtDangLam.AutoSize = true;
-            rbtDangLam.CheckedColor = Color.MediumSlateBlue;
-            rbtDangLam.Location = new Point(328, 50);
-            rbtDangLam.MinimumSize = new Size(0, 21);
-            rbtDangLam.Name = "rbtDangLam";
-            rbtDangLam.Padding = new Padding(10, 0, 0, 0);
-            rbtDangLam.Size = new Size(86, 21);
-            rbtDangLam.TabIndex = 52;
-            rbtDangLam.TabStop = true;
-            rbtDangLam.Text = "Đang làm";
-            rbtDangLam.UnCheckedColor = Color.Gray;
-            rbtDangLam.UseVisualStyleBackColor = true;
-            // 
-            // iconButton8
-            // 
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatStyle = FlatStyle.Flat;
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            iconButton8.IconColor = Color.Black;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 23;
-            iconButton8.Location = new Point(30, 40);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Size = new Size(32, 25);
-            iconButton8.TabIndex = 51;
-            iconButton8.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.BorderColor = Color.Black;
-            txtTimKiem.BorderFocusColor = Color.Black;
-            txtTimKiem.BorderRadius = 10;
-            txtTimKiem.BorderSize = 1;
-            txtTimKiem.Location = new Point(24, 36);
-            txtTimKiem.Multiline = false;
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Padding = new Padding(42, 7, 7, 7);
-            txtTimKiem.PasswordChar = false;
-            txtTimKiem.PlaceholderColor = Color.DarkGray;
-            txtTimKiem.PlaceholderText = "Tìm kiếm";
-            txtTimKiem.Size = new Size(250, 30);
-            txtTimKiem.TabIndex = 50;
-            txtTimKiem.Texts = "";
-            txtTimKiem.UnderlinedStyle = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlText;
-            label2.Location = new Point(389, 10);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 21);
-            label2.TabIndex = 3;
-            label2.Text = "Trạng Thái";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(15, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 21);
-            label1.TabIndex = 2;
-            label1.Text = "Tìm Kiếm";
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(dgv);
+            panel3.Location = new Point(12, 118);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(860, 483);
+            panel3.TabIndex = 5;
             // 
             // FrmNhanVien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1440, 676);
-            Controls.Add(panel1);
+            BackColor = Color.FromArgb(244, 245, 255);
+            ClientSize = new Size(1521, 690);
+            Controls.Add(panel3);
             Controls.Add(panel2);
-            Controls.Add(dgv_NhanVien);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmNhanVien";
-            Text = "FrmNhanVien";
-            ((System.ComponentModel.ISupportInitialize)dgv_NhanVien).EndInit();
+            Text = "Nhân viên";
+            Load += FrmNhanVien_Load_1;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
@@ -651,36 +708,18 @@
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dgv_NhanVien;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column11;
+        private Panel panel1;
+        private Label label2;
+        private Label label1;
+        private DataGridView dgv;
         private Panel panel2;
-        private CustomControl.TextBoxCustom txtMaNhanVien;
-        private PictureBox ptbAnh;
-        private Panel panel5;
-        private CustomControl.RadioButtonCustom rbtQuanLy;
-        private CustomControl.RadioButtonCustom rbtNhanVien;
-        private Panel panel4;
-        private CustomControl.RadioButtonCustom rbtNam;
-        private CustomControl.RadioButtonCustom rbtNu;
-        private CustomControl.TextBoxCustom2_0 txtDiaChi;
-        private FontAwesome.Sharp.IconButton iconButtonXoa;
-        private FontAwesome.Sharp.IconButton iconButtonLoad;
+        private FontAwesome.Sharp.IconButton iconButtonSua;
         private FontAwesome.Sharp.IconButton iconButtonThem;
         private FontAwesome.Sharp.IconButton iconButtonSua;
         private Label label5;
@@ -694,15 +733,37 @@
         private CustomControl.TextBoxCustom txtMatKhau;
         private Label label7;
         private Label label6;
+        private CustomControl.TextBoxCustom txtSoCanCuoc;
+        private Label label5;
         private CustomControl.TextBoxCustom txtSoDienThoai;
         private Label label4;
+        private CustomControl.TextBoxCustom txtMaNhanVien;
         private Label label3;
-        private Panel panel1;
-        private CustomControl.RadioButtonCustom rbtDaNghiViec;
-        private CustomControl.RadioButtonCustom rbtDangLam;
+        private Label label12;
+        private CustomControl.PictrueBoxCustom ptbAnh;
+        private FontAwesome.Sharp.IconButton iconButtonLoad;
+        private FontAwesome.Sharp.IconButton iconButtonXoa;
+        private CustomControl.TextBoxCustom2_0 txtDiaChi;
+        private CustomControl.RadioButtonCustom rbtQuanLy;
+        private CustomControl.RadioButtonCustom rbtNhanVien;
         private FontAwesome.Sharp.IconButton iconButton8;
         private CustomControl.TextBoxCustom2_0 txtTimKiem;
-        private Label label2;
-        private Label label1;
+        private Panel panel3;
+        private CustomControl.RadioButtonCustom rbtDaNghiViec;
+        private CustomControl.RadioButtonCustom rbtDangLam;
+        private CustomControl.RadioButtonCustom rbtNu;
+        private CustomControl.RadioButtonCustom rbtNam;
+        private Panel panel4;
+        private Panel panel5;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column11;
     }
 }

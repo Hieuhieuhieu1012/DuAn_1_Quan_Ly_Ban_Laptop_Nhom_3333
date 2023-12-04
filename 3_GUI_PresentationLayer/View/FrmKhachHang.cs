@@ -27,37 +27,7 @@ namespace _3_GUI_PresentationLayer.View
 
         public void loadata()
         {
-            //int i = 1;
-            //dgvKhachHang.Rows.Clear();
-            //foreach (var item in _khachhangService.GetAllKhachHangs())
-            //{
-            //    dgvKhachHang.Rows.Add(item.Ma, item.Hoten, item.SoDienThoai, item.Email, item.GioiTinh == false ? "Nam" : "Nữ", item.DiaChi, item.Id);
-            //}
-            //txtMa.Enabled = false;
-            dgvKhachHang.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvKhachHang.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            dgvKhachHang.ColumnCount = 6;
-            dgvKhachHang.Columns[0].Name = "Mã Khách Hàng";
-
-            dgvKhachHang.Columns[1].Name = "Họ Tên";
-            dgvKhachHang.Columns[2].Name = "Sđt";
-            dgvKhachHang.Columns[2].DefaultCellStyle.Format = "N0";
-            dgvKhachHang.Columns[3].Name = "Email";
-            dgvKhachHang.Columns[4].Name = "Giới Tính";
-            dgvKhachHang.Columns[5].Name = "Địa Chỉ";
-
             dgvKhachHang.Rows.Clear();
-
-            var row = new DataGridViewRow();
-            row.CreateCells(dgvKhachHang);
-            row.Cells[0].Value = $"KH001";
-            row.Cells[1].Value = $"Nguyễn Văn A";
-            row.Cells[2].Value = "0336610829";
-            row.Cells[3].Value = "A@a";
-            row.Cells[4].Value = "Nam";
-            row.Cells[5].Value = "Kiều Mai";
-
-            dgvKhachHang.Rows.Add(row);
         }
 
         private string RandomMa()
