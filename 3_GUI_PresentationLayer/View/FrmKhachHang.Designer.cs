@@ -167,14 +167,14 @@
             // 
             // iconButtonClear
             // 
-            iconButtonClear.BackColor = Color.FromArgb(254, 220, 204);
+            iconButtonClear.BackColor = Color.White;
             iconButtonClear.FlatAppearance.BorderSize = 0;
             iconButtonClear.FlatStyle = FlatStyle.Flat;
             iconButtonClear.IconChar = FontAwesome.Sharp.IconChar.Rotate;
-            iconButtonClear.IconColor = Color.FromArgb(252, 107, 124);
+            iconButtonClear.IconColor = Color.Navy;
             iconButtonClear.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonClear.IconSize = 45;
-            iconButtonClear.Location = new Point(286, 533);
+            iconButtonClear.Location = new Point(262, 533);
             iconButtonClear.Name = "iconButtonClear";
             iconButtonClear.Size = new Size(97, 43);
             iconButtonClear.TabIndex = 53;
@@ -201,14 +201,14 @@
             // 
             // iconButtonSua
             // 
-            iconButtonSua.BackColor = Color.FromArgb(254, 220, 204);
+            iconButtonSua.BackColor = Color.White;
             iconButtonSua.FlatAppearance.BorderSize = 0;
             iconButtonSua.FlatStyle = FlatStyle.Flat;
             iconButtonSua.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            iconButtonSua.IconColor = Color.FromArgb(252, 107, 124);
+            iconButtonSua.IconColor = Color.Navy;
             iconButtonSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSua.IconSize = 40;
-            iconButtonSua.Location = new Point(154, 533);
+            iconButtonSua.Location = new Point(142, 533);
             iconButtonSua.Name = "iconButtonSua";
             iconButtonSua.Size = new Size(97, 43);
             iconButtonSua.TabIndex = 43;
@@ -217,11 +217,11 @@
             // 
             // iconButtonThem
             // 
-            iconButtonThem.BackColor = Color.FromArgb(254, 220, 204);
+            iconButtonThem.BackColor = Color.White;
             iconButtonThem.FlatAppearance.BorderSize = 0;
             iconButtonThem.FlatStyle = FlatStyle.Flat;
             iconButtonThem.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            iconButtonThem.IconColor = Color.FromArgb(252, 107, 124);
+            iconButtonThem.IconColor = Color.Navy;
             iconButtonThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonThem.IconSize = 40;
             iconButtonThem.Location = new Point(18, 533);
@@ -380,7 +380,7 @@
             panel3.Controls.Add(iconButton8);
             panel3.Controls.Add(txtTimKiem);
             panel3.Controls.Add(label1);
-            panel3.Location = new Point(29, 34);
+            panel3.Location = new Point(38, 56);
             panel3.Name = "panel3";
             panel3.Size = new Size(287, 87);
             panel3.TabIndex = 11;

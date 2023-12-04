@@ -52,7 +52,7 @@ namespace _3_GUI_PresentationLayer.View
             }
             rbtDangLam.Checked = true;
             txtMaNhanVien.Enabled = false;
-            
+
         }
 
 
@@ -132,13 +132,13 @@ namespace _3_GUI_PresentationLayer.View
             _nhanVien.TrangThai = true;
             _nhanVien.HinhAnh = Extension.ImageToArrBytes(ptbAnh.Image);
 
-            if (_nhanvienService.GetAllNhanViens().Any(c=>c.CCCD == txtSoCanCuoc.Texts))
+            if (_nhanvienService.GetAllNhanViens().Any(c => c.CCCD == txtSoCanCuoc.Texts))
             {
                 MessageBox.Show("Số căn cước đã tồn tại. Xin vui lòng kiểm tra lại!");
                 return;
             }
 
-            if (_nhanvienService.GetAllNhanViens().All(c=>c.SoDienThoai == txtSoDienThoai.Texts))
+            if (_nhanvienService.GetAllNhanViens().All(c => c.SoDienThoai == txtSoDienThoai.Texts))
             {
                 MessageBox.Show("Số điện thoại đã tồn tại. Xin vui lòng kiểm tra lại!");
                 return;
@@ -167,7 +167,7 @@ namespace _3_GUI_PresentationLayer.View
                 _nhanvienService.AddNhanVien(_nhanVien);
                 MessageBox.Show("Thêm thành công");
                 loaddata();
-                iconButtonThem.Enabled= false;
+                iconButtonThem.Enabled = false;
             }
         }
 
@@ -251,7 +251,7 @@ namespace _3_GUI_PresentationLayer.View
                 MessageBox.Show(_nhanvienService.DoiTrangThai(nv));
                 loaddata();
             }
-            
+
 
         }
 
@@ -366,6 +366,6 @@ namespace _3_GUI_PresentationLayer.View
             }
         }
 
-        
+
     }
 }

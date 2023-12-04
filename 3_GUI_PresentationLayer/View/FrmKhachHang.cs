@@ -21,7 +21,7 @@ namespace _3_GUI_PresentationLayer.View
         public FrmKhachHang()
         {
             InitializeComponent();
-            _khachhangService= new KhachhangService();
+            _khachhangService = new KhachhangService();
             loadata();
         }
 
@@ -52,7 +52,7 @@ namespace _3_GUI_PresentationLayer.View
                 MessageBox.Show("Xin vui lòng nhập đầy đủ các trường dữ liệu!");
                 return;
             }
-            
+
             if (!Validation.checkSDT(txtSoDienThoai.Texts))
             {
                 MessageBox.Show("Số điện thoại phải đủ 10 chữ số và bắt đầu bằng số 0.Mời bạn kiểm tra lại số điện thoại!", "Thông báo");
@@ -67,7 +67,7 @@ namespace _3_GUI_PresentationLayer.View
             {
                 MessageBox.Show("Số điện thoại đã bị tồn tai!Vui lòng kiểm tra lại số điện thoại!");
                 return;
-            } 
+            }
 
             _khachHang.Ma = RandomMa();
             _khachHang.Hoten = txtHoTen.Texts;
@@ -98,14 +98,14 @@ namespace _3_GUI_PresentationLayer.View
         private void iconButtonSua_Click(object sender, EventArgs e)
         {
 
-            var kh = _khachhangService.GetAllKhachHangs().FirstOrDefault(c=>c.Id == _idKhachHang);
+            var kh = _khachhangService.GetAllKhachHangs().FirstOrDefault(c => c.Id == _idKhachHang);
             if (txtHoTen.Texts == null || txtSoDienThoai.Texts == null
                  || rbtNam.Checked == false && rbtNu.Checked == false || txtDiaChi.Texts == null)
             {
                 MessageBox.Show("Xin vui lòng nhập đầy đủ các trường dữ liệu!");
                 return;
             }
-            
+
             if (!Validation.checkSDT(txtSoDienThoai.Texts))
             {
                 MessageBox.Show("Số điện thoại phải đủ 10 chữ số và bắt đầu bằng số 0.Mời bạn kiểm tra lại số điện thoại!", "Thông báo");
@@ -117,7 +117,7 @@ namespace _3_GUI_PresentationLayer.View
                 return;
             }
             kh.SoDienThoai = txtSoDienThoai.Texts;
-            if (_khachhangService.GetAllKhachHangs().Any(c=>c.SoDienThoai == txtSoDienThoai.Texts && txtSoDienThoai.Texts != kh.SoDienThoai))
+            if (_khachhangService.GetAllKhachHangs().Any(c => c.SoDienThoai == txtSoDienThoai.Texts && txtSoDienThoai.Texts != kh.SoDienThoai))
             {
                 MessageBox.Show("Số điện thoại bạn vừa sửa đã tồn tại!Vui lòng kiểm tra lại.");
                 return;
@@ -193,7 +193,7 @@ namespace _3_GUI_PresentationLayer.View
             dgvKhachHang.Rows.Clear();
             foreach (var item in _khachhangService.GetByKhachHangs(txtTimKiem.Texts))
             {
-                dgvKhachHang.Rows.Add(item.Ma, item.Hoten, item.SoDienThoai,item.Email,item.GioiTinh == false ? "Nam" : "Nữ", item.DiaChi, item.Id);
+                dgvKhachHang.Rows.Add(item.Ma, item.Hoten, item.SoDienThoai, item.Email, item.GioiTinh == false ? "Nam" : "Nữ", item.DiaChi, item.Id);
             }
         }
     }
