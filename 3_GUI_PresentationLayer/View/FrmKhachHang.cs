@@ -27,13 +27,7 @@ namespace _3_GUI_PresentationLayer.View
 
         public void loadata()
         {
-            int i = 1;
             dgvKhachHang.Rows.Clear();
-            foreach (var item in _khachhangService.GetAllKhachHangs())
-            {
-                dgvKhachHang.Rows.Add(item.Ma, item.Hoten, item.SoDienThoai, item.Email, item.GioiTinh == false ? "Nam" : "Nữ", item.DiaChi, item.Id);
-            }
-            txtMa.Enabled = false;
         }
 
         private string RandomMa()
@@ -195,6 +189,16 @@ namespace _3_GUI_PresentationLayer.View
             {
                 dgvKhachHang.Rows.Add(item.Ma, item.Hoten, item.SoDienThoai, item.Email, item.GioiTinh == false ? "Nam" : "Nữ", item.DiaChi, item.Id);
             }
+        }
+
+        private void dgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

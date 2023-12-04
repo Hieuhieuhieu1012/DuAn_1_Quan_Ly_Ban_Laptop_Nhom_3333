@@ -47,6 +47,8 @@
             Column9 = new DataGridViewTextBoxColumn();
             Column11 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
+            txtMaNhanVien = new CustomControl.TextBoxCustom();
+            ptbAnh = new PictureBox();
             panel5 = new Panel();
             rbtQuanLy = new CustomControl.RadioButtonCustom();
             rbtNhanVien = new CustomControl.RadioButtonCustom();
@@ -78,6 +80,7 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAnh).BeginInit();
@@ -254,6 +257,8 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(txtMaNhanVien);
+            panel2.Controls.Add(ptbAnh);
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(txtDiaChi);
@@ -281,6 +286,34 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(599, 582);
             panel2.TabIndex = 4;
+            // 
+            // txtMaNhanVien
+            // 
+            txtMaNhanVien.BorderColor = Color.MediumSlateBlue;
+            txtMaNhanVien.BorderFocusColor = Color.HotPink;
+            txtMaNhanVien.BorderSize = 2;
+            txtMaNhanVien.Location = new Point(341, 18);
+            txtMaNhanVien.Multiline = false;
+            txtMaNhanVien.Name = "txtMaNhanVien";
+            txtMaNhanVien.Padding = new Padding(7);
+            txtMaNhanVien.PasswordChar = false;
+            txtMaNhanVien.Size = new Size(225, 30);
+            txtMaNhanVien.TabIndex = 36;
+            txtMaNhanVien.Texts = "";
+            txtMaNhanVien.UnderlinedStyle = true;
+            txtMaNhanVien.Load += txtMaNhanVien_Load;
+            // 
+            // ptbAnh
+            // 
+            ptbAnh.BackColor = Color.DarkGray;
+            ptbAnh.BackgroundImageLayout = ImageLayout.None;
+            ptbAnh.BorderStyle = BorderStyle.Fixed3D;
+            ptbAnh.Location = new Point(20, 30);
+            ptbAnh.Name = "ptbAnh";
+            ptbAnh.Size = new Size(164, 170);
+            ptbAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbAnh.TabIndex = 6;
+            ptbAnh.TabStop = false;
             // 
             // panel5
             // 
@@ -670,6 +703,7 @@
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbAnh).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -687,6 +721,10 @@
         private Panel panel2;
         private FontAwesome.Sharp.IconButton iconButtonSua;
         private FontAwesome.Sharp.IconButton iconButtonThem;
+        private FontAwesome.Sharp.IconButton iconButtonSua;
+        private Label label5;
+        private CustomControl.TextBoxCustom txtSoCanCuoc;
+        private Label label12;
         private CustomControl.TextBoxCustom txtEmail;
         private Label label10;
         private CustomControl.TextBoxCustom txtHoTen;

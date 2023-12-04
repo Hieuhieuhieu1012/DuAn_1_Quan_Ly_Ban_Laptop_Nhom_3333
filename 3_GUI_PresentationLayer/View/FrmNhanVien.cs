@@ -218,14 +218,14 @@ namespace _3_GUI_PresentationLayer.View
             if (rbtNam.Checked == true)
             {
                 nv.GioiTinh = false;
-            }
+        }
             else if (rbtNu.Checked == true)
             {
                 nv.GioiTinh = true;
             }
 
             if (rbtNhanVien.Checked == true)
-            {
+        {
                 nv.ChucVu = "Nhân viên";
             }
             else if (rbtQuanLy.Checked == true)
@@ -240,7 +240,7 @@ namespace _3_GUI_PresentationLayer.View
                 _nhanvienService.UpdateNhanVien(_idNhanvien, nv);
                 MessageBox.Show("Sửa thành công");
                 loaddata();
-            }
+        }
         }
 
         private void iconButtonXoa_Click(object sender, EventArgs e)

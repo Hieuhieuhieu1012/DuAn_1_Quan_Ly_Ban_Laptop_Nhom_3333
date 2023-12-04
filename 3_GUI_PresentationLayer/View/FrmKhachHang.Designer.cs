@@ -77,6 +77,7 @@
             dgvKhachHang.Size = new Size(992, 494);
             dgvKhachHang.TabIndex = 8;
             dgvKhachHang.CellClick += dgvKhachHang_CellClick;
+            dgvKhachHang.CellContentClick += dgvKhachHang_CellContentClick;
             // 
             // Column1
             // 
@@ -374,6 +375,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(998, 500);
             panel2.TabIndex = 10;
+            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
