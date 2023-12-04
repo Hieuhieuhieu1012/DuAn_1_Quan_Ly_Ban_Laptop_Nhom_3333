@@ -195,6 +195,7 @@
             btnExportExcel.SizeMode = PictureBoxSizeMode.StretchImage;
             btnExportExcel.TabIndex = 18;
             btnExportExcel.TabStop = false;
+            btnExportExcel.Click += btnExportExcel_Click;
             // 
             // groupBox1
             // 

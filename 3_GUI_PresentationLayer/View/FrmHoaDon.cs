@@ -55,17 +55,17 @@ namespace _3_GUI_PresentationLayer.View
             dgv_CTHD.Columns[4].Name = "Thành Tiền";
 
             dgv_CTHD.Rows.Clear();
-           
-                var row = new DataGridViewRow();
-                row.CreateCells(dgv_CTHD);
-                row.Cells[0].Value = $"Laptop 123";
-                row.Cells[1].Value = "2";
-                row.Cells[2].Value = "10,000,000";
-                row.Cells[3].Value = "5,000,000";
-                row.Cells[4].Value = "5,000,000";
 
-                dgv_CTHD.Rows.Add(row);
-            
+            var row = new DataGridViewRow();
+            row.CreateCells(dgv_CTHD);
+            row.Cells[0].Value = $"Laptop 123";
+            row.Cells[1].Value = "2";
+            row.Cells[2].Value = "10,000,000";
+            row.Cells[3].Value = "5,000,000";
+            row.Cells[4].Value = "5,000,000";
+
+            dgv_CTHD.Rows.Add(row);
+
 
         }
 
@@ -73,6 +73,11 @@ namespace _3_GUI_PresentationLayer.View
         {
             LoadHoaDon();
             LoadHoaDonCT();
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,7 +48,7 @@
             Column11 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             txtMaNhanVien = new CustomControl.TextBoxCustom();
-            ptbAnh = new PictureBox();
+           // ptbAnh = new PictureBox();
             panel5 = new Panel();
             rbtQuanLy = new CustomControl.RadioButtonCustom();
             rbtNhanVien = new CustomControl.RadioButtonCustom();
@@ -301,7 +301,7 @@
             txtMaNhanVien.TabIndex = 36;
             txtMaNhanVien.Texts = "";
             txtMaNhanVien.UnderlinedStyle = true;
-            txtMaNhanVien.Load += txtMaNhanVien_Load;
+           // txtMaNhanVien.Load += txtMaNhanVien_Load;
             // 
             // ptbAnh
             // 
@@ -721,7 +721,7 @@
         private Panel panel2;
         private FontAwesome.Sharp.IconButton iconButtonSua;
         private FontAwesome.Sharp.IconButton iconButtonThem;
-        private FontAwesome.Sharp.IconButton iconButtonSua;
+     //   private FontAwesome.Sharp.IconButton iconButtonSua;
         private Label label5;
         private CustomControl.TextBoxCustom txtSoCanCuoc;
         private Label label12;
@@ -733,13 +733,13 @@
         private CustomControl.TextBoxCustom txtMatKhau;
         private Label label7;
         private Label label6;
-        private CustomControl.TextBoxCustom txtSoCanCuoc;
-        private Label label5;
+      //  private CustomControl.TextBoxCustom txtSoCanCuoc;
+      //  private Label label5;
         private CustomControl.TextBoxCustom txtSoDienThoai;
         private Label label4;
         private CustomControl.TextBoxCustom txtMaNhanVien;
         private Label label3;
-        private Label label12;
+      //  private Label label12;
         private CustomControl.PictrueBoxCustom ptbAnh;
         private FontAwesome.Sharp.IconButton iconButtonLoad;
         private FontAwesome.Sharp.IconButton iconButtonXoa;

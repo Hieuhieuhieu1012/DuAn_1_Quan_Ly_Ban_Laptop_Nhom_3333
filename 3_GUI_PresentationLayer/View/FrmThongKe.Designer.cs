@@ -578,7 +578,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmThongKe";
             Text = "Thống kê";
-            Load += FrmThongKe_Load;
+           // Load += FrmThongKe_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

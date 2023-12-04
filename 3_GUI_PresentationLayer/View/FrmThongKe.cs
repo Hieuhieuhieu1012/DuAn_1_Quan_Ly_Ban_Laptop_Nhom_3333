@@ -11,7 +11,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using _2_BUS_BusinessLayer.IServices;
 using _2_BUS_BusinessLayer.Services;
 using _2_BUS_BusinessLayer.ViewModel;
-
+// CS1022.cs
 namespace _3_GUI_PresentationLayer.View
 {
 
@@ -65,4 +65,5 @@ namespace _3_GUI_PresentationLayer.View
         }
         }
     }
-}
+
+
