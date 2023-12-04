@@ -63,31 +63,6 @@ namespace _3_GUI_PresentationLayer.View
             }*/
             #endregion
         }
-
-        private void FrmThongKe_Load(object sender, EventArgs e)
-        {
-            #region
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 6", 11);
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 7", 8);
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 8", 30);
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 9", 20);
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 10", 16);
-            chartDoanhThu.Series["Số lượng máy bán ra"].Points.AddXY("Tháng 11", 9);
-            #endregion
-
-            #region 
-            Chart_Top5.Series["charttop5"].Points.AddXY("Dell", 35);
-            Chart_Top5.Series["charttop5"].Points.AddXY("HP", 25);
-            Chart_Top5.Series["charttop5"].Points.AddXY("Acer", 12);
-            Chart_Top5.Series["charttop5"].Points.AddXY("ASUS", 18);
-            Chart_Top5.Series["charttop5"].Points.AddXY("Lenovo", 10);
-            #endregion  fake data
-
-            #region
-            dgvUnderStock.Rows.Add("                                      Dell", "                              Lenovo ThinkPad X1 Carbon");
-            dgvUnderStock.Rows.Add("                                      Asus", "                              Asus VivoBook W202NA");
-            dgvUnderStock.Rows.Add("                                      Acer", "                              Chromebook 11 N7");
-            #endregion
         }
     }
 }
