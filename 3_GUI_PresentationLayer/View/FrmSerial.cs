@@ -111,11 +111,11 @@ namespace _3_GUI_PresentationLayer.View
 
         private void dgvLaptop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int rowindex = e.RowIndex;
-            //if (rowindex == -1 || rowindex == _serialLaptopService.GetAllLaptopView().Count) return;
-            //_idLaptop = Guid.Parse(dgvLaptop.Rows[rowindex].Cells[0].Value.ToString());
-            //btnThem.Enabled = true;
-            //txtSerial.Enabled = true;
+            int rowindex = e.RowIndex;
+            if (rowindex == -1 || rowindex == _serialLaptopService.GetAllLaptopView().Count) return;
+            _idLaptop = Guid.Parse(dgvLaptop.Rows[rowindex].Cells[0].Value.ToString());
+            btnThem.Enabled = true;
+            txtSerial.Enabled = true;
 
         }
 
