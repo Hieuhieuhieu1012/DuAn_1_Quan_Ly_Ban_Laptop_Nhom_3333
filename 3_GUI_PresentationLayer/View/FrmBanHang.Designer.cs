@@ -73,8 +73,8 @@
             strKhuyenMai = new ToolStripMenuItem();
             printHD = new System.Drawing.Printing.PrintDocument();
             printPerviewHD = new PrintPreviewDialog();
-            groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dgcDHCho = new GroupBox();
+            dataGridView2 = new DataGridView();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             panel2.SuspendLayout();
@@ -85,8 +85,8 @@
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
             menuStrip.SuspendLayout();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgcDHCho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -561,7 +561,7 @@
             panel3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             panel3.Location = new Point(18, 174);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1000, 221);
+            panel3.Size = new Size(1000, 268);
             panel3.TabIndex = 43;
             // 
             // dgvSanPham
@@ -584,7 +584,7 @@
             dgvSanPham.Name = "dgvSanPham";
             dgvSanPham.RowHeadersVisible = false;
             dgvSanPham.RowTemplate.Height = 25;
-            dgvSanPham.Size = new Size(993, 215);
+            dgvSanPham.Size = new Size(993, 262);
             dgvSanPham.TabIndex = 23;
             dgvSanPham.CellClick += dgvSanPham_CellClick;
             dgvSanPham.CellContentClick += dgvSanPham_CellContentClick;
@@ -594,9 +594,9 @@
             // 
             groupBox2.Controls.Add(dgvGioHang);
             groupBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(19, 401);
+            groupBox2.Location = new Point(18, 452);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(451, 267);
+            groupBox2.Size = new Size(517, 223);
             groupBox2.TabIndex = 24;
             groupBox2.TabStop = false;
             groupBox2.Text = "Giỏ Hàng";
@@ -607,6 +607,7 @@
             dgvGioHang.AllowUserToResizeRows = false;
             dgvGioHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvGioHang.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvGioHang.BackgroundColor = Color.FromArgb(192, 255, 192);
             dgvGioHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvGioHang.Dock = DockStyle.Fill;
             dgvGioHang.Location = new Point(3, 23);
@@ -615,7 +616,7 @@
             dgvGioHang.RowHeadersWidth = 50;
             dgvGioHang.RowTemplate.Height = 25;
             dgvGioHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvGioHang.Size = new Size(445, 241);
+            dgvGioHang.Size = new Size(511, 197);
             dgvGioHang.TabIndex = 12;
             dgvGioHang.CellClick += dgvGioHang_CellClick;
             dgvGioHang.CellContentClick += dgvGioHang_CellContentClick;
@@ -653,35 +654,35 @@
             printPerviewHD.Name = "printPerviewHD";
             printPerviewHD.Visible = false;
             // 
-            // groupBox1
+            // dgcDHCho
             // 
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(561, 401);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(451, 267);
-            groupBox1.TabIndex = 25;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Chờ thanh toán";
-            groupBox1.Enter += groupBox1_Enter;
+            dgcDHCho.Controls.Add(dataGridView2);
+            dgcDHCho.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dgcDHCho.Location = new Point(541, 452);
+            dgcDHCho.Name = "dgcDHCho";
+            dgcDHCho.Size = new Size(477, 223);
+            dgcDHCho.TabIndex = 25;
+            dgcDHCho.TabStop = false;
+            dgcDHCho.Text = "Chờ Thanh Toán";
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 23);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 50;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(445, 241);
-            dataGridView1.TabIndex = 12;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToResizeRows = false;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView2.BackgroundColor = Color.FromArgb(255, 192, 192);
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Dock = DockStyle.Fill;
+            dataGridView2.Location = new Point(3, 23);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.RowHeadersWidth = 50;
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.Size = new Size(471, 197);
+            dataGridView2.TabIndex = 12;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // FrmBanHang
             // 
@@ -689,7 +690,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 245, 255);
             ClientSize = new Size(1521, 690);
-            Controls.Add(groupBox1);
+            Controls.Add(dgcDHCho);
             Controls.Add(groupBox2);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -711,8 +712,8 @@
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
             menuStrip.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            dgcDHCho.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -759,7 +760,9 @@
         private CustomControl.TextBoxCustom2_0 txtGiaDau;
         private Label label8;
         private Label label7;
-        private GroupBox groupBox1;
-        private DataGridView dataGridView1;
+        private System.CodeDom.CodeTypeReference groupBox1;
+        private System.CodeDom.CodeTypeReference dataGridView1;
+        private GroupBox dgcDHCho;
+        private DataGridView dataGridView2;
     }
 }
