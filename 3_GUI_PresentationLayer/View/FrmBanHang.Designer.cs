@@ -29,15 +29,23 @@
         private void InitializeComponent()
         {
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
-            this.textBoxCustom2_04 = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.txtTimKiem = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvGioHang = new System.Windows.Forms.DataGridView();
-            this.buttonCustom1 = new _3_GUI_PresentationLayer.CustomControl.ButtonCustom();
+            this.activeCamera = new _3_GUI_PresentationLayer.CustomControl.ButtonCustom();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbCamera = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnCheck = new FontAwesome.Sharp.IconButton();
+            this.txtGiaCuoi = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
+            this.txtGiaDau = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxCustom3 = new _3_GUI_PresentationLayer.CustomControl.ComboBoxCustom();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvChoThanhToan = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,13 +68,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxCustom3 = new _3_GUI_PresentationLayer.CustomControl.ComboBoxCustom();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnCheck = new FontAwesome.Sharp.IconButton();
-            this.txtGiaCuoi = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
-            this.txtGiaDau = new _3_GUI_PresentationLayer.CustomControl.TextBoxCustom2_0();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,23 +93,23 @@
             this.dgvSanPham.Size = new System.Drawing.Size(971, 262);
             this.dgvSanPham.TabIndex = 23;
             // 
-            // textBoxCustom2_04
+            // txtTimKiem
             // 
-            this.textBoxCustom2_04.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.textBoxCustom2_04.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.textBoxCustom2_04.BorderRadius = 10;
-            this.textBoxCustom2_04.BorderSize = 1;
-            this.textBoxCustom2_04.Location = new System.Drawing.Point(4, 20);
-            this.textBoxCustom2_04.Multiline = false;
-            this.textBoxCustom2_04.Name = "textBoxCustom2_04";
-            this.textBoxCustom2_04.Padding = new System.Windows.Forms.Padding(42, 7, 7, 7);
-            this.textBoxCustom2_04.PasswordChar = false;
-            this.textBoxCustom2_04.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxCustom2_04.PlaceholderText = "Tìm kiếm";
-            this.textBoxCustom2_04.Size = new System.Drawing.Size(250, 30);
-            this.textBoxCustom2_04.TabIndex = 46;
-            this.textBoxCustom2_04.Texts = "";
-            this.textBoxCustom2_04.UnderlinedStyle = false;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTimKiem.BorderRadius = 10;
+            this.txtTimKiem.BorderSize = 1;
+            this.txtTimKiem.Location = new System.Drawing.Point(4, 20);
+            this.txtTimKiem.Multiline = false;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(42, 7, 7, 7);
+            this.txtTimKiem.PasswordChar = false;
+            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTimKiem.PlaceholderText = "Tìm kiếm";
+            this.txtTimKiem.Size = new System.Drawing.Size(250, 30);
+            this.txtTimKiem.TabIndex = 46;
+            this.txtTimKiem.Texts = "";
+            this.txtTimKiem.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -168,43 +169,123 @@
             this.dgvGioHang.Size = new System.Drawing.Size(472, 212);
             this.dgvGioHang.TabIndex = 12;
             // 
-            // buttonCustom1
+            // activeCamera
             // 
-            this.buttonCustom1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.buttonCustom1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 10;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.FlatAppearance.BorderSize = 0;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom1.Location = new System.Drawing.Point(663, 11);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(105, 40);
-            this.buttonCustom1.TabIndex = 49;
-            this.buttonCustom1.Text = "Bật camera";
-            this.buttonCustom1.TextColor = System.Drawing.Color.White;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
+            this.activeCamera.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.activeCamera.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.activeCamera.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.activeCamera.BorderRadius = 10;
+            this.activeCamera.BorderSize = 0;
+            this.activeCamera.FlatAppearance.BorderSize = 0;
+            this.activeCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.activeCamera.ForeColor = System.Drawing.Color.White;
+            this.activeCamera.Location = new System.Drawing.Point(663, 49);
+            this.activeCamera.Name = "activeCamera";
+            this.activeCamera.Size = new System.Drawing.Size(105, 40);
+            this.activeCamera.TabIndex = 49;
+            this.activeCamera.Text = "Bật camera";
+            this.activeCamera.TextColor = System.Drawing.Color.White;
+            this.activeCamera.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.cbbCamera);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnCheck);
             this.panel2.Controls.Add(this.txtGiaCuoi);
             this.panel2.Controls.Add(this.txtGiaDau);
-            this.panel2.Controls.Add(this.buttonCustom1);
+            this.panel2.Controls.Add(this.activeCamera);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.comboBoxCustom3);
             this.panel2.Controls.Add(this.iconButton8);
-            this.panel2.Controls.Add(this.textBoxCustom2_04);
+            this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(9, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(972, 140);
             this.panel2.TabIndex = 47;
+            // 
+            // cbbCamera
+            // 
+            this.cbbCamera.FormattingEnabled = true;
+            this.cbbCamera.Location = new System.Drawing.Point(663, 20);
+            this.cbbCamera.Name = "cbbCamera";
+            this.cbbCamera.Size = new System.Drawing.Size(105, 23);
+            this.cbbCamera.TabIndex = 61;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(311, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Lọc theo khoảng giá";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(421, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 15);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "--";
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnCheck.IconColor = System.Drawing.Color.White;
+            this.btnCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheck.IconSize = 25;
+            this.btnCheck.Location = new System.Drawing.Point(559, 76);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(40, 30);
+            this.btnCheck.TabIndex = 58;
+            this.btnCheck.UseVisualStyleBackColor = false;
+            // 
+            // txtGiaCuoi
+            // 
+            this.txtGiaCuoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtGiaCuoi.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtGiaCuoi.BorderRadius = 0;
+            this.txtGiaCuoi.BorderSize = 2;
+            this.txtGiaCuoi.Location = new System.Drawing.Point(443, 76);
+            this.txtGiaCuoi.Multiline = false;
+            this.txtGiaCuoi.Name = "txtGiaCuoi";
+            this.txtGiaCuoi.Padding = new System.Windows.Forms.Padding(7);
+            this.txtGiaCuoi.PasswordChar = false;
+            this.txtGiaCuoi.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtGiaCuoi.PlaceholderText = "";
+            this.txtGiaCuoi.Size = new System.Drawing.Size(100, 30);
+            this.txtGiaCuoi.TabIndex = 57;
+            this.txtGiaCuoi.Texts = "";
+            this.txtGiaCuoi.UnderlinedStyle = true;
+            // 
+            // txtGiaDau
+            // 
+            this.txtGiaDau.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtGiaDau.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtGiaDau.BorderRadius = 0;
+            this.txtGiaDau.BorderSize = 2;
+            this.txtGiaDau.Location = new System.Drawing.Point(311, 76);
+            this.txtGiaDau.Multiline = false;
+            this.txtGiaDau.Name = "txtGiaDau";
+            this.txtGiaDau.Padding = new System.Windows.Forms.Padding(7);
+            this.txtGiaDau.PasswordChar = false;
+            this.txtGiaDau.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtGiaDau.PlaceholderText = "";
+            this.txtGiaDau.Size = new System.Drawing.Size(100, 30);
+            this.txtGiaDau.TabIndex = 56;
+            this.txtGiaDau.Texts = "";
+            this.txtGiaDau.UnderlinedStyle = true;
             // 
             // pictureBox1
             // 
@@ -213,6 +294,36 @@
             this.pictureBox1.Size = new System.Drawing.Size(195, 126);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
+            // 
+            // comboBoxCustom3
+            // 
+            this.comboBoxCustom3.BackColor = System.Drawing.Color.White;
+            this.comboBoxCustom3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.BorderSize = 1;
+            this.comboBoxCustom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxCustom3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxCustom3.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxCustom3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxCustom3.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxCustom3.Location = new System.Drawing.Point(10, 88);
+            this.comboBoxCustom3.MinimumSize = new System.Drawing.Size(150, 30);
+            this.comboBoxCustom3.Name = "comboBoxCustom3";
+            this.comboBoxCustom3.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxCustom3.Size = new System.Drawing.Size(244, 30);
+            this.comboBoxCustom3.TabIndex = 48;
+            this.comboBoxCustom3.Texts = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(10, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Loại sản phẩm";
             // 
             // groupBox1
             // 
@@ -313,7 +424,7 @@
             this.txtMaHD.PasswordChar = false;
             this.txtMaHD.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMaHD.PlaceholderText = "";
-            this.txtMaHD.Size = new System.Drawing.Size(241, 35);
+            this.txtMaHD.Size = new System.Drawing.Size(241, 30);
             this.txtMaHD.TabIndex = 52;
             this.txtMaHD.Texts = "";
             this.txtMaHD.UnderlinedStyle = true;
@@ -466,7 +577,6 @@
             this.rbtnCash.Text = "Tiền mặt";
             this.rbtnCash.UnCheckedColor = System.Drawing.Color.Black;
             this.rbtnCash.UseVisualStyleBackColor = false;
-            //this.rbtnCash.UseVisualStyleBackColor = false;
             // 
             // rbtnTransfer
             // 
@@ -519,107 +629,6 @@
             this.label11.Text = "Tổng Tiền: ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(10, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Loại sản phẩm";
-            // 
-            // comboBoxCustom3
-            // 
-            this.comboBoxCustom3.BackColor = System.Drawing.Color.White;
-            this.comboBoxCustom3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxCustom3.BorderSize = 1;
-            this.comboBoxCustom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxCustom3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxCustom3.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxCustom3.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxCustom3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxCustom3.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxCustom3.Location = new System.Drawing.Point(10, 88);
-            this.comboBoxCustom3.MinimumSize = new System.Drawing.Size(150, 30);
-            this.comboBoxCustom3.Name = "comboBoxCustom3";
-            this.comboBoxCustom3.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxCustom3.Size = new System.Drawing.Size(244, 30);
-            this.comboBoxCustom3.TabIndex = 48;
-            this.comboBoxCustom3.Texts = "";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(311, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 17);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Lọc theo khoảng giá";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(421, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 15);
-            this.label9.TabIndex = 59;
-            this.label9.Text = "--";
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnCheck.FlatAppearance.BorderSize = 0;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.btnCheck.IconColor = System.Drawing.Color.White;
-            this.btnCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCheck.IconSize = 25;
-            this.btnCheck.Location = new System.Drawing.Point(559, 76);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(40, 30);
-            this.btnCheck.TabIndex = 58;
-            this.btnCheck.UseVisualStyleBackColor = false;
-            // 
-            // txtGiaCuoi
-            // 
-            this.txtGiaCuoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtGiaCuoi.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtGiaCuoi.BorderRadius = 0;
-            this.txtGiaCuoi.BorderSize = 2;
-            this.txtGiaCuoi.Location = new System.Drawing.Point(443, 76);
-            this.txtGiaCuoi.Multiline = false;
-            this.txtGiaCuoi.Name = "txtGiaCuoi";
-            this.txtGiaCuoi.Padding = new System.Windows.Forms.Padding(7);
-            this.txtGiaCuoi.PasswordChar = false;
-            this.txtGiaCuoi.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtGiaCuoi.PlaceholderText = "";
-            this.txtGiaCuoi.Size = new System.Drawing.Size(100, 30);
-            this.txtGiaCuoi.TabIndex = 57;
-            this.txtGiaCuoi.Texts = "";
-            this.txtGiaCuoi.UnderlinedStyle = true;
-            // 
-            // txtGiaDau
-            // 
-            this.txtGiaDau.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtGiaDau.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtGiaDau.BorderRadius = 0;
-            this.txtGiaDau.BorderSize = 2;
-            this.txtGiaDau.Location = new System.Drawing.Point(311, 76);
-            this.txtGiaDau.Multiline = false;
-            this.txtGiaDau.Name = "txtGiaDau";
-            this.txtGiaDau.Padding = new System.Windows.Forms.Padding(7);
-            this.txtGiaDau.PasswordChar = false;
-            this.txtGiaDau.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtGiaDau.PlaceholderText = "";
-            this.txtGiaDau.Size = new System.Drawing.Size(100, 30);
-            this.txtGiaDau.TabIndex = 56;
-            this.txtGiaDau.Texts = "";
-            this.txtGiaDau.UnderlinedStyle = true;
-            // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -633,7 +642,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBanHang";
             this.Text = "FrmBanHang";
-            this.Load += new System.EventHandler(this.FrmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -654,13 +662,13 @@
         #endregion
 
         private DataGridView dgvSanPham;
-        private CustomControl.TextBoxCustom2_0 textBoxCustom2_04;
+        private CustomControl.TextBoxCustom2_0 txtTimKiem;
         private Label label2;
         private Panel panel3;
         private FontAwesome.Sharp.IconButton iconButton8;
         private GroupBox groupBox2;
         private DataGridView dgvGioHang;
-        private CustomControl.ButtonCustom buttonCustom1;
+        private CustomControl.ButtonCustom activeCamera;
         private Panel panel2;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
@@ -692,5 +700,11 @@
         private CustomControl.TextBoxCustom2_0 txtGiaDau;
         private CustomControl.ComboBoxCustom comboBoxCustom3;
         private Label label1;
+        private ComboBox cbbCamera;
+        private System.Drawing.Printing.PrintDocument printHD;
+        private PrintPreviewDialog printPerviewHD;
+        private PictureBox ptbCamera;
+        private System.Windows.Forms.Timer tCamera;
+
     }
 }
