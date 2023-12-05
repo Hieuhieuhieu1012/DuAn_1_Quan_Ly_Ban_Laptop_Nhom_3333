@@ -50,7 +50,7 @@ namespace _1_DAL_DataAccessLayer.Context
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Data Source=DESKTOP-VGNG2FP\SQLEXPRESS;Initial Catalog=Du_An_1_Group_Done;Integrated Security=True");
+                    @"Data Source=DESKTOP-VGNG2FP\SQLEXPRESS;Initial Catalog=Du_An_1_Group_Test;Integrated Security=True");
             }
         }
 
