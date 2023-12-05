@@ -19,11 +19,11 @@ namespace _3_GUI_PresentationLayer.View
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-      //  private INhanVienService _nhanVienService;
+        private INhanVienService _nhanVienService;
         public FrmMain()
         {
             InitializeComponent();
-          //  _nhanVienService = new NhanvienService();
+            _nhanVienService = new NhanvienService();
 
             this.CenterToScreen();
             currentBtn = new IconButton();
@@ -31,8 +31,8 @@ namespace _3_GUI_PresentationLayer.View
             leftBorderBtn.Size = new Size(10, 70);
             panelMenu.Controls.Add(leftBorderBtn);
 
-           // LoadInfoNhanVien();
-          //  OpenChildForm(new FrmHome());
+            LoadInfoNhanVien();
+            OpenChildForm(new FrmHome());
         }
 
         //Structs RGB
@@ -171,67 +171,18 @@ namespace _3_GUI_PresentationLayer.View
 
         private void pictrueBoxCustom1_Click(object sender, EventArgs e)
         {
-           // OpenChildForm(new FrmHome());
+            OpenChildForm(new FrmHome());
         }
 
-        //private void LoadInfoNhanVien()
-        //{
-        //    string email = Properties.Settings.Default._TKdaLogin;
-        //    var nhanVien = _nhanVienService.GetAllNhanViens().Find(c => c.Email == email);
-        //    if (nhanVien != null)
-        //    {
-        //        lblMa.Text = nhanVien.Ma;
-        //        lblTen.Text = nhanVien.Hoten;
-        //    }
-        //}
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        private void LoadInfoNhanVien()
         {
-
-        }
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void lblTen_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblMa_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void lblTitleChildFrm_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void iconCurrentChildFrm_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panelShadow_Paint(object sender, PaintEventArgs e)
-        {
+            string email = Properties.Settings.Default._TKdaLogin;
+            var nhanVien = _nhanVienService.GetAllNhanViens().Find(c => c.Email == email);
+            if (nhanVien != null)
+            {
+                lblMa.Text = nhanVien.Ma;
+                lblTen.Text = nhanVien.Hoten;
+            }
         }
     }
 }

@@ -76,7 +76,7 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(247, 811);
             panelMenu.TabIndex = 0;
-            panelMenu.Paint += panelMenu_Paint;
+           // panelMenu.Paint += panelMenu_Paint;
             // 
             // btnDangXuat
             // 
@@ -264,7 +264,7 @@
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(247, 222);
             panelLogo.TabIndex = 0;
-            panelLogo.Paint += panelLogo_Paint;
+            //panelLogo.Paint += panelLogo_Paint;
             // 
             // panel1
             // 
@@ -277,7 +277,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(247, 222);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            //panel1.Paint += panel1_Paint;
             // 
             // lblTen
             // 
@@ -289,7 +289,7 @@
             lblTen.Size = new Size(33, 20);
             lblTen.TabIndex = 3;
             lblTen.Text = "Tên";
-            lblTen.Click += lblTen_Click;
+            //lblTen.Click += lblTen_Click;
             // 
             // lblMa
             // 
@@ -301,7 +301,7 @@
             lblMa.Size = new Size(31, 20);
             lblMa.TabIndex = 2;
             lblMa.Text = "Mã";
-            lblMa.Click += lblMa_Click;
+            //lblMa.Click += lblMa_Click;
             // 
             // label2
             // 
@@ -313,7 +313,7 @@
             label2.Size = new Size(50, 17);
             label2.TabIndex = 1;
             label2.Text = "Họ tên:";
-            label2.Click += label2_Click;
+           // label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -325,7 +325,7 @@
             label1.Size = new Size(89, 17);
             label1.TabIndex = 0;
             label1.Text = "Mã nhân viên:";
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // pictrueBoxCustom1
             // 
@@ -356,7 +356,7 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1537, 73);
             panelTitleBar.TabIndex = 1;
-            panelTitleBar.Paint += panelTitleBar_Paint;
+            //panelTitleBar.Paint += panelTitleBar_Paint;
             // 
             // btnMinimize
             // 
@@ -400,7 +400,7 @@
             lblTitleChildFrm.Size = new Size(121, 50);
             lblTitleChildFrm.TabIndex = 1;
             lblTitleChildFrm.Text = "Home";
-            lblTitleChildFrm.Click += lblTitleChildFrm_Click;
+            //lblTitleChildFrm.Click += lblTitleChildFrm_Click;
             // 
             // iconCurrentChildFrm
             // 
@@ -415,7 +415,7 @@
             iconCurrentChildFrm.Size = new Size(60, 52);
             iconCurrentChildFrm.TabIndex = 0;
             iconCurrentChildFrm.TabStop = false;
-            iconCurrentChildFrm.Click += iconCurrentChildFrm_Click;
+            //iconCurrentChildFrm.Click += iconCurrentChildFrm_Click;
             // 
             // panelShadow
             // 
@@ -425,7 +425,7 @@
             panelShadow.Name = "panelShadow";
             panelShadow.Size = new Size(1537, 9);
             panelShadow.TabIndex = 2;
-            panelShadow.Paint += panelShadow_Paint;
+            //panelShadow.Paint += panelShadow_Paint;
             // 
             // panelDesktop
             // 
@@ -435,7 +435,7 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1537, 729);
             panelDesktop.TabIndex = 3;
-            panelDesktop.Paint += panelDesktop_Paint;
+           // panelDesktop.Paint += panelDesktop_Paint;
             // 
             // FrmMain
             // 
