@@ -1,11 +1,4 @@
-﻿using _1_DAL_DataAccessLayer.IRepositories;
-using _1_DAL_DataAccessLayer.Models;
-using _1_DAL_DataAccessLayer.Repositories;
-using _2_BUS_BusinessLayer.IServices;
-using _2_BUS_BusinessLayer.Services;
-using _2_BUS_BusinessLayer.ViewModel;
-using AForge.Video.DirectShow;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _1_DAL_DataAccessLayer.IRepositories;
+using _1_DAL_DataAccessLayer.Models;
+using _1_DAL_DataAccessLayer.Repositories;
+using _2_BUS_BusinessLayer.IServices;
+using _2_BUS_BusinessLayer.Services;
+using _2_BUS_BusinessLayer.ViewModel;
+using _3_GUI_PresentationLayer.CustomControl;
+using AForge.Video.DirectShow;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using ZXing;
 using ZXing.Windows.Compatibility;
 
@@ -21,7 +23,6 @@ namespace _3_GUI_PresentationLayer.View
 {
     public partial class FrmBanHang : Form
     {
-
         private ILaptopService _laptopService;
         private ISerialLaptopService _serialLaptopService;
         private IHoaDonSerevice _hoaDonSerevice;
@@ -116,8 +117,8 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Desktop\HocTap\DuAn1_src\3_GUI_PresentationLayer\Resources\add-to-cart.png");
-            dgvSanPham.Columns.Add(imageColumn);
+            //imageColumn.Image = Image.FromFile(@"D:\CODE\C#\DuAn_1_Quan_Ly_Ban_Laptop\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            //dgvSanPham.Columns.Add(imageColumn);
         }
 
         private void LoadSanPham(string value)
@@ -158,8 +159,8 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Desktop\HocTap\DuAn1_src\3_GUI_PresentationLayer\Resources\add-to-cart.png");
-            dgvSanPham.Columns.Add(imageColumn);
+            //imageColumn.Image = Image.FromFile(@"D:\CODE\C#\DuAn_1_Quan_Ly_Ban_Laptop\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            // dgvSanPham.Columns.Add(imageColumn);
         }
 
         private void LoadSanPham(string value1, string value2)
@@ -199,7 +200,7 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Desktop\HocTap\DuAn1_src\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            imageColumn.Image = Image.FromFile(@"D:\CODE\C#\DuAn_1_Quan_Ly_Ban_Laptop\3_GUI_PresentationLayer\Resources\add-to-cart.png");
             dgvSanPham.Columns.Add(imageColumn);
         }
         #endregion
@@ -225,8 +226,8 @@ namespace _3_GUI_PresentationLayer.View
             img.HeaderText = "Thao tác";
             img.ImageLayout = DataGridViewImageCellLayout.Normal;
             img.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            img.Image = Image.FromFile(@"C:\Users\Admin\Desktop\HocTap\DuAn1_src\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
-            dgvGioHang.Columns.Add(img);
+            //img.Image = Image.FromFile(@"D:\CODE\C#\DuAn_1_Quan_Ly_Ban_Laptop\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
+            //dgvGioHang.Columns.Add(img);
 
             dgvGioHang.Rows.Clear();
             foreach (var a in _lstCtHoaDonViews)
@@ -638,16 +639,16 @@ namespace _3_GUI_PresentationLayer.View
             //var serial = _serialLaptopService.GetSerialLaptopList().FirstOrDefault(c => c.Serial == seriaWhenClick);
         }
 
-        //private void dgvGioHang_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
-        //{
-        //    if (e.Button == MouseButtons.Right)
-        //    {
-        //        dgvGioHang.Rows[e.RowIndex].Selected = true;
-        //        this.menuStrip.Show(dgvGioHang, e.Location);
-        //        menuStrip.Show(Cursor.Position);
-        //    }
+        private void dgvGioHang_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                dgvGioHang.Rows[e.RowIndex].Selected = true;
+                this.menuStrip.Show(dgvGioHang, e.Location);
+                menuStrip.Show(Cursor.Position);
+            }
 
-        //}
+        }
 
         private void FrmBanHang_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -786,7 +787,14 @@ namespace _3_GUI_PresentationLayer.View
             LoadKhachHang();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

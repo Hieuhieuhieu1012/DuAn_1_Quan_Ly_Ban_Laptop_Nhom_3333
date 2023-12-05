@@ -107,7 +107,7 @@ namespace _3_GUI_PresentationLayer.View
         private void btnBanHang_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color2);
-            OpenChildForm(new FrmBanHang());
+            OpenChildForm(new FrmBanHang1());
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
