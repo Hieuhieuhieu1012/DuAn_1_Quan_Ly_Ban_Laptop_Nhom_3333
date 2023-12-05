@@ -49,7 +49,7 @@ namespace _1_DAL_DataAccessLayer.Context
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Data Source=DESKTOP-HVLFK5F\SQLEXPRESS;Initial Catalog=Duan1_Group3;Integrated Security=True");
+                    @"Data Source=LAPTOP-5169M4OF\SQLEXPRESS;Initial Catalog=duAn1_doneDb;Integrated Security=True");
             }
         }
 
