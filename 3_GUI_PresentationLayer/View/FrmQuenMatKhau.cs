@@ -47,7 +47,7 @@ namespace _3_GUI_PresentationLayer.View
             {
                 _randomCode = new Random().Next(100000, 999999);
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("nguyenhieuhieu.1012@gmail.com\r\n");
+                mail.From = new MailAddress("nguyenhieuhieu.1012@gmail.com");
                 mail.To.Add(txt_Email.Texts);
                 mail.Body = "Mã code của bạn là: " + _randomCode;
                 SmtpClient smtp = new SmtpClient();
