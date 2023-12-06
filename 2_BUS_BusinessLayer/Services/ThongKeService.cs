@@ -122,7 +122,7 @@ namespace _2_BUS_BusinessLayer.Services
                               select new KeyValuePair<string, int>($"{g.Key.Hang} {g.Key.Dong} {g.Key.TenSanPham}", g.Sum(c => c.SoLuong))).Take(5).ToList();
 
             UnderStockList = (from a in _laptopService.GetAllLaptop()
-                              where a.TrangThai == true && a.SoLuongTon < 3
+                              where a.TrangThai == true && a.SoLuongTon < 5
                               select new KeyValuePair<string, int>($"{a.HangLaptop} {a.DongLaptop} {a.Ten}", a.SoLuongTon)).ToList();
 
         }
