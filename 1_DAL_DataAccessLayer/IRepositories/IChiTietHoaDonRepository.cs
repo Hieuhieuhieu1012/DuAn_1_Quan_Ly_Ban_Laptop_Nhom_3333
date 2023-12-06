@@ -10,6 +10,7 @@ namespace _1_DAL_DataAccessLayer.IRepositories
     public interface IChiTietHoaDonRepository
     {
         bool AddChiTietHoaDon(ChiTietHoaDon chiTietHoaDon);
+        bool DeleteChiTietHoaDon(Guid idChiTietHoaDon);
         bool UpdateChiTietHoaDon(ChiTietHoaDon chiTietHoaDon);
         //bool DeleteChiTietHoaDon(Guid idChiTietHoaDon);
         ChiTietHoaDon GetChiTietHoaDonById(Guid idChiTietHoaDon);

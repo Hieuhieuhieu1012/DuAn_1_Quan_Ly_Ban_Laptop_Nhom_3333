@@ -113,7 +113,7 @@
             cb_nhoMatKhau.TabIndex = 3;
             cb_nhoMatKhau.Text = "Nhớ mật khẩu";
             cb_nhoMatKhau.UseVisualStyleBackColor = true;
-            cb_nhoMatKhau.CheckedChanged +=  cb_nhoMatKhau_CheckedChanged;
+            cb_nhoMatKhau.CheckedChanged += cb_nhoMatKhau_CheckedChanged;
             // 
             // lbQuenMatKhau
             // 
@@ -194,6 +194,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmDangNhap";
             Text = "FrmDangNhap";
+            FormClosing += FrmDangNhap_FormClosing;
             Load += FrmDangNhap_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -90,7 +90,7 @@ namespace _3_GUI_PresentationLayer.View
             dgv_hoaDon.Columns[8].DefaultCellStyle.Format = "N0";
 
             dgv_hoaDon.Rows.Clear();
-            foreach (var item in _Bus_hoaDon.GetAllHoaDonViews())
+            foreach (var item in _Bus_hoaDon.GetAllHoaDonViews().Where(c => c.TrangThaiHD == 0))
             {
                 dgv_hoaDon.Rows.Add(item.Id, item.IdKhachHang, item.TenNhanVien, item.TenKhachHang, item.MaHd, item.HTThanhToan, item.NgayTao, item.GhiChu, item.TongTien);
             }
@@ -294,7 +294,7 @@ namespace _3_GUI_PresentationLayer.View
 
             dgv_hoaDon.Rows.Clear();
             foreach (var item in _Bus_hoaDon.GetAllHoaDonViews().Where(c => c.SDT.Contains(txtTimKiem.Texts) || c.TenKhachHang.ToLower().Contains(txtTimKiem.Texts.ToLower())))
-                     
+
             {
                 dgv_hoaDon.Rows.Add(item.Id, item.IdKhachHang, item.TenNhanVien, item.TenKhachHang, item.MaHd,
                     item.HTThanhToan, item.NgayTao, item.GhiChu, item.TongTien);

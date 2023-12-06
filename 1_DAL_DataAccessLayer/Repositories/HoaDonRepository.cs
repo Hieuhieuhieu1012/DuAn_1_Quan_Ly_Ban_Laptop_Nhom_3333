@@ -63,9 +63,9 @@ namespace _1_DAL_DataAccessLayer.Repositories
             }
         }
 
-        public List<HoaDon> GetAllHoaDon()
+        public IQueryable<HoaDon> GetAllHoaDon()
         {
-            return _lapTopContext.HoaDons.ToList();
+            return _lapTopContext.HoaDons.AsQueryable();
         }
 
         public HoaDon GetHoaDonById(Guid idHoaDon)

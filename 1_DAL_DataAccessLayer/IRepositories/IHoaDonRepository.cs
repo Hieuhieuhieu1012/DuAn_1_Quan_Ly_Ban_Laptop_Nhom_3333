@@ -12,6 +12,6 @@ namespace _1_DAL_DataAccessLayer.IRepositories
         bool AddHoaDon(HoaDon hoaDon);
         bool UpdateHoaDon(HoaDon hoaDon);
         HoaDon GetHoaDonById(Guid idHoaDon);
-        List<HoaDon> GetAllHoaDon();
+        IQueryable<HoaDon> GetAllHoaDon();
     }
 }

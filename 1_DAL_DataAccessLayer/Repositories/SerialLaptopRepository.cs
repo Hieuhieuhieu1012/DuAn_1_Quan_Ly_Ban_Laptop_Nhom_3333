@@ -112,9 +112,9 @@ namespace _1_DAL_DataAccessLayer.Repositories
             }
         }
 
-        public List<SerialLaptop> GetLstSerialLaptopFromDb()
+        public IQueryable<SerialLaptop> GetLstSerialLaptopFromDb()
         {
-            return _context.SerialLaptop.ToList();
+            return _context.SerialLaptop.AsQueryable();
         }
     }
 }

@@ -85,7 +85,7 @@ namespace _2_BUS_BusinessLayer.Services
 
         public List<SerialLaptop> GetSerialLaptopList()
         {
-            return _serialLaptopRes.GetLstSerialLaptopFromDb();
+            return _serialLaptopRes.GetLstSerialLaptopFromDb().ToList();
         }
     }
 }

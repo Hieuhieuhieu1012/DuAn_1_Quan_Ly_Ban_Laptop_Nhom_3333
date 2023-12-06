@@ -16,5 +16,7 @@ namespace _2_BUS_BusinessLayer.IServices
         public List<HoaDonView> GetAllHoaDonViews();
         public string AutoGenerateMa();
 
+        List<HoaDonView> GetHoaDonChoViews();
+
     }
 }

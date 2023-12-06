@@ -32,6 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBanHang));
             panel1 = new Panel();
+            btn_Remove_HdCho = new FontAwesome.Sharp.IconButton();
+            btn_Luu_Hoa_Don = new FontAwesome.Sharp.IconButton();
             cbbGiamGia = new ComboBox();
             label1 = new Label();
             btnRefresh = new FontAwesome.Sharp.IconButton();
@@ -74,7 +76,7 @@
             printHD = new System.Drawing.Printing.PrintDocument();
             printPerviewHD = new PrintPreviewDialog();
             dgcDHCho = new GroupBox();
-            dataGridView2 = new DataGridView();
+            dgv_hoaDonCho = new DataGridView();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             panel2.SuspendLayout();
@@ -86,12 +88,14 @@
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
             menuStrip.SuspendLayout();
             dgcDHCho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_hoaDonCho).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btn_Remove_HdCho);
+            panel1.Controls.Add(btn_Luu_Hoa_Don);
             panel1.Controls.Add(cbbGiamGia);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnRefresh);
@@ -110,6 +114,50 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(457, 661);
             panel1.TabIndex = 19;
+            // 
+            // btn_Remove_HdCho
+            // 
+            btn_Remove_HdCho.BackColor = Color.FromArgb(146, 185, 229);
+            btn_Remove_HdCho.FlatAppearance.BorderSize = 0;
+            btn_Remove_HdCho.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
+            btn_Remove_HdCho.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_Remove_HdCho.FlatStyle = FlatStyle.Flat;
+            btn_Remove_HdCho.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Remove_HdCho.ForeColor = Color.FromArgb(148, 105, 215);
+            btn_Remove_HdCho.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            btn_Remove_HdCho.IconColor = Color.FromArgb(148, 105, 215);
+            btn_Remove_HdCho.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Remove_HdCho.IconSize = 38;
+            btn_Remove_HdCho.Location = new Point(238, 599);
+            btn_Remove_HdCho.Name = "btn_Remove_HdCho";
+            btn_Remove_HdCho.Size = new Size(123, 55);
+            btn_Remove_HdCho.TabIndex = 59;
+            btn_Remove_HdCho.Text = "Xóa HĐ Chờ";
+            btn_Remove_HdCho.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Remove_HdCho.UseVisualStyleBackColor = true;
+            btn_Remove_HdCho.Click += btn_Remove_HdCho_Click;
+            // 
+            // btn_Luu_Hoa_Don
+            // 
+            btn_Luu_Hoa_Don.BackColor = Color.FromArgb(146, 185, 229);
+            btn_Luu_Hoa_Don.FlatAppearance.BorderSize = 0;
+            btn_Luu_Hoa_Don.FlatAppearance.MouseDownBackColor = Color.FromArgb(232, 225, 197);
+            btn_Luu_Hoa_Don.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_Luu_Hoa_Don.FlatStyle = FlatStyle.Flat;
+            btn_Luu_Hoa_Don.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Luu_Hoa_Don.ForeColor = Color.FromArgb(148, 105, 215);
+            btn_Luu_Hoa_Don.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            btn_Luu_Hoa_Don.IconColor = Color.FromArgb(148, 105, 215);
+            btn_Luu_Hoa_Don.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Luu_Hoa_Don.IconSize = 38;
+            btn_Luu_Hoa_Don.Location = new Point(114, 599);
+            btn_Luu_Hoa_Don.Name = "btn_Luu_Hoa_Don";
+            btn_Luu_Hoa_Don.Size = new Size(120, 55);
+            btn_Luu_Hoa_Don.TabIndex = 58;
+            btn_Luu_Hoa_Don.Text = "Lưu Hóa Đơn";
+            btn_Luu_Hoa_Don.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Luu_Hoa_Don.UseVisualStyleBackColor = true;
+            btn_Luu_Hoa_Don.Click += iconButton1_Click;
             // 
             // cbbGiamGia
             // 
@@ -144,9 +192,9 @@
             btnRefresh.IconColor = Color.FromArgb(148, 105, 215);
             btnRefresh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRefresh.IconSize = 38;
-            btnRefresh.Location = new Point(235, 596);
+            btnRefresh.Location = new Point(367, 599);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(143, 55);
+            btnRefresh.Size = new Size(95, 55);
             btnRefresh.TabIndex = 56;
             btnRefresh.Text = "Làm mới";
             btnRefresh.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -279,9 +327,9 @@
             btnThanhToan.IconColor = Color.FromArgb(148, 105, 215);
             btnThanhToan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnThanhToan.IconSize = 38;
-            btnThanhToan.Location = new Point(81, 596);
+            btnThanhToan.Location = new Point(2, 600);
             btnThanhToan.Name = "btnThanhToan";
-            btnThanhToan.Size = new Size(143, 55);
+            btnThanhToan.Size = new Size(108, 55);
             btnThanhToan.TabIndex = 49;
             btnThanhToan.Text = "Thanh toán";
             btnThanhToan.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -656,7 +704,7 @@
             // 
             // dgcDHCho
             // 
-            dgcDHCho.Controls.Add(dataGridView2);
+            dgcDHCho.Controls.Add(dgv_hoaDonCho);
             dgcDHCho.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             dgcDHCho.Location = new Point(541, 452);
             dgcDHCho.Name = "dgcDHCho";
@@ -665,24 +713,24 @@
             dgcDHCho.TabStop = false;
             dgcDHCho.Text = "Chờ Thanh Toán";
             // 
-            // dataGridView2
+            // dgv_hoaDonCho
             // 
-            dataGridView2.AllowUserToAddRows = false;
-            dataGridView2.AllowUserToResizeRows = false;
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView2.BackgroundColor = Color.FromArgb(255, 192, 192);
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(3, 23);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.RowHeadersWidth = 50;
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.Size = new Size(471, 197);
-            dataGridView2.TabIndex = 12;
-            dataGridView2.CellClick += dataGridView2_CellClick;
+            dgv_hoaDonCho.AllowUserToAddRows = false;
+            dgv_hoaDonCho.AllowUserToResizeRows = false;
+            dgv_hoaDonCho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_hoaDonCho.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_hoaDonCho.BackgroundColor = Color.FromArgb(255, 192, 192);
+            dgv_hoaDonCho.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_hoaDonCho.Dock = DockStyle.Fill;
+            dgv_hoaDonCho.Location = new Point(3, 23);
+            dgv_hoaDonCho.Name = "dgv_hoaDonCho";
+            dgv_hoaDonCho.RowHeadersVisible = false;
+            dgv_hoaDonCho.RowHeadersWidth = 50;
+            dgv_hoaDonCho.RowTemplate.Height = 25;
+            dgv_hoaDonCho.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_hoaDonCho.Size = new Size(471, 197);
+            dgv_hoaDonCho.TabIndex = 12;
+            dgv_hoaDonCho.CellClick += dgv_hoaDonCho_CellClick;
             // 
             // FrmBanHang
             // 
@@ -713,7 +761,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
             menuStrip.ResumeLayout(false);
             dgcDHCho.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_hoaDonCho).EndInit();
             ResumeLayout(false);
         }
 
@@ -763,6 +811,8 @@
         private System.CodeDom.CodeTypeReference groupBox1;
         private System.CodeDom.CodeTypeReference dataGridView1;
         private GroupBox dgcDHCho;
-        private DataGridView dataGridView2;
+        private DataGridView dgv_hoaDonCho;
+        private FontAwesome.Sharp.IconButton btn_Luu_Hoa_Don;
+        private FontAwesome.Sharp.IconButton btn_Remove_HdCho;
     }
 }

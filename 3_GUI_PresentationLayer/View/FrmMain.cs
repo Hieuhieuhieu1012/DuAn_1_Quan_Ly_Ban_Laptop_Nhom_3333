@@ -85,7 +85,7 @@ namespace _3_GUI_PresentationLayer.View
         {
             if (currentChildForm != null)
             {
-                currentChildForm.Close();
+                currentChildForm.Hide();
             }
             currentChildForm = childForm;
 

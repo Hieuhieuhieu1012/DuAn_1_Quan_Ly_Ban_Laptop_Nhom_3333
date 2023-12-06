@@ -49,8 +49,8 @@ namespace _3_GUI_PresentationLayer.View
                             Hide();
                             SaveInfor();
                             Form home = new FrmMain();
-                            home.ShowDialog();
-                            Close();
+                            home.Show();
+                            this.Hide();
                             return;
 
                         }
@@ -85,7 +85,7 @@ namespace _3_GUI_PresentationLayer.View
                 }
                 else
                 {
-                    Properties.Settings.Default.Reset();                           
+                    Properties.Settings.Default.Reset();
                 }
             }
         }
@@ -140,6 +140,13 @@ namespace _3_GUI_PresentationLayer.View
         private void txtEmail_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            this.Parent = null;
+            e.Cancel = true;
         }
     }
 

@@ -66,16 +66,16 @@ namespace _2_BUS_BusinessLayer.Services
             hoaDon.NgayTao = obj.NgayTao;
             hoaDon.NgayThanhToan = obj.NgayThanhToan;
             hoaDon.TrangThai = obj.TrangThaiHD;
-           hoaDon.DiaChiNhanHang = obj.DcNhanHang;
-           hoaDon.GhiChu = obj.GhiChu;
-           hoaDon.TongTien = obj.TongTien;
+            hoaDon.DiaChiNhanHang = obj.DcNhanHang;
+            hoaDon.GhiChu = obj.GhiChu;
+            hoaDon.TongTien = obj.TongTien;
 
-           if (_hoaDonRepository.UpdateHoaDon(hoaDon))
-           {
-               return "Sửa thành công";
-           }
+            if (_hoaDonRepository.UpdateHoaDon(hoaDon))
+            {
+                return "Sửa thành công";
+            }
 
-           return "Sửa thất bại";
+            return "Sửa thất bại";
         }
 
         public string UpdateStatusHoaDon(Guid id)
@@ -85,27 +85,55 @@ namespace _2_BUS_BusinessLayer.Services
 
         public List<HoaDonView> GetAllHoaDonViews()
         {
-            var lst = (from a in _hoaDonRepository.GetAllHoaDon()
-                join b in _nhanVienRepository.GetAllNhanVien() on a.IdNhanVien equals b.Id
-                join c in _khachHangRepository.GetAllKhachHang() on a.IdKhachHang equals c.Id
-                select new HoaDonView()
-                {
-                    Id = a.Id,
-                    IdNhanVien = b.Id,
-                    IdKhachHang = c.Id,
-                    TenNhanVien = b.Hoten,
-                    TenKhachHang = c.Hoten,
+            var lst = (from a in _hoaDonRepository.GetAllHoaDon().ToList()
+                       join b in _nhanVienRepository.GetAllNhanVien() on a.IdNhanVien equals b.Id
+                       join c in _khachHangRepository.GetAllKhachHang() on a.IdKhachHang equals c.Id
+                       select new HoaDonView()
+                       {
+                           Id = a.Id,
+                           IdNhanVien = b.Id,
+                           IdKhachHang = c.Id,
+                           TenNhanVien = b.Hoten,
+                           TenKhachHang = c.Hoten,
                            SDT = c.SoDienThoai,
                            MaHd = a.Ma,
-                    HTThanhToan = a.HinhThucTT,
-                    NgayTao = a.NgayTao,
+                           HTThanhToan = a.HinhThucTT,
+                           NgayTao = a.NgayTao,
                            TrangThaiHD = a.TrangThai,
-                    NgayThanhToan = a.NgayThanhToan,
-                    //  TrangThai = a.TrangThai,
-                    DcNhanHang = a.DiaChiNhanHang,
-                    GhiChu = a.GhiChu,
-                    TongTien = a.TongTien
-                }).ToList();
+                           NgayThanhToan = a.NgayThanhToan,
+                           //  TrangThai = a.TrangThai,
+                           DcNhanHang = a.DiaChiNhanHang,
+                           GhiChu = a.GhiChu,
+                           TongTien = a.TongTien
+                       }).ToList();
+
+            return lst;
+        }
+
+        public List<HoaDonView> GetHoaDonChoViews()
+        {
+            var lstHdCho = _hoaDonRepository.GetAllHoaDon().Where(c => c.TrangThai == 1).ToList();
+            var lst = (from a in lstHdCho
+                       join b in _nhanVienRepository.GetAllNhanVien() on a.IdNhanVien equals b.Id
+                       join c in _khachHangRepository.GetAllKhachHang() on a.IdKhachHang equals c.Id
+                       select new HoaDonView()
+                       {
+                           Id = a.Id,
+                           IdNhanVien = b.Id,
+                           IdKhachHang = c.Id,
+                           TenNhanVien = b.Hoten,
+                           TenKhachHang = c.Hoten,
+                           SDT = c.SoDienThoai,
+                           MaHd = a.Ma,
+                           HTThanhToan = a.HinhThucTT,
+                           NgayTao = a.NgayTao,
+                           TrangThaiHD = a.TrangThai,
+                           NgayThanhToan = a.NgayThanhToan,
+                           //  TrangThai = a.TrangThai,
+                           DcNhanHang = a.DiaChiNhanHang,
+                           GhiChu = a.GhiChu,
+                           TongTien = a.TongTien
+                       }).ToList();
 
             return lst;
         }
@@ -113,10 +141,10 @@ namespace _2_BUS_BusinessLayer.Services
         public string AutoGenerateMa()
         {
             Random random = new Random();
-            int numGenerate =  random.Next(1000,9999);
+            int numGenerate = random.Next(1000, 9999);
             string maHD;
             maHD = $"HD{numGenerate}";
-            if (_hoaDonRepository.GetAllHoaDon().Any(c=>c.Ma == maHD))
+            if (_hoaDonRepository.GetAllHoaDon().ToList().Any(c => c.Ma == maHD))
             {
                 AutoGenerateMa();
             }

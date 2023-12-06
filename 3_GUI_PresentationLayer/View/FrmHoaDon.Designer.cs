@@ -59,7 +59,7 @@
             dtpEndDate.BorderSize = 0;
             dtpEndDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             dtpEndDate.Format = DateTimePickerFormat.Short;
-            dtpEndDate.Location = new Point(906, 20);
+            dtpEndDate.Location = new Point(496, 20);
             dtpEndDate.MinimumSize = new Size(0, 35);
             dtpEndDate.Name = "dtpEndDate";
             dtpEndDate.Size = new Size(141, 35);
@@ -72,7 +72,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.MenuHighlight;
-            label5.Location = new Point(863, 29);
+            label5.Location = new Point(453, 29);
             label5.Name = "label5";
             label5.Size = new Size(37, 20);
             label5.TabIndex = 7;
@@ -84,7 +84,7 @@
             dtpStartDate.BorderSize = 0;
             dtpStartDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             dtpStartDate.Format = DateTimePickerFormat.Short;
-            dtpStartDate.Location = new Point(726, 19);
+            dtpStartDate.Location = new Point(316, 19);
             dtpStartDate.MinimumSize = new Size(0, 35);
             dtpStartDate.Name = "dtpStartDate";
             dtpStartDate.Size = new Size(131, 35);
@@ -97,7 +97,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.MenuHighlight;
-            label4.Location = new Point(694, 29);
+            label4.Location = new Point(284, 29);
             label4.Name = "label4";
             label4.Size = new Size(26, 20);
             label4.TabIndex = 6;
@@ -185,7 +185,7 @@
             btnSelect.FlatStyle = FlatStyle.Flat;
             btnSelect.ForeColor = Color.White;
             btnSelect.Image = Properties.Resources.check;
-            btnSelect.Location = new Point(1055, 19);
+            btnSelect.Location = new Point(645, 19);
             btnSelect.Name = "btnSelect";
             btnSelect.Size = new Size(38, 37);
             btnSelect.TabIndex = 51;

@@ -15,6 +15,6 @@ namespace _1_DAL_DataAccessLayer.IRepositories
         public bool UpdateStatusSerial(string serial);
         public bool UpdateSerialLaptop(SerialLaptop obj);
         public bool DeleteSerialLaptop(Guid Id);
-        public List<SerialLaptop> GetLstSerialLaptopFromDb();
+        public IQueryable<SerialLaptop> GetLstSerialLaptopFromDb();
     }
 }

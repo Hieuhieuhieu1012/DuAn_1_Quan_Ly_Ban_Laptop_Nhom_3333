@@ -48,6 +48,19 @@ namespace _1_DAL_DataAccessLayer.Repositories
             return false;
         }
 
+        //public bool DeleteChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
+        //{
+        //    var ketqua = _lapTopContext.ChiTietHoaDons;
+        //    if (ketqua != null)
+        //    {
+        //        _lapTopContext.Remove(ketqua);
+        //        _lapTopContext.SaveChanges();
+
+        //        return true;
+        //    }
+        //    return false;
+        //}
+
         public List<ChiTietHoaDon> GetAllChiTietHoaDon()
         {
             return _lapTopContext.ChiTietHoaDons.ToList();

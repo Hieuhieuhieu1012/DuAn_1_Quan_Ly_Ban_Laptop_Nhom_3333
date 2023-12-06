@@ -52,10 +52,7 @@ namespace _2_BUS_BusinessLayer.Services
             return "Khong thanh cong";
         }
 
-        public string RemoveChiTietHoaDon(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public string UpdateChiTietHoaDon(ChiTietHoaDonView obj)
         {
@@ -88,7 +85,7 @@ namespace _2_BUS_BusinessLayer.Services
         public List<ChiTietHoaDonView> GetAllChiTietHoaDon()
         {
             var lst = (from a in _chiTietHoaDonRepository.GetAllChiTietHoaDon()
-                join b in _hoaDonRepository.GetAllHoaDon() on a.IdHoaDon equals b.Id
+                join b in _hoaDonRepository.GetAllHoaDon().ToList() on a.IdHoaDon equals b.Id
                 join c in _lapTopRepository.GetAllLapTop() on a.IdLaptop equals c.Id
                 join e in _hangLaptopRepositories.GetAllHangLaptops() on c.IdHangLaptop equals e.Id
                 join f in _dongLapTopRepositories.GetAllDongLaptop() on c.IdDongLaptop equals f.Id 
@@ -111,7 +108,7 @@ namespace _2_BUS_BusinessLayer.Services
         public List<ChiTietHoaDonView> GetAllCTHĐ(Guid id)
         {
             var lst = (from a in _chiTietHoaDonRepository.GetAllChiTietHoaDon()
-                join b in _hoaDonRepository.GetAllHoaDon() on a.IdHoaDon equals b.Id
+                join b in _hoaDonRepository.GetAllHoaDon().ToList() on a.IdHoaDon equals b.Id
                 join c in _lapTopRepository.GetAllLapTop() on a.IdLaptop equals c.Id
                 join e in _hangLaptopRepositories.GetAllHangLaptops() on c.IdHangLaptop equals e.Id
                 join f in _dongLapTopRepositories.GetAllDongLaptop() on c.IdDongLaptop equals f.Id 
@@ -132,6 +129,13 @@ namespace _2_BUS_BusinessLayer.Services
                 }).ToList();
 
             return lst;
+        }
+
+        public string RemoveChiTietHoaDon(Guid id)
+        {
+            var lst = _chiTietHoaDonRepository.DeleteChiTietHoaDon(id);
+            return "Xóa thành công" ;
+
         }
     }
 }
