@@ -64,10 +64,7 @@ namespace _3_GUI_PresentationLayer.View
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+
         }
 
 
@@ -147,6 +144,14 @@ namespace _3_GUI_PresentationLayer.View
             this.Hide();
             this.Parent = null;
             e.Cancel = true;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 

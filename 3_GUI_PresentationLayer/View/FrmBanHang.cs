@@ -549,11 +549,7 @@ namespace _3_GUI_PresentationLayer.View
                     if (a.IdHoaDon == Guid.Empty)
                     {
                         _serialLaptopService.UpdateStatusSerial(a.SerialSanPham);
-
-
                     }
-
-
                 }
             }
             _lstLaptopViews = _laptopService.GetAllLaptop();
@@ -1031,13 +1027,25 @@ namespace _3_GUI_PresentationLayer.View
             hoaDon.TrangThaiHD = 2;
             hoaDon.NgayThanhToan = DateTime.Now;
             _hoaDonSerevice.UpdateHoaDon(hoaDon);
-            
-            
-            
+
+
+            if (_lstCtHoaDonViews.Any())
+            {
+                foreach (var a in _lstCtHoaDonViews)
+                {
+                    if (a.IdHoaDon == Guid.Empty)
+                    {
+                        _serialLaptopService.UpdateStatusSerial(a.SerialSanPham);
+                    }
+                }
+            }
+            _lstLaptopViews = _laptopService.GetAllLaptop();
             LoadData();
-            LoadGioHang();
+
             MessageBox.Show("Xóa thành công", "Thông báo");
 
         }
+
+       
     }
 }

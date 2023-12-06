@@ -45,8 +45,6 @@
             label1 = new Label();
             pictrueBoxCustom1 = new CustomControl.PictrueBoxCustom();
             panelTitleBar = new Panel();
-            btnMinimize = new FontAwesome.Sharp.IconButton();
-            btnExit = new FontAwesome.Sharp.IconButton();
             lblTitleChildFrm = new Label();
             iconCurrentChildFrm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
@@ -76,7 +74,6 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(247, 811);
             panelMenu.TabIndex = 0;
-           // panelMenu.Paint += panelMenu_Paint;
             // 
             // btnDangXuat
             // 
@@ -264,7 +261,6 @@
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(247, 222);
             panelLogo.TabIndex = 0;
-            //panelLogo.Paint += panelLogo_Paint;
             // 
             // panel1
             // 
@@ -277,7 +273,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(247, 222);
             panel1.TabIndex = 1;
-            //panel1.Paint += panel1_Paint;
             // 
             // lblTen
             // 
@@ -289,7 +284,6 @@
             lblTen.Size = new Size(33, 20);
             lblTen.TabIndex = 3;
             lblTen.Text = "Tên";
-            //lblTen.Click += lblTen_Click;
             // 
             // lblMa
             // 
@@ -301,7 +295,6 @@
             lblMa.Size = new Size(31, 20);
             lblMa.TabIndex = 2;
             lblMa.Text = "Mã";
-            //lblMa.Click += lblMa_Click;
             // 
             // label2
             // 
@@ -313,7 +306,6 @@
             label2.Size = new Size(50, 17);
             label2.TabIndex = 1;
             label2.Text = "Họ tên:";
-           // label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -325,7 +317,6 @@
             label1.Size = new Size(89, 17);
             label1.TabIndex = 0;
             label1.Text = "Mã nhân viên:";
-            //label1.Click += label1_Click;
             // 
             // pictrueBoxCustom1
             // 
@@ -347,8 +338,6 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(26, 27, 61);
-            panelTitleBar.Controls.Add(btnMinimize);
-            panelTitleBar.Controls.Add(btnExit);
             panelTitleBar.Controls.Add(lblTitleChildFrm);
             panelTitleBar.Controls.Add(iconCurrentChildFrm);
             panelTitleBar.Dock = DockStyle.Top;
@@ -356,39 +345,6 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1537, 73);
             panelTitleBar.TabIndex = 1;
-            //panelTitleBar.Paint += panelTitleBar_Paint;
-            // 
-            // btnMinimize
-            // 
-            btnMinimize.BackColor = Color.FromArgb(26, 27, 61);
-            btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatStyle = FlatStyle.Flat;
-            btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            btnMinimize.IconColor = Color.FromArgb(0, 192, 192);
-            btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMinimize.IconSize = 27;
-            btnMinimize.Location = new Point(1470, 5);
-            btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(31, 26);
-            btnMinimize.TabIndex = 2;
-            btnMinimize.UseVisualStyleBackColor = false;
-            btnMinimize.Click += btnMinimize_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.FromArgb(26, 27, 61);
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            btnExit.IconColor = Color.FromArgb(0, 192, 192);
-            btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnExit.IconSize = 27;
-            btnExit.Location = new Point(1496, 5);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(31, 26);
-            btnExit.TabIndex = 2;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
             // 
             // lblTitleChildFrm
             // 
@@ -400,7 +356,6 @@
             lblTitleChildFrm.Size = new Size(121, 50);
             lblTitleChildFrm.TabIndex = 1;
             lblTitleChildFrm.Text = "Home";
-            //lblTitleChildFrm.Click += lblTitleChildFrm_Click;
             // 
             // iconCurrentChildFrm
             // 
@@ -415,7 +370,6 @@
             iconCurrentChildFrm.Size = new Size(60, 52);
             iconCurrentChildFrm.TabIndex = 0;
             iconCurrentChildFrm.TabStop = false;
-            //iconCurrentChildFrm.Click += iconCurrentChildFrm_Click;
             // 
             // panelShadow
             // 
@@ -425,7 +379,6 @@
             panelShadow.Name = "panelShadow";
             panelShadow.Size = new Size(1537, 9);
             panelShadow.TabIndex = 2;
-            //panelShadow.Paint += panelShadow_Paint;
             // 
             // panelDesktop
             // 
@@ -435,7 +388,6 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1537, 729);
             panelDesktop.TabIndex = 3;
-           // panelDesktop.Paint += panelDesktop_Paint;
             // 
             // FrmMain
             // 
@@ -477,8 +429,6 @@
         private Label lblTitleChildFrm;
         private Panel panelShadow;
         private Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton btnMinimize;
-        private FontAwesome.Sharp.IconButton btnExit;
         private Panel panel1;
         private Label lblTen;
         private Label lblMa;

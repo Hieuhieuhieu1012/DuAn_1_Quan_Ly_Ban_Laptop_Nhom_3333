@@ -35,7 +35,6 @@
             cb_nhoMatKhau = new CheckBox();
             lbQuenMatKhau = new LinkLabel();
             btnDangNhap = new CustomControl.ButtonCustom();
-            btnExit = new FontAwesome.Sharp.IconButton();
             pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -150,22 +149,6 @@
             btnDangNhap.UseVisualStyleBackColor = false;
             btnDangNhap.Click += btnDangNhap_Click;
             // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.FromArgb(204, 204, 204);
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            btnExit.IconColor = SystemColors.InfoText;
-            btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnExit.IconSize = 30;
-            btnExit.Location = new Point(347, 1);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(35, 26);
-            btnExit.TabIndex = 6;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click_1;
-            // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.airplane;
@@ -183,7 +166,6 @@
             BackColor = Color.FromArgb(204, 204, 204);
             ClientSize = new Size(378, 432);
             Controls.Add(pictureBox3);
-            Controls.Add(btnExit);
             Controls.Add(btnDangNhap);
             Controls.Add(lbQuenMatKhau);
             Controls.Add(cb_nhoMatKhau);
@@ -212,7 +194,6 @@
         private CheckBox cb_nhoMatKhau;
         private LinkLabel lbQuenMatKhau;
         private CustomControl.ButtonCustom btnDangNhap;
-        private FontAwesome.Sharp.IconButton btnExit;
         private PictureBox pictureBox3;
     }
 }

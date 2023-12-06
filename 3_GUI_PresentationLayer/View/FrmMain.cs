@@ -174,14 +174,21 @@ namespace _3_GUI_PresentationLayer.View
             OpenChildForm(new FrmHome());
         }
 
+
         private void LoadInfoNhanVien()
         {
             string email = Properties.Settings.Default._TKdaLogin;
             var nhanVien = _nhanVienService.GetAllNhanViens().Find(c => c.Email == email);
+
             if (nhanVien != null)
             {
                 lblMa.Text = nhanVien.Ma;
                 lblTen.Text = nhanVien.Hoten;
+                if (nhanVien.ChucVu == "Nhân viên")
+                {
+                    btnNhanVien.Enabled = false;
+                    btnKhuyenMai.Enabled = false;
+                }
             }
         }
     }

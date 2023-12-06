@@ -38,6 +38,8 @@
             groupBox2 = new GroupBox();
             dgv_CTHD = new DataGridView();
             panel2 = new Panel();
+            radioButton2 = new RadioButton();
+            rd_ThanhToan = new RadioButton();
             btnSelect = new CustomControl.ButtonCustom();
             iconButton8 = new FontAwesome.Sharp.IconButton();
             txtTimKiem = new CustomControl.TextBoxCustom2_0();
@@ -162,6 +164,8 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(radioButton2);
+            panel2.Controls.Add(rd_ThanhToan);
             panel2.Controls.Add(btnSelect);
             panel2.Controls.Add(iconButton8);
             panel2.Controls.Add(txtTimKiem);
@@ -173,6 +177,30 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1306, 74);
             panel2.TabIndex = 1;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(860, 26);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(62, 19);
+            radioButton2.TabIndex = 53;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Đã hủy";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // rd_ThanhToan
+            // 
+            rd_ThanhToan.AutoSize = true;
+            rd_ThanhToan.Location = new Point(734, 26);
+            rd_ThanhToan.Name = "rd_ThanhToan";
+            rd_ThanhToan.Size = new Size(100, 19);
+            rd_ThanhToan.TabIndex = 52;
+            rd_ThanhToan.TabStop = true;
+            rd_ThanhToan.Text = "Đã thanh toán";
+            rd_ThanhToan.UseVisualStyleBackColor = true;
+            rd_ThanhToan.Click += rd_ThanhToan_Click;
             // 
             // btnSelect
             // 
@@ -308,5 +336,7 @@
         private System.Drawing.Printing.PrintDocument printHD;
         private PrintPreviewDialog printPreviewDialog1;
         private CustomControl.ButtonCustom btnSelect;
+        private RadioButton radioButton2;
+        private RadioButton rd_ThanhToan;
     }
 }

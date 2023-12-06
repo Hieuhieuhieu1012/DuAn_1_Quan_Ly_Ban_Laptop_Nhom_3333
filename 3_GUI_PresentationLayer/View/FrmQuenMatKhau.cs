@@ -47,14 +47,14 @@ namespace _3_GUI_PresentationLayer.View
             {
                 _randomCode = new Random().Next(100000, 999999);
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("maituandat087804@gmail.com");
+                mail.From = new MailAddress("nguyenhieuhieu.1012@gmail.com\r\n");
                 mail.To.Add(txt_Email.Texts);
                 mail.Body = "Mã code của bạn là: " + _randomCode;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
                 NetworkCredential nc = new NetworkCredential();
-                nc.UserName = "maituandat087804@gmail.com";
-                nc.Password = "dyeeqsadlarqjync";
+                nc.UserName = "nguyenhieuhieu.1012@gmail.com";
+                nc.Password = "opmi aqre tbnz bflo";
                 smtp.Credentials = nc;
                 smtp.EnableSsl = true;
                 smtp.Port = 587;

@@ -328,5 +328,57 @@ namespace _3_GUI_PresentationLayer.View
                     item.HTThanhToan, item.NgayTao, item.GhiChu, item.TongTien);
             }
         }
+
+        private void rd_ThanhToan_Click(object sender, EventArgs e)
+        {
+            dgv_hoaDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv_hoaDon.ColumnHeadersDefaultCellStyle.Font =
+                new Font(dgv_hoaDon.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
+            dgv_hoaDon.ColumnHeadersHeight = 40;
+            dgv_hoaDon.RowTemplate.Height = 30;
+            dgv_hoaDon.ColumnCount = 9;
+            dgv_hoaDon.Columns[0].Visible = false;
+            dgv_hoaDon.Columns[1].Visible = false;
+            dgv_hoaDon.Columns[2].Name = "Tên Nhân Viên";
+            dgv_hoaDon.Columns[3].Name = "Tên Khách Hàng";
+            dgv_hoaDon.Columns[4].Name = "Mã hóa đơn";
+            dgv_hoaDon.Columns[5].Name = "Hình thức TT";
+            dgv_hoaDon.Columns[6].Name = "Ngày tạo";
+            dgv_hoaDon.Columns[7].Name = "Ghi chú";
+            dgv_hoaDon.Columns[8].Name = "Tổng tiền";
+            dgv_hoaDon.Columns[8].DefaultCellStyle.Format = "N0";
+
+            dgv_hoaDon.Rows.Clear();
+            foreach (var item in _Bus_hoaDon.GetAllHoaDonViews().Where(c => c.TrangThaiHD == 0))
+            {
+                dgv_hoaDon.Rows.Add(item.Id, item.IdKhachHang, item.TenNhanVien, item.TenKhachHang, item.MaHd, item.HTThanhToan, item.NgayTao, item.GhiChu, item.TongTien);
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            dgv_hoaDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv_hoaDon.ColumnHeadersDefaultCellStyle.Font =
+                new Font(dgv_hoaDon.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
+            dgv_hoaDon.ColumnHeadersHeight = 40;
+            dgv_hoaDon.RowTemplate.Height = 30;
+            dgv_hoaDon.ColumnCount = 9;
+            dgv_hoaDon.Columns[0].Visible = false;
+            dgv_hoaDon.Columns[1].Visible = false;
+            dgv_hoaDon.Columns[2].Name = "Tên Nhân Viên";
+            dgv_hoaDon.Columns[3].Name = "Tên Khách Hàng";
+            dgv_hoaDon.Columns[4].Name = "Mã hóa đơn";
+            dgv_hoaDon.Columns[5].Name = "Hình thức TT";
+            dgv_hoaDon.Columns[6].Name = "Ngày tạo";
+            dgv_hoaDon.Columns[7].Name = "Ghi chú";
+            dgv_hoaDon.Columns[8].Name = "Tổng tiền";
+            dgv_hoaDon.Columns[8].DefaultCellStyle.Format = "N0";
+
+            dgv_hoaDon.Rows.Clear();
+            foreach (var item in _Bus_hoaDon.GetAllHoaDonViews().Where(c => c.TrangThaiHD == 2))
+            {
+                dgv_hoaDon.Rows.Add(item.Id, item.IdKhachHang, item.TenNhanVien, item.TenKhachHang, item.MaHd, item.HTThanhToan, item.NgayTao, item.GhiChu, item.TongTien);
+            }
+        }
     }
 }
