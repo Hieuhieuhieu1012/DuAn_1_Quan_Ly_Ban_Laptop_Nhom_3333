@@ -38,15 +38,15 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
-            btnTimKiemKM = new FontAwesome.Sharp.IconButton();
-            btnAll = new CustomControl.ButtonCustom();
-            dateTimePickerCustom2 = new CustomControl.DateTimePickerCustom();
-            dateTimePickerCustom1 = new CustomControl.DateTimePickerCustom();
             label1 = new Label();
+            dtpStartDate = new CustomControl.DateTimePickerCustom();
+            dtpEndDate = new CustomControl.DateTimePickerCustom();
+            btnOk = new CustomControl.ButtonCustom();
+            btnCustom = new CustomControl.ButtonCustom();
+            btnToday = new CustomControl.ButtonCustom();
+            btnLast7Days = new CustomControl.ButtonCustom();
+            btnThisMonth = new CustomControl.ButtonCustom();
             panel2 = new Panel();
             pictureBox5 = new PictureBox();
             lblNumHoaDons = new Label();
@@ -71,9 +71,8 @@
             panel7 = new Panel();
             dgvUnderStock = new DataGridView();
             label12 = new Label();
-            panel_Top5 = new Panel();
-            Chart_Top5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            panel8 = new Panel();
+            chartTop5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -87,92 +86,166 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUnderStock).BeginInit();
-            panel_Top5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Chart_Top5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartTop5).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnTimKiemKM);
-            panel1.Controls.Add(btnAll);
-            panel1.Controls.Add(dateTimePickerCustom2);
-            panel1.Controls.Add(dateTimePickerCustom1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-40, 12);
+            panel1.Controls.Add(dtpStartDate);
+            panel1.Controls.Add(dtpEndDate);
+            panel1.Controls.Add(btnOk);
+            panel1.Controls.Add(btnCustom);
+            panel1.Controls.Add(btnToday);
+            panel1.Controls.Add(btnLast7Days);
+            panel1.Controls.Add(btnThisMonth);
+            panel1.Location = new Point(20, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1126, 72);
+            panel1.Size = new Size(1476, 72);
             panel1.TabIndex = 0;
-            // 
-            // btnTimKiemKM
-            // 
-            btnTimKiemKM.BackColor = Color.MediumSlateBlue;
-            btnTimKiemKM.FlatAppearance.BorderSize = 0;
-            btnTimKiemKM.FlatStyle = FlatStyle.Flat;
-            btnTimKiemKM.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btnTimKiemKM.IconColor = Color.White;
-            btnTimKiemKM.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnTimKiemKM.IconSize = 23;
-            btnTimKiemKM.Location = new Point(945, 26);
-            btnTimKiemKM.Name = "btnTimKiemKM";
-            btnTimKiemKM.Size = new Size(32, 25);
-            btnTimKiemKM.TabIndex = 55;
-            btnTimKiemKM.UseVisualStyleBackColor = false;
-            // 
-            // btnAll
-            // 
-            btnAll.BackColor = Color.MediumSlateBlue;
-            btnAll.BackgroundColor = Color.MediumSlateBlue;
-            btnAll.BorderColor = Color.PaleVioletRed;
-            btnAll.BorderRadius = 10;
-            btnAll.BorderSize = 0;
-            btnAll.FlatAppearance.BorderSize = 0;
-            btnAll.FlatStyle = FlatStyle.Flat;
-            btnAll.ForeColor = Color.White;
-            btnAll.Location = new Point(906, 20);
-            btnAll.Name = "btnAll";
-            btnAll.Size = new Size(111, 35);
-            btnAll.TabIndex = 24;
-            btnAll.TextColor = Color.White;
-            btnAll.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePickerCustom2
-            // 
-            dateTimePickerCustom2.BorderColor = Color.PaleVioletRed;
-            dateTimePickerCustom2.BorderSize = 0;
-            dateTimePickerCustom2.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom2.Location = new Point(524, 20);
-            dateTimePickerCustom2.MinimumSize = new Size(0, 35);
-            dateTimePickerCustom2.Name = "dateTimePickerCustom2";
-            dateTimePickerCustom2.Size = new Size(320, 35);
-            dateTimePickerCustom2.SkinColor = Color.MediumSlateBlue;
-            dateTimePickerCustom2.TabIndex = 6;
-            dateTimePickerCustom2.TextColor = Color.White;
-            // 
-            // dateTimePickerCustom1
-            // 
-            dateTimePickerCustom1.BorderColor = Color.PaleVioletRed;
-            dateTimePickerCustom1.BorderSize = 0;
-            dateTimePickerCustom1.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom1.Location = new Point(99, 20);
-            dateTimePickerCustom1.MinimumSize = new Size(0, 35);
-            dateTimePickerCustom1.Name = "dateTimePickerCustom1";
-            dateTimePickerCustom1.Size = new Size(326, 35);
-            dateTimePickerCustom1.SkinColor = Color.MediumSlateBlue;
-            dateTimePickerCustom1.TabIndex = 5;
-            dateTimePickerCustom1.TextColor = Color.White;
-            dateTimePickerCustom1.Value = new DateTime(2023, 6, 17, 21, 32, 0, 0);
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(451, 21);
+            label1.Location = new Point(192, 32);
             label1.Name = "label1";
-            label1.Size = new Size(37, 30);
+            label1.Size = new Size(22, 15);
             label1.TabIndex = 3;
             label1.Text = "---";
+            // 
+            // dtpStartDate
+            // 
+            dtpStartDate.BorderColor = Color.PaleVioletRed;
+            dtpStartDate.BorderSize = 0;
+            dtpStartDate.Enabled = false;
+            dtpStartDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpStartDate.Format = DateTimePickerFormat.Short;
+            dtpStartDate.Location = new Point(49, 21);
+            dtpStartDate.MinimumSize = new Size(0, 35);
+            dtpStartDate.Name = "dtpStartDate";
+            dtpStartDate.Size = new Size(131, 35);
+            dtpStartDate.SkinColor = Color.MediumSlateBlue;
+            dtpStartDate.TabIndex = 2;
+            dtpStartDate.TabStop = false;
+            dtpStartDate.TextColor = Color.White;
+            // 
+            // dtpEndDate
+            // 
+            dtpEndDate.BorderColor = Color.PaleVioletRed;
+            dtpEndDate.BorderSize = 0;
+            dtpEndDate.Enabled = false;
+            dtpEndDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpEndDate.Format = DateTimePickerFormat.Short;
+            dtpEndDate.Location = new Point(220, 20);
+            dtpEndDate.MinimumSize = new Size(0, 35);
+            dtpEndDate.Name = "dtpEndDate";
+            dtpEndDate.Size = new Size(135, 35);
+            dtpEndDate.SkinColor = Color.MediumSlateBlue;
+            dtpEndDate.TabIndex = 1;
+            dtpEndDate.TextColor = Color.White;
+            // 
+            // btnOk
+            // 
+            btnOk.BackColor = Color.MediumSlateBlue;
+            btnOk.BackgroundColor = Color.MediumSlateBlue;
+            btnOk.BorderColor = Color.PaleVioletRed;
+            btnOk.BorderRadius = 10;
+            btnOk.BorderSize = 0;
+            btnOk.FlatAppearance.BorderSize = 0;
+            btnOk.FlatStyle = FlatStyle.Flat;
+            btnOk.ForeColor = Color.White;
+            btnOk.Image = Properties.Resources.check;
+            btnOk.Location = new Point(404, 17);
+            btnOk.Name = "btnOk";
+            btnOk.Size = new Size(41, 40);
+            btnOk.TabIndex = 0;
+            btnOk.TextColor = Color.White;
+            btnOk.UseVisualStyleBackColor = false;
+            btnOk.Visible = false;
+            btnOk.Click += btnOk_Click;
+            // 
+            // btnCustom
+            // 
+            btnCustom.BackColor = Color.MediumSlateBlue;
+            btnCustom.BackgroundColor = Color.MediumSlateBlue;
+            btnCustom.BorderColor = Color.PaleVioletRed;
+            btnCustom.BorderRadius = 10;
+            btnCustom.BorderSize = 0;
+            btnCustom.FlatAppearance.BorderSize = 0;
+            btnCustom.FlatStyle = FlatStyle.Flat;
+            btnCustom.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCustom.ForeColor = Color.White;
+            btnCustom.Location = new Point(455, 17);
+            btnCustom.Name = "btnCustom";
+            btnCustom.Size = new Size(195, 40);
+            btnCustom.TabIndex = 0;
+            btnCustom.Text = "Tùy chọn";
+            btnCustom.TextColor = Color.White;
+            btnCustom.UseVisualStyleBackColor = false;
+            btnCustom.Click += btnCustom_Click;
+            // 
+            // btnToday
+            // 
+            btnToday.BackColor = Color.MediumSlateBlue;
+            btnToday.BackgroundColor = Color.MediumSlateBlue;
+            btnToday.BorderColor = Color.PaleVioletRed;
+            btnToday.BorderRadius = 10;
+            btnToday.BorderSize = 0;
+            btnToday.FlatAppearance.BorderSize = 0;
+            btnToday.FlatStyle = FlatStyle.Flat;
+            btnToday.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnToday.ForeColor = Color.White;
+            btnToday.Location = new Point(705, 16);
+            btnToday.Name = "btnToday";
+            btnToday.Size = new Size(195, 40);
+            btnToday.TabIndex = 0;
+            btnToday.Text = "Hôm nay";
+            btnToday.TextColor = Color.White;
+            btnToday.UseVisualStyleBackColor = false;
+            btnToday.Click += btnToday_Click;
+            // 
+            // btnLast7Days
+            // 
+            btnLast7Days.BackColor = Color.MediumSlateBlue;
+            btnLast7Days.BackgroundColor = Color.MediumSlateBlue;
+            btnLast7Days.BorderColor = Color.PaleVioletRed;
+            btnLast7Days.BorderRadius = 10;
+            btnLast7Days.BorderSize = 0;
+            btnLast7Days.FlatAppearance.BorderSize = 0;
+            btnLast7Days.FlatAppearance.MouseOverBackColor = Color.SlateBlue;
+            btnLast7Days.FlatStyle = FlatStyle.Flat;
+            btnLast7Days.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLast7Days.ForeColor = Color.White;
+            btnLast7Days.Location = new Point(951, 15);
+            btnLast7Days.Name = "btnLast7Days";
+            btnLast7Days.Size = new Size(195, 40);
+            btnLast7Days.TabIndex = 0;
+            btnLast7Days.Text = "7 ngày gần nhất";
+            btnLast7Days.TextColor = Color.White;
+            btnLast7Days.UseVisualStyleBackColor = false;
+            btnLast7Days.Click += btnLast7Days_Click;
+            // 
+            // btnThisMonth
+            // 
+            btnThisMonth.BackColor = Color.MediumSlateBlue;
+            btnThisMonth.BackgroundColor = Color.MediumSlateBlue;
+            btnThisMonth.BorderColor = Color.PaleVioletRed;
+            btnThisMonth.BorderRadius = 10;
+            btnThisMonth.BorderSize = 0;
+            btnThisMonth.FlatAppearance.BorderSize = 0;
+            btnThisMonth.FlatStyle = FlatStyle.Flat;
+            btnThisMonth.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThisMonth.ForeColor = Color.White;
+            btnThisMonth.Location = new Point(1184, 16);
+            btnThisMonth.Name = "btnThisMonth";
+            btnThisMonth.Size = new Size(201, 40);
+            btnThisMonth.TabIndex = 0;
+            btnThisMonth.Text = "Tháng này";
+            btnThisMonth.TextColor = Color.White;
+            btnThisMonth.UseVisualStyleBackColor = false;
+            btnThisMonth.Click += btnThisMonth_Click;
             // 
             // panel2
             // 
@@ -202,9 +275,9 @@
             lblNumHoaDons.ForeColor = Color.FromArgb(2, 76, 94);
             lblNumHoaDons.Location = new Point(132, 29);
             lblNumHoaDons.Name = "lblNumHoaDons";
-            lblNumHoaDons.Size = new Size(37, 30);
+            lblNumHoaDons.Size = new Size(126, 30);
             lblNumHoaDons.TabIndex = 1;
-            lblNumHoaDons.Text = "94";
+            lblNumHoaDons.Text = "Số hóa đơn";
             // 
             // label2
             // 
@@ -256,9 +329,9 @@
             lblTotalDoanhThu.ForeColor = Color.FromArgb(2, 76, 94);
             lblTotalDoanhThu.Location = new Point(124, 29);
             lblTotalDoanhThu.Name = "lblTotalDoanhThu";
-            lblTotalDoanhThu.Size = new Size(203, 30);
+            lblTotalDoanhThu.Size = new Size(173, 30);
             lblTotalDoanhThu.TabIndex = 1;
-            lblTotalDoanhThu.Text = "1.627.910.000 VND";
+            lblTotalDoanhThu.Text = "Tổng doanh thu";
             // 
             // label4
             // 
@@ -299,15 +372,19 @@
             chartDoanhThu.Legends.Add(legend1);
             chartDoanhThu.Location = new Point(0, 0);
             chartDoanhThu.Name = "chartDoanhThu";
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series1.BackSecondaryColor = Color.FromArgb(107, 83, 255);
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series1.IsXValueIndexed = true;
+            series1.Color = Color.FromArgb(241, 88, 127);
             series1.Legend = "Legend1";
-            series1.Name = "Số lượng máy bán ra";
+            series1.MarkerColor = Color.FromArgb(255, 128, 255);
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Series1";
             chartDoanhThu.Series.Add(series1);
             chartDoanhThu.Size = new Size(1069, 248);
             chartDoanhThu.TabIndex = 4;
-            chartDoanhThu.Text = "Doanh Thu";
+            chartDoanhThu.Text = "chart1";
             title1.Alignment = ContentAlignment.TopLeft;
             title1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             title1.Name = "Title1";
@@ -369,9 +446,9 @@
             lblNumProducts.ForeColor = Color.FromArgb(2, 76, 94);
             lblNumProducts.Location = new Point(75, 180);
             lblNumProducts.Name = "lblNumProducts";
-            lblNumProducts.Size = new Size(36, 20);
+            lblNumProducts.Size = new Size(45, 20);
             lblNumProducts.TabIndex = 2;
-            lblNumProducts.Text = "130";
+            lblNumProducts.Text = "1000";
             // 
             // lblNumNhaCungCaps
             // 
@@ -380,9 +457,9 @@
             lblNumNhaCungCaps.ForeColor = Color.FromArgb(2, 76, 94);
             lblNumNhaCungCaps.Location = new Point(75, 113);
             lblNumNhaCungCaps.Name = "lblNumNhaCungCaps";
-            lblNumNhaCungCaps.Size = new Size(27, 20);
+            lblNumNhaCungCaps.Size = new Size(45, 20);
             lblNumNhaCungCaps.TabIndex = 2;
-            lblNumNhaCungCaps.Text = "13";
+            lblNumNhaCungCaps.Text = "1000";
             // 
             // lblNumCustomers
             // 
@@ -391,9 +468,9 @@
             lblNumCustomers.ForeColor = Color.FromArgb(2, 76, 94);
             lblNumCustomers.Location = new Point(75, 58);
             lblNumCustomers.Name = "lblNumCustomers";
-            lblNumCustomers.Size = new Size(36, 20);
+            lblNumCustomers.Size = new Size(45, 20);
             lblNumCustomers.TabIndex = 2;
-            lblNumCustomers.Text = "184";
+            lblNumCustomers.Text = "1000";
             // 
             // label8
             // 
@@ -413,9 +490,9 @@
             label7.ForeColor = Color.FromArgb(145, 158, 194);
             label7.Location = new Point(75, 92);
             label7.Name = "label7";
-            label7.Size = new Size(176, 21);
+            label7.Size = new Size(129, 21);
             label7.TabIndex = 0;
-            label7.Text = "Số lượng nhà cung cấp";
+            label7.Text = "Số nhà cung cấp";
             // 
             // label6
             // 
@@ -485,81 +562,48 @@
             label12.TabIndex = 3;
             label12.Text = "Sản phẩm sắp hết hàng";
             // 
-            // panel_Top5
+            // panel8
             // 
-            panel_Top5.BackColor = Color.White;
-            panel_Top5.Controls.Add(Chart_Top5);
-            panel_Top5.Location = new Point(1113, 12);
-            panel_Top5.Name = "panel_Top5";
-            panel_Top5.Size = new Size(383, 657);
-            panel_Top5.TabIndex = 3;
+            panel8.BackColor = Color.White;
+            panel8.Controls.Add(chartTop5);
+            panel8.Location = new Point(1113, 97);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(383, 572);
+            panel8.TabIndex = 3;
             // 
-            // Chart_Top5
+            // chartTop5
             // 
             chartArea2.Name = "ChartArea1";
-            Chart_Top5.ChartAreas.Add(chartArea2);
-            legend2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            legend2.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            chartTop5.ChartAreas.Add(chartArea2);
+            chartTop5.Dock = DockStyle.Fill;
+            legend2.BorderColor = Color.White;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
-            legend2.Position.Auto = false;
-            legend2.Position.Height = 15.4408188F;
-            legend2.Position.Width = 65.03957F;
-            legend2.Position.X = 5F;
-            legend2.Position.Y = 84.55918F;
-            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            legend2.Title = "Chú thích";
-            Chart_Top5.Legends.Add(legend2);
-            Chart_Top5.Location = new Point(3, 3);
-            Chart_Top5.Name = "Chart_Top5";
-            Chart_Top5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            Chart_Top5.PaletteCustomColors = new Color[]
-    {
-    Color.FromArgb(192, 255, 192)
-    };
-            Chart_Top5.RightToLeft = RightToLeft.No;
-            series2.BackSecondaryColor = Color.FromArgb(255, 224, 192);
-            series2.BorderColor = SystemColors.ControlDark;
+            legend2.TitleFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            chartTop5.Legends.Add(legend2);
+            chartTop5.Location = new Point(0, 0);
+            chartTop5.Name = "chartTop5";
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series2.BackSecondaryColor = Color.FromArgb(255, 128, 255);
+            series2.BorderColor = Color.White;
+            series2.BorderWidth = 5;
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Color = Color.White;
-            series2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             series2.IsValueShownAsLabel = true;
-            series2.IsXValueIndexed = true;
-            series2.LabelBackColor = Color.Transparent;
-            series2.LabelBorderColor = Color.Transparent;
+            series2.LabelForeColor = Color.White;
             series2.Legend = "Legend1";
-            series2.Name = "charttop5";
-            series2.ShadowColor = SystemColors.ActiveCaptionText;
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            Chart_Top5.Series.Add(series2);
-            Chart_Top5.Size = new Size(380, 654);
-            Chart_Top5.SuppressExceptions = true;
-            Chart_Top5.TabIndex = 4;
-            Chart_Top5.Text = "Top 5 Laptop bán chạy";
-            title2.BorderWidth = 5;
-            title2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            title2.ForeColor = Color.IndianRed;
+            series2.Name = "Series1";
+            chartTop5.Series.Add(series2);
+            chartTop5.Size = new Size(383, 572);
+            chartTop5.TabIndex = 5;
+            chartTop5.Text = "chart2";
+            title2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             title2.Name = "Title1";
-            title2.ShadowColor = Color.Black;
-            title2.Text = "Top 5 LapTop bán chạy ";
-            Chart_Top5.Titles.Add(title2);
-            // 
-            // chart2
-            // 
-            chartArea3.Name = "ChartArea1";
-            chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chart2.Legends.Add(legend3);
-            chart2.Location = new Point(1498, 141);
-            chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            chart2.Series.Add(series3);
-            chart2.Size = new Size(300, 300);
-            chart2.TabIndex = 4;
-            chart2.Text = "chart2";
+            title2.Text = "Top 5 lapotp bán chạy";
+            chartTop5.Titles.Add(title2);
             // 
             // FrmThongKe
             // 
@@ -567,8 +611,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 245, 255);
             ClientSize = new Size(1521, 690);
-            Controls.Add(chart2);
-            Controls.Add(panel_Top5);
+            Controls.Add(panel8);
             Controls.Add(panel7);
             Controls.Add(panel6);
             Controls.Add(panel5);
@@ -578,7 +621,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmThongKe";
             Text = "Thống kê";
-           // Load += FrmThongKe_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -597,9 +639,8 @@
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUnderStock).EndInit();
-            panel_Top5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)Chart_Top5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
+            panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)chartTop5).EndInit();
             ResumeLayout(false);
         }
 
@@ -607,6 +648,8 @@
 
         private Panel panel1;
         private Label label1;
+        private CustomControl.DateTimePickerCustom dtpStartDate;
+        private CustomControl.DateTimePickerCustom dtpEndDate;
         private CustomControl.ButtonCustom btnOk;
         private CustomControl.ButtonCustom btnCustom;
         private CustomControl.ButtonCustom btnToday;
@@ -621,13 +664,14 @@
         private Panel panel6;
         private Label label6;
         private Panel panel7;
-        private Panel panel_Top5;
+        private Panel panel8;
         private Label lblNumProducts;
         private Label lblNumNhaCungCaps;
         private Label lblNumCustomers;
         private Label label8;
         private Label label7;
         private Label label12;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTop5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
         private DataGridView dgvUnderStock;
         private Label lblNumHoaDons;
@@ -637,11 +681,5 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Chart_Top5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private CustomControl.DateTimePickerCustom dateTimePickerCustom2;
-        private CustomControl.DateTimePickerCustom dateTimePickerCustom1;
-        private CustomControl.ButtonCustom btnAll;
-        private FontAwesome.Sharp.IconButton btnTimKiemKM;
     }
 }

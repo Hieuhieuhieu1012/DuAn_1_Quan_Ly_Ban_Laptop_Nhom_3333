@@ -38,14 +38,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Update="View\FrmKhuyenMai.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\FrmThongKe.cs">
-      <SubType>Form</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
