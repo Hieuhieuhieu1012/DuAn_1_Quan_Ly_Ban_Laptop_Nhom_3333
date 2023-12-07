@@ -933,13 +933,13 @@ namespace _3_GUI_PresentationLayer.View
                 new Font(dgv_hoaDonCho.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
             // dgv_hoaDonCho.ColumnHeadersHeight = 40;
             // dgv_hoaDonCho.RowTemplate.Height = 30;
-            dgv_hoaDonCho.ColumnCount = 6;
+            dgv_hoaDonCho.ColumnCount = 5;
             dgv_hoaDonCho.Columns[0].Visible = false;
             dgv_hoaDonCho.Columns[1].Visible = false;
             dgv_hoaDonCho.Columns[2].Name = "Mã hóa đơn";
             dgv_hoaDonCho.Columns[3].Name = "Tên Khách Hàng";
-            dgv_hoaDonCho.Columns[3].Name = "Tổng tiền";
-            dgv_hoaDonCho.Columns[5].DefaultCellStyle.Format = "N0";
+            dgv_hoaDonCho.Columns[4].Name = "Tổng tiền";
+            //dgv_hoaDonCho.Columns[5].DefaultCellStyle.Format = "N0";
 
             var lstoaDonCho = _Bus_hoaDon.GetHoaDonChoViews();
             dgv_hoaDonCho.Rows.Clear();
