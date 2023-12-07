@@ -22,8 +22,8 @@ namespace _3_GUI_PresentationLayer.View
         {
             InitializeComponent();
 
-            //dtpStartDate.Value = DateTime.Today.AddDays(-7);
-            //dtpEndDate.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Today.AddDays(-7);
+            dtpEndDate.Value = DateTime.Now;
 
             _thongKeService = new ThongKeService();
 
@@ -37,14 +37,14 @@ namespace _3_GUI_PresentationLayer.View
             dgvUnderStock.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             dgvUnderStock.Columns[0].Name = "Hãng";
             dgvUnderStock.Columns[1].Name = "Dòng Laptop";
-            #region
-            /*var refresData = _thongKeService.LoadData(dtpStartDate.Value, dtpEndDate.Value);
+
+            var refresData = _thongKeService.LoadData(dtpStartDate.Value, dtpEndDate.Value);
             if (refresData == true)
             {
-                chartTop5.DataSource = _thongKeService.TopProductList;
-                chartTop5.Series[0].XValueMember = "Key";
-                chartTop5.Series[0].YValueMembers = "Value";
-                chartTop5.DataBind();
+                Chart_Top5.DataSource = _thongKeService.TopProductList;
+                Chart_Top5.Series[0].XValueMember = "Key";
+                Chart_Top5.Series[0].YValueMembers = "Value";
+                Chart_Top5.DataBind();
 
                 chartDoanhThu.DataSource = _thongKeService.DoanhThuByDaysList;
                 chartDoanhThu.Series[0].XValueMember = "Date";
@@ -60,9 +60,12 @@ namespace _3_GUI_PresentationLayer.View
                 lblNumCustomers.Text = _thongKeService.NumCustomers.ToString();
                 lblNumNhaCungCaps.Text = _thongKeService.NumNhaCungCaps.ToString();
                 lblNumProducts.Text = _thongKeService.NumProducts.ToString();
-            }*/
-            #endregion
+            }
         }
+
+        private void btnTimKiemKM_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

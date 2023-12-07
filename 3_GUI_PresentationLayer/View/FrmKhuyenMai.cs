@@ -29,11 +29,11 @@ namespace _3_GUI_PresentationLayer.View
         public FrmKhuyenMai()
         {
             InitializeComponent();
-            /*_khuyenMaiServices = new KhuyenMaiServices();
+            _khuyenMaiServices = new KhuyenMaiServices();
             _laptopService = new LaptopService();
             _hangLaptopServices = new HangLaptopServices();
             _dongLaptopServices = new DongLaptopServices();
-            _khachHangService = new KhachhangService();*/
+            _khachHangService = new KhachhangService();
             ChuyenTrangThai();
             LoadData();
             ClearForm();
@@ -60,35 +60,7 @@ namespace _3_GUI_PresentationLayer.View
             dgvKhuyenMai.Columns[6].Name = "Ngày kết thúc";
             dgvKhuyenMai.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
 
-
-            #region Fake Data
-            dgvKhuyenMai.Rows.Add(Guid.NewGuid(), "Quốc tế hiến chương các nhà giáo", "ASUS, HP, Dell ", "7%", "Đang khuyến mại", "17/11/2023", "20/11/2023");
-            dgvKhuyenMai.Rows.Add(Guid.NewGuid(), "Ngày nhà quốc tế Nam Giới", "MSI, ASUS, Lenovo, Dell, Acer", "5%", "Sắp khuyến mại", "19/11/2023", "19/11/2023");
-            dgvKhuyenMai.Rows.Add(Guid.NewGuid(), "Noel", "Asus , HP, LG, Dell, Acer ", "2.500.000 VND", "Sắp khuyến mại", "24/12/2023", "25/12/2023");
-            dgvKhuyenMai.Rows.Add(Guid.NewGuid(), "Quốc tế thiếu nhi", "Lenovo, HP , Macbook ", "1.250.000 VND", "Đã kết thúc", "01/06/2023", "01/06/2023");
-
-            dgvSanPham.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dgvSanPham.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            dgvSanPham.ColumnCount = 2;
-            dgvSanPham.Columns[0].Visible = false;
-            dgvSanPham.Columns[1].Name = "Tên Laptop";
-
-            DataGridViewCheckBoxColumn checkBox = new DataGridViewCheckBoxColumn();
-            checkBox.FillWeight = 50;
-            checkBox.HeaderText = "Chọn";
-            checkBox.Name = "cb";
-            dgvSanPham.Columns.Add(checkBox);
-
-            dgvSanPham.Rows.Clear();
-            dgvSanPham.Rows.Add(Guid.NewGuid(), "Dell");
-            dgvSanPham.Rows.Add(Guid.NewGuid(), "HP");
-            dgvSanPham.Rows.Add(Guid.NewGuid(), "Lenovo");
-            dgvSanPham.Rows.Add(Guid.NewGuid(), "Acer");
-            dgvSanPham.Rows.Add(Guid.NewGuid(), "ASUS");
-            #endregion
-
-            #region
-            /*dgvKhuyenMai.Rows.Clear();
+            dgvKhuyenMai.Rows.Clear();
             foreach (var x in _khuyenMaiServices.GetAllKhuyenMai())
             {
                 string trangThai = x.TrangThai == 0 ? "Đang khuyến mại" : (x.TrangThai == 1 ? "Sắp khuyến mại" : "Đã kết thúc");
@@ -111,14 +83,13 @@ namespace _3_GUI_PresentationLayer.View
             foreach (var a in _laptopService.GetAllLaptop().Where(c => c.TrangThai == true))
             {
                 dgvSanPham.Rows.Add(a.Id, $"{a.HangLaptop} {a.DongLaptop} {a.Ten}");
-            }*/
-            #endregion
+            }
 
         }
 
         private void LoadComboBox()
         {
-            /*cbbLoaiKhuyenMai.Items.Clear();
+            cbbLoaiKhuyenMai.Items.Clear();
             cbbLoaiKhuyenMai.Items.Add("Giảm giá tiền trực tiếp");
             cbbLoaiKhuyenMai.Items.Add("Giảm %");
             cbbLoaiKhuyenMai.SelectedIndex = 0;
@@ -131,7 +102,7 @@ namespace _3_GUI_PresentationLayer.View
             cbbDong.DisplayMember = "Ten";
             cbbDong.ValueMember = "Id";
             cbbDong.DataSource = _dongLaptopServices.GetAllDongLaptop();
-            cbbDong.SelectedIndex = -1;*/
+            cbbDong.SelectedIndex = -1;
 
         }
 
@@ -145,7 +116,7 @@ namespace _3_GUI_PresentationLayer.View
         private void btnThem_Click(object sender, EventArgs e)
         {
             {
-                /*if (txtTenCT.Texts == "" || txtMucGia.Texts == "")
+                if (txtTenCT.Texts == "" || txtMucGia.Texts == "")
                 {
                     MessageBox.Show("Không được để trống dữ liệu", "Thông báo");
                     return;
@@ -201,7 +172,7 @@ namespace _3_GUI_PresentationLayer.View
                         }
                         MessageBox.Show($"Đã gửi email đến cho: {khachHangCount} Khách hàng", "Thông báo");
                     };
-                }*/
+                }
 
                 LoadData();
             }
@@ -209,15 +180,15 @@ namespace _3_GUI_PresentationLayer.View
 
         private void ChuyenTrangThai()
         {
-            /*foreach (var x in _khuyenMaiServices.GetAllKhuyenMai())
+            foreach (var x in _khuyenMaiServices.GetAllKhuyenMai())
             {
                 _khuyenMaiServices.ChuyenTrangThai(x);
-            }*/
+            }
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            /*if (txtTenCT.Texts == "" || txtMucGia.Texts == "")
+            if (txtTenCT.Texts == "" || txtMucGia.Texts == "")
             {
                 MessageBox.Show("Không được để trống dữ liệu", "Thông báo");
                 return;
@@ -268,7 +239,7 @@ namespace _3_GUI_PresentationLayer.View
                     }
                 }
                 LoadData();
-            }*/
+            }
 
         }
 
@@ -288,27 +259,6 @@ namespace _3_GUI_PresentationLayer.View
             txtMucGia.Texts = "";
             dtBatDau.Value = DateTime.Now;
             dtKetThuc.Value = DateTime.Now;
-        }
-
-        private void SendEmailKhuyenMai(string ten, string email, string tenKM)
-        {
-            /*MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("congnvph28878@fpt.edu.com");
-            mail.To.Add(email);
-            mail.Body = $"Xin chào anh/chị: <b>{ten}</b>\n." +
-                $"Hiện tại cửa hàng chúng tôi đang có chương trình khuyến mại: {tenKM} với nhiều ưu đãi giảm giá cho các dòng Laptop.\n" +
-                "Kính mời anh/chị tới cửa hàng tham khảo và trải nghiệm. \n" +
-                "                                           Trân trọng!";
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            NetworkCredential nc = new NetworkCredential();
-            nc.UserName = "congnvph28878@fpt.edu.com";
-            nc.Password = "congnvph28878";
-            smtp.Credentials = nc;
-            smtp.EnableSsl = true;
-            smtp.Port = 587;
-            smtp.Send(mail);*/
-            MessageBox.Show("Gửi thành công");
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -342,15 +292,142 @@ namespace _3_GUI_PresentationLayer.View
 
         private void cbbHang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (cbbHang.SelectedIndex == -1)
+            if (cbbHang.SelectedIndex == -1)
             {
                 cbbHang.Text = "Tất cả";
                 return;
             }
             var idHangLaptopSelected = Guid.Parse(cbbHang.SelectedValue.ToString());
-            var dongLaptopList = _dongLaptopServices.GetAllDongLaptop().Where(c=>c.IdHangLaptop == idHangLaptopSelected).ToList();
-            cbbDong.DisplayMember = "Tên";*/
+            var dongLaptopList = _dongLaptopServices.GetAllDongLaptop().Where(c => c.IdHangLaptop == idHangLaptopSelected).ToList();
+            cbbDong.DisplayMember = "Tên";
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvSanPham.Rows)
+            {
+                DataGridViewCheckBoxCell checkBoxCellcell = (DataGridViewCheckBoxCell)row.Cells["cb"];
+                checkBoxCellcell.Value = false;
+            }
+        }
+
+        private void dgvKhuyenMai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowindex = e.RowIndex;
+            if (rowindex == -1 || rowindex == _khuyenMaiServices.GetAllKhuyenMai().Count)
+            {
+                return;
+            }
+            btn_Sua.Enabled = true;
+            btnThem.Enabled = false;
+
+            _idKhuyenMai = Guid.Parse(dgvKhuyenMai.Rows[rowindex].Cells[0].Value.ToString());
+            var khuyenMai = _khuyenMaiServices.GetAllKhuyenMai().FirstOrDefault(c => c.Id == _idKhuyenMai);
+            txtMa.Texts = khuyenMai.Ma;
+            txtTenCT.Texts = khuyenMai.Ten;
+            cbbLoaiKhuyenMai.Text = khuyenMai.LoaiKhuyenMai;
+            dtBatDau.Value = khuyenMai.NgayBatDau;
+            dtKetThuc.Value = khuyenMai.NgayKetThuc;
+            txtMucGia.Texts = khuyenMai.GiaTri.ToString();
+
+
+            var laptopList = _laptopService.GetAllLaptop().Where(c => c.IdKhuyenMai == _idKhuyenMai);
+            foreach (DataGridViewRow row in dgvSanPham.Rows)
+            {
+                Guid idLaptop = Guid.Parse(row.Cells[0].Value.ToString());
+                DataGridViewCheckBoxCell checkBoxCell = (DataGridViewCheckBoxCell)row.Cells["cb"];
+
+                if (laptopList.Any(c => c.Id == idLaptop))
+                {
+                    checkBoxCell.Value = true;
+                }
+                else
+                {
+                    checkBoxCell.Value = false;
+                }
+            }
+        }
+
+        private void cbbDong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbDong.SelectedIndex == -1 && cbbHang.SelectedIndex == -1)
+            {
+                cbbDong.Text = "Tất cả";
+                return;
+            }
+
+            var idDongLaptopSelected = Guid.Parse(cbbDong.SelectedValue.ToString());
+
+            dgvSanPham.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvSanPham.ColumnHeadersDefaultCellStyle.Font =
+                new Font(dgvSanPham.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
+            dgvSanPham.ColumnCount = 2;
+            dgvSanPham.Columns[0].Visible = false;
+            dgvSanPham.Columns[1].Name = "Tên laptop";
+
+            DataGridViewCheckBoxColumn checkBox = new DataGridViewCheckBoxColumn();
+            checkBox.FillWeight = 20;
+            checkBox.HeaderText = "Chọn";
+            checkBox.Name = "cb";
+            dgvSanPham.Columns.Add(checkBox);
+
+            dgvSanPham.Rows.Clear();
+            foreach (var a in _laptopService.GetAllLaptop().Where(c => c.IdDongLaptop == idDongLaptopSelected || c.TrangThai == true))
+            {
+                dgvSanPham.Rows.Add(a.Id, $"{a.HangLaptop} {a.DongLaptop} {a.Ten}");
+            }
+        }
+
+        private void txtMucGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnrbDang_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvKhuyenMai.ColumnCount = 7;
+            dgvKhuyenMai.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font(dgvKhuyenMai.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
+            dgvKhuyenMai.Columns[0].Visible = false;
+            dgvKhuyenMai.Columns[1].Name = "Tên";
+            dgvKhuyenMai.Columns[2].Name = "Loại";
+            dgvKhuyenMai.Columns[3].Name = "Giá trị";
+            dgvKhuyenMai.Columns[4].Name = "Trạng thái";
+            dgvKhuyenMai.Columns[5].Name = "Ngày bắt đầu";
+            dgvKhuyenMai.Columns[6].Name = "Ngày kết thúc";
+
+            dgvKhuyenMai.Rows.Clear();
+            foreach (var x in _khuyenMaiServices.GetAllKhuyenMai().Where(c => c.TrangThai == 0))
+            {
+                string trangThai = x.TrangThai == 0 ? "Đang khuyến mại" : (x.TrangThai == 1 ? "Sắp khuyến mại" : "Đã kết thúc");
+                string giaTri = x.LoaiKhuyenMai == "Giảm %" ? $"{x.GiaTri:N0} %" : $"{x.GiaTri:N0} VND";
+                dgvKhuyenMai.Rows.Add(x.Id, x.Ten, x.LoaiKhuyenMai, giaTri, trangThai, x.NgayBatDau, x.NgayKetThuc);
+            }
+        }
+        private void SendEmailKhuyenMai(string ten, string email, string tenKM)
+        {
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress("congnvph28878@fpt.edu.com");
+            mail.To.Add(email);
+            mail.Body = $"Xin chào anh/chị: <b>{ten}</b>\n." +
+                $"Hiện tại cửa hàng chúng tôi đang có chương trình khuyến mại: {tenKM} với nhiều ưu đãi giảm giá cho các dòng Laptop.\n" +
+                "Kính mời anh/chị tới cửa hàng tham khảo và trải nghiệm. \n" +
+                "                                           Trân trọng!";
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            NetworkCredential nc = new NetworkCredential();
+            nc.UserName = "congnvph28878@fpt.edu.com";
+            nc.Password = "congnvph28878";
+            smtp.Credentials = nc;
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.Send(mail);
+            MessageBox.Show("Gửi thành công");
+        }
+
     }
 }

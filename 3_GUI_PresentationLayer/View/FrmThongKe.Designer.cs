@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
             btnTimKiemKM = new FontAwesome.Sharp.IconButton();
-            btnAll = new CustomControl.ButtonCustom();
-            dateTimePickerCustom2 = new CustomControl.DateTimePickerCustom();
-            dateTimePickerCustom1 = new CustomControl.DateTimePickerCustom();
+            dtpEndDate = new CustomControl.DateTimePickerCustom();
+            dtpStartDate = new CustomControl.DateTimePickerCustom();
             label1 = new Label();
             panel2 = new Panel();
             pictureBox5 = new PictureBox();
@@ -74,6 +73,9 @@
             panel_Top5 = new Panel();
             Chart_Top5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -90,15 +92,16 @@
             panel_Top5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Chart_Top5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(iconPictureBox1);
             panel1.Controls.Add(btnTimKiemKM);
-            panel1.Controls.Add(btnAll);
-            panel1.Controls.Add(dateTimePickerCustom2);
-            panel1.Controls.Add(dateTimePickerCustom1);
+            panel1.Controls.Add(dtpEndDate);
+            panel1.Controls.Add(dtpStartDate);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-40, 12);
             panel1.Name = "panel1";
@@ -110,59 +113,44 @@
             btnTimKiemKM.BackColor = Color.MediumSlateBlue;
             btnTimKiemKM.FlatAppearance.BorderSize = 0;
             btnTimKiemKM.FlatStyle = FlatStyle.Flat;
+            btnTimKiemKM.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnTimKiemKM.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             btnTimKiemKM.IconColor = Color.White;
             btnTimKiemKM.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnTimKiemKM.IconSize = 23;
-            btnTimKiemKM.Location = new Point(945, 26);
+            btnTimKiemKM.Location = new Point(909, 21);
             btnTimKiemKM.Name = "btnTimKiemKM";
-            btnTimKiemKM.Size = new Size(32, 25);
+            btnTimKiemKM.Size = new Size(90, 34);
             btnTimKiemKM.TabIndex = 55;
             btnTimKiemKM.UseVisualStyleBackColor = false;
+            btnTimKiemKM.Click += btnTimKiemKM_Click;
             // 
-            // btnAll
+            // dtpEndDate
             // 
-            btnAll.BackColor = Color.MediumSlateBlue;
-            btnAll.BackgroundColor = Color.MediumSlateBlue;
-            btnAll.BorderColor = Color.PaleVioletRed;
-            btnAll.BorderRadius = 10;
-            btnAll.BorderSize = 0;
-            btnAll.FlatAppearance.BorderSize = 0;
-            btnAll.FlatStyle = FlatStyle.Flat;
-            btnAll.ForeColor = Color.White;
-            btnAll.Location = new Point(906, 20);
-            btnAll.Name = "btnAll";
-            btnAll.Size = new Size(111, 35);
-            btnAll.TabIndex = 24;
-            btnAll.TextColor = Color.White;
-            btnAll.UseVisualStyleBackColor = false;
+            dtpEndDate.BorderColor = Color.PaleVioletRed;
+            dtpEndDate.BorderSize = 0;
+            dtpEndDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpEndDate.Location = new Point(524, 20);
+            dtpEndDate.MinimumSize = new Size(0, 35);
+            dtpEndDate.Name = "dtpEndDate";
+            dtpEndDate.Size = new Size(320, 35);
+            dtpEndDate.SkinColor = Color.MediumSlateBlue;
+            dtpEndDate.TabIndex = 6;
+            dtpEndDate.TextColor = Color.White;
             // 
-            // dateTimePickerCustom2
+            // dtpStartDate
             // 
-            dateTimePickerCustom2.BorderColor = Color.PaleVioletRed;
-            dateTimePickerCustom2.BorderSize = 0;
-            dateTimePickerCustom2.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom2.Location = new Point(524, 20);
-            dateTimePickerCustom2.MinimumSize = new Size(0, 35);
-            dateTimePickerCustom2.Name = "dateTimePickerCustom2";
-            dateTimePickerCustom2.Size = new Size(320, 35);
-            dateTimePickerCustom2.SkinColor = Color.MediumSlateBlue;
-            dateTimePickerCustom2.TabIndex = 6;
-            dateTimePickerCustom2.TextColor = Color.White;
-            // 
-            // dateTimePickerCustom1
-            // 
-            dateTimePickerCustom1.BorderColor = Color.PaleVioletRed;
-            dateTimePickerCustom1.BorderSize = 0;
-            dateTimePickerCustom1.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerCustom1.Location = new Point(99, 20);
-            dateTimePickerCustom1.MinimumSize = new Size(0, 35);
-            dateTimePickerCustom1.Name = "dateTimePickerCustom1";
-            dateTimePickerCustom1.Size = new Size(326, 35);
-            dateTimePickerCustom1.SkinColor = Color.MediumSlateBlue;
-            dateTimePickerCustom1.TabIndex = 5;
-            dateTimePickerCustom1.TextColor = Color.White;
-            dateTimePickerCustom1.Value = new DateTime(2023, 6, 17, 21, 32, 0, 0);
+            dtpStartDate.BorderColor = Color.PaleVioletRed;
+            dtpStartDate.BorderSize = 0;
+            dtpStartDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpStartDate.Location = new Point(99, 20);
+            dtpStartDate.MinimumSize = new Size(0, 35);
+            dtpStartDate.Name = "dtpStartDate";
+            dtpStartDate.Size = new Size(326, 35);
+            dtpStartDate.SkinColor = Color.MediumSlateBlue;
+            dtpStartDate.TabIndex = 5;
+            dtpStartDate.TextColor = Color.White;
+            dtpStartDate.Value = new DateTime(2023, 6, 17, 21, 32, 0, 0);
             // 
             // label1
             // 
@@ -282,37 +270,37 @@
             // 
             // chartDoanhThu
             // 
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.LineColor = Color.FromArgb(255, 192, 192);
-            chartArea1.AxisX.MajorGrid.LineColor = Color.FromArgb(255, 192, 192);
-            chartArea1.AxisX.MajorGrid.LineWidth = 0;
-            chartArea1.AxisX.MajorTickMark.Size = 3F;
-            chartArea1.AxisY.LineWidth = 0;
-            chartArea1.AxisY.MajorGrid.LineColor = Color.FromArgb(255, 192, 192);
-            chartArea1.AxisY.MajorTickMark.LineColor = Color.FromArgb(255, 192, 192);
-            chartArea1.AxisY.MajorTickMark.LineWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            chartDoanhThu.ChartAreas.Add(chartArea1);
+            chartArea16.AxisX.IsMarginVisible = false;
+            chartArea16.AxisX.LineColor = Color.FromArgb(255, 192, 192);
+            chartArea16.AxisX.MajorGrid.LineColor = Color.FromArgb(255, 192, 192);
+            chartArea16.AxisX.MajorGrid.LineWidth = 0;
+            chartArea16.AxisX.MajorTickMark.Size = 3F;
+            chartArea16.AxisY.LineWidth = 0;
+            chartArea16.AxisY.MajorGrid.LineColor = Color.FromArgb(255, 192, 192);
+            chartArea16.AxisY.MajorTickMark.LineColor = Color.FromArgb(255, 192, 192);
+            chartArea16.AxisY.MajorTickMark.LineWidth = 0;
+            chartArea16.Name = "ChartArea1";
+            chartDoanhThu.ChartAreas.Add(chartArea16);
             chartDoanhThu.Dock = DockStyle.Fill;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            chartDoanhThu.Legends.Add(legend1);
+            legend16.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend16.Name = "Legend1";
+            chartDoanhThu.Legends.Add(legend16);
             chartDoanhThu.Location = new Point(0, 0);
             chartDoanhThu.Name = "chartDoanhThu";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Số lượng máy bán ra";
-            chartDoanhThu.Series.Add(series1);
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series16.IsXValueIndexed = true;
+            series16.Legend = "Legend1";
+            series16.Name = "Số lượng máy bán ra";
+            chartDoanhThu.Series.Add(series16);
             chartDoanhThu.Size = new Size(1069, 248);
             chartDoanhThu.TabIndex = 4;
             chartDoanhThu.Text = "Doanh Thu";
-            title1.Alignment = ContentAlignment.TopLeft;
-            title1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            title1.Name = "Title1";
-            title1.Text = "Biểu đồ doanh thu";
-            chartDoanhThu.Titles.Add(title1);
+            title11.Alignment = ContentAlignment.TopLeft;
+            title11.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            title11.Name = "Title1";
+            title11.Text = "Biểu đồ doanh thu";
+            chartDoanhThu.Titles.Add(title11);
             // 
             // panel6
             // 
@@ -448,22 +436,22 @@
             dgvUnderStock.BorderStyle = BorderStyle.None;
             dgvUnderStock.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvUnderStock.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(214, 248, 248);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(240, 101, 88);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle11.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(214, 248, 248);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(240, 101, 88);
+            dataGridViewCellStyle12.SelectionForeColor = Color.White;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
+            dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle12;
             dgvUnderStock.EnableHeadersVisualStyles = false;
             dgvUnderStock.GridColor = Color.FromArgb(145, 158, 194);
             dgvUnderStock.Location = new Point(17, 30);
@@ -496,20 +484,20 @@
             // 
             // Chart_Top5
             // 
-            chartArea2.Name = "ChartArea1";
-            Chart_Top5.ChartAreas.Add(chartArea2);
-            legend2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            legend2.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.Position.Auto = false;
-            legend2.Position.Height = 15.4408188F;
-            legend2.Position.Width = 65.03957F;
-            legend2.Position.X = 5F;
-            legend2.Position.Y = 84.55918F;
-            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            legend2.Title = "Chú thích";
-            Chart_Top5.Legends.Add(legend2);
+            chartArea17.Name = "ChartArea1";
+            Chart_Top5.ChartAreas.Add(chartArea17);
+            legend17.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            legend17.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend17.IsTextAutoFit = false;
+            legend17.Name = "Legend1";
+            legend17.Position.Auto = false;
+            legend17.Position.Height = 15.4408188F;
+            legend17.Position.Width = 65.03957F;
+            legend17.Position.X = 5F;
+            legend17.Position.Y = 84.55918F;
+            legend17.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            legend17.Title = "Chú thích";
+            Chart_Top5.Legends.Add(legend17);
             Chart_Top5.Location = new Point(3, 3);
             Chart_Top5.Name = "Chart_Top5";
             Chart_Top5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
@@ -518,48 +506,85 @@
     Color.FromArgb(192, 255, 192)
     };
             Chart_Top5.RightToLeft = RightToLeft.No;
-            series2.BackSecondaryColor = Color.FromArgb(255, 224, 192);
-            series2.BorderColor = SystemColors.ControlDark;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Color = Color.White;
-            series2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            series2.IsValueShownAsLabel = true;
-            series2.IsXValueIndexed = true;
-            series2.LabelBackColor = Color.Transparent;
-            series2.LabelBorderColor = Color.Transparent;
-            series2.Legend = "Legend1";
-            series2.Name = "charttop5";
-            series2.ShadowColor = SystemColors.ActiveCaptionText;
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            Chart_Top5.Series.Add(series2);
+            series17.BackSecondaryColor = Color.FromArgb(255, 224, 192);
+            series17.BorderColor = SystemColors.ControlDark;
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series17.Color = Color.White;
+            series17.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            series17.IsValueShownAsLabel = true;
+            series17.IsXValueIndexed = true;
+            series17.LabelBackColor = Color.Transparent;
+            series17.LabelBorderColor = Color.Transparent;
+            series17.Legend = "Legend1";
+            series17.Name = "charttop5";
+            series17.ShadowColor = SystemColors.ActiveCaptionText;
+            series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            Chart_Top5.Series.Add(series17);
             Chart_Top5.Size = new Size(380, 654);
             Chart_Top5.SuppressExceptions = true;
             Chart_Top5.TabIndex = 4;
             Chart_Top5.Text = "Top 5 Laptop bán chạy";
-            title2.BorderWidth = 5;
-            title2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            title2.ForeColor = Color.IndianRed;
-            title2.Name = "Title1";
-            title2.ShadowColor = Color.Black;
-            title2.Text = "Top 5 LapTop bán chạy ";
-            Chart_Top5.Titles.Add(title2);
+            title12.BorderWidth = 5;
+            title12.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            title12.ForeColor = Color.IndianRed;
+            title12.Name = "Title1";
+            title12.ShadowColor = Color.Black;
+            title12.Text = "Top 5 LapTop bán chạy ";
+            Chart_Top5.Titles.Add(title12);
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chart2.Legends.Add(legend3);
+            chartArea18.Name = "ChartArea1";
+            chart2.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            chart2.Legends.Add(legend18);
             chart2.Location = new Point(1498, 141);
             chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            chart2.Series.Add(series3);
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            chart2.Series.Add(series18);
             chart2.Size = new Size(300, 300);
             chart2.TabIndex = 4;
             chart2.Text = "chart2";
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.White;
+            iconPictureBox1.ForeColor = SystemColors.ControlText;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconPictureBox1.IconColor = SystemColors.ControlText;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.Location = new Point(0, 0);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(32, 32);
+            iconPictureBox1.TabIndex = 56;
+            iconPictureBox1.TabStop = false;
+            // 
+            // iconButton1
+            // 
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.Location = new Point(0, 0);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(75, 23);
+            iconButton1.TabIndex = 5;
+            iconButton1.Text = "iconButton1";
+            iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton2.IconColor = Color.Black;
+            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton2.Location = new Point(8, 8);
+            iconButton2.Name = "iconButton2";
+            iconButton2.Size = new Size(75, 23);
+            iconButton2.TabIndex = 6;
+            iconButton2.Text = "iconButton2";
+            iconButton2.UseVisualStyleBackColor = true;
             // 
             // FrmThongKe
             // 
@@ -567,6 +592,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 245, 255);
             ClientSize = new Size(1521, 690);
+            Controls.Add(iconButton2);
+            Controls.Add(iconButton1);
             Controls.Add(chart2);
             Controls.Add(panel_Top5);
             Controls.Add(panel7);
@@ -578,7 +605,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmThongKe";
             Text = "Thống kê";
-            Load += FrmThongKe_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -600,6 +626,7 @@
             panel_Top5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Chart_Top5).EndInit();
             ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -639,9 +666,11 @@
         private PictureBox pictureBox4;
         private System.Windows.Forms.DataVisualization.Charting.Chart Chart_Top5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private CustomControl.DateTimePickerCustom dateTimePickerCustom2;
-        private CustomControl.DateTimePickerCustom dateTimePickerCustom1;
-        private CustomControl.ButtonCustom btnAll;
+        private CustomControl.DateTimePickerCustom dtpEndDate;
+        private CustomControl.DateTimePickerCustom dtpStartDate;
         private FontAwesome.Sharp.IconButton btnTimKiemKM;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

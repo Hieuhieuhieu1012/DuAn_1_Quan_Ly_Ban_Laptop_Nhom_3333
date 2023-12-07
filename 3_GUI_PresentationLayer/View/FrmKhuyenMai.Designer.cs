@@ -93,6 +93,7 @@
             dgvKhuyenMai.RowTemplate.Height = 25;
             dgvKhuyenMai.Size = new Size(957, 290);
             dgvKhuyenMai.TabIndex = 4;
+            dgvKhuyenMai.CellContentClick += dgvKhuyenMai_CellContentClick;
             // 
             // label4
             // 
@@ -345,6 +346,7 @@
             btnClear.Text = "Chọn lại";
             btnClear.TextColor = Color.White;
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnClearForm
             // 
@@ -378,6 +380,7 @@
             cbbDong.Name = "cbbDong";
             cbbDong.Size = new Size(280, 23);
             cbbDong.TabIndex = 55;
+            cbbDong.SelectedIndexChanged += cbbDong_SelectedIndexChanged;
             // 
             // lblLoai
             // 
@@ -423,6 +426,7 @@
             txtMucGia.TabIndex = 58;
             txtMucGia.Texts = "";
             txtMucGia.UnderlinedStyle = true;
+            txtMucGia.KeyPress += txtMucGia_KeyPress;
             // 
             // panel
             // 
@@ -517,6 +521,7 @@
             btnrbDang.Text = "Đang khuyến mại";
             btnrbDang.UnCheckedColor = Color.Gray;
             btnrbDang.UseVisualStyleBackColor = true;
+            btnrbDang.CheckedChanged += btnrbDang_CheckedChanged;
             // 
             // txtTimKiemKM
             // 
