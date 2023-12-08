@@ -40,16 +40,7 @@ namespace _3_GUI_PresentationLayer.View
                 return;
             }
 
-            //if (!Validation.checkSDT(txtSoDienThoai.Texts))
-            //{
-            //    MessageBox.Show("Số điện thoại phải đủ 10 chữ số và bắt đầu bằng số 0.Mời bạn kiểm tra lại số điện thoại!", "Thông báo");
-            //    return;
-            //}
-            //if (!Validation.checkEmail(txtEmail.Texts))
-            //{
-            //    MessageBox.Show("Eamil phải theo đúng định dang! VD: vinh@gmail.com ", "Thông báo");
-            //    return;
-            //}
+            
             if (_khachhangService.GetAllKhachHangs().Any(c => c.SoDienThoai == txtSoDienThoai.Texts))
             {
                 MessageBox.Show("Số điện thoại đã bị tồn tai!Vui lòng kiểm tra lại số điện thoại!");
@@ -86,6 +77,47 @@ namespace _3_GUI_PresentationLayer.View
             txtDiaChi.Texts = "";
             rbtNam.Checked = false;
             rbtNu.Checked = false;
+        }
+
+        private void btThem_Click_1(object sender, EventArgs e)
+        {
+            _khachHang = new KhachHang();
+            if (txtHoTen.Texts == null || txtSoDienThoai.Texts == null
+                 || rbtNam.Checked == false && rbtNu.Checked == false || txtDiaChi.Texts == null)
+            {
+                MessageBox.Show("Xin vui lòng nhập đầy đủ các trường dữ liệu!");
+                return;
+            }
+
+
+            if (_khachhangService.GetAllKhachHangs().Any(c => c.SoDienThoai == txtSoDienThoai.Texts))
+            {
+                MessageBox.Show("Số điện thoại đã bị tồn tai!Vui lòng kiểm tra lại số điện thoại!");
+                return;
+            }
+
+            _khachHang.Ma = RandomMa();
+            _khachHang.Hoten = txtHoTen.Texts;
+            _khachHang.SoDienThoai = txtSoDienThoai.Texts;
+            _khachHang.DiaChi = txtDiaChi.Texts;
+            _khachHang.Email = txtEmail.Texts;
+
+            if (rbtNam.Checked == true)
+            {
+                _khachHang.GioiTinh = false;
+            }
+            else if (rbtNu.Checked == true)
+            {
+                _khachHang.GioiTinh = true;
+            }
+
+            if (MessageBox.Show("Có muốn thêm hay ko ?", "Hỏi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                _khachhangService.AddKhachHang(_khachHang);
+                MessageBox.Show("Thêm Thành Công !");
+                Close();
+            }
+
         }
     }
 }

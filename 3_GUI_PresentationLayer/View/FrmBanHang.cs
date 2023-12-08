@@ -129,7 +129,7 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Downloads\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            imageColumn.Image = Image.FromFile(@"C:\Users\CôngNguyễnVũ\source\repos\DuAn_1_Quan_Ly_Ban_Laptop_Nhom_3333\3_GUI_PresentationLayer\Resources\add-to-cart.png");
             dgvSanPham.Columns.Add(imageColumn);
         }
 
@@ -171,7 +171,7 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Downloads\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            imageColumn.Image = Image.FromFile(@"C:\Users\CôngNguyễnVũ\source\repos\DuAn_1_Quan_Ly_Ban_Laptop_Nhom_3333\3_GUI_PresentationLayer\Resources\add-to-cart.png");
             dgvSanPham.Columns.Add(imageColumn);
         }
 
@@ -212,7 +212,7 @@ namespace _3_GUI_PresentationLayer.View
             imageColumn.HeaderText = "Thao tac";
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
             imageColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            imageColumn.Image = Image.FromFile(@"C:\Users\Admin\Downloads\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\3_GUI_PresentationLayer\Resources\add-to-cart.png");
+            imageColumn.Image = Image.FromFile(@"C:\Users\CôngNguyễnVũ\source\repos\DuAn_1_Quan_Ly_Ban_Laptop_Nhom_3333\3_GUI_PresentationLayer\Resources\add-to-cart.png");
             dgvSanPham.Columns.Add(imageColumn);
         }
         #endregion
@@ -238,7 +238,7 @@ namespace _3_GUI_PresentationLayer.View
             img.HeaderText = "Thao tác";
             img.ImageLayout = DataGridViewImageCellLayout.Normal;
             img.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            img.Image = Image.FromFile(@"C:\Users\Admin\Downloads\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
+            img.Image = Image.FromFile(@"C:\Users\CôngNguyễnVũ\source\repos\DuAn_1_Quan_Ly_Ban_Laptop_Nhom_3333\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
             dgvGioHang.Columns.Add(img);
 
             dgvGioHang.Rows.Clear();
@@ -807,7 +807,7 @@ namespace _3_GUI_PresentationLayer.View
             FrmThemNhanhKH f = new FrmThemNhanhKH();
             f.StartPosition = FormStartPosition.Manual;
             f.Location = new Point(Cursor.Position.X - f.Width, Cursor.Position.Y);
-            f.ShowDialog();
+            f.Show();
             LoadKhachHang();
         }
 
@@ -933,15 +933,15 @@ namespace _3_GUI_PresentationLayer.View
                 new Font(dgv_hoaDonCho.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold);
             // dgv_hoaDonCho.ColumnHeadersHeight = 40;
             // dgv_hoaDonCho.RowTemplate.Height = 30;
-            dgv_hoaDonCho.ColumnCount = 6;
+            dgv_hoaDonCho.ColumnCount = 5;
             dgv_hoaDonCho.Columns[0].Visible = false;
             dgv_hoaDonCho.Columns[1].Visible = false;
             dgv_hoaDonCho.Columns[2].Name = "Mã hóa đơn";
             dgv_hoaDonCho.Columns[3].Name = "Tên Khách Hàng";
-            dgv_hoaDonCho.Columns[3].Name = "Tổng tiền";
-            dgv_hoaDonCho.Columns[5].DefaultCellStyle.Format = "N0";
+            dgv_hoaDonCho.Columns[4].Name = "Tổng tiền";
+            //dgv_hoaDonCho.Columns[5].DefaultCellStyle.Format = "N0";
 
-            var lstoaDonCho = _Bus_hoaDon.GetHoaDonChoViews();
+            var lstoaDonCho = _Bus_hoaDon.GetAllHoaDonViews().Where(C=>C.TrangThaiHD==1);
             dgv_hoaDonCho.Rows.Clear();
             foreach (var item in lstoaDonCho)
 
@@ -983,7 +983,7 @@ namespace _3_GUI_PresentationLayer.View
             img.HeaderText = "Thao tác";
             img.ImageLayout = DataGridViewImageCellLayout.Normal;
             img.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            img.Image = Image.FromFile(@"C:\Users\Admin\Downloads\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\DuAn_1_Quan_Ly_Ban_Laptop-Dev_backup\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
+            img.Image = Image.FromFile(@"C:\Users\CôngNguyễnVũ\source\repos\DuAn_1_Quan_Ly_Ban_Laptop_Nhom_3333\3_GUI_PresentationLayer\Resources\remove_to_cart.png");
             dgvGioHang.Columns.Add(img);
 
             _lstCtHoaDonViews = _Bus_CThoaDon.GetAllChiTietHoaDon().Where(c => c.IdHoaDon == id).ToList();

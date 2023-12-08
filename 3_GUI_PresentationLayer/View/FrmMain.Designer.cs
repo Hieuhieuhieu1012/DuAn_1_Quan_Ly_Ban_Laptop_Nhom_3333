@@ -365,7 +365,7 @@
             iconCurrentChildFrm.IconColor = Color.MediumPurple;
             iconCurrentChildFrm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconCurrentChildFrm.IconSize = 52;
-            iconCurrentChildFrm.Location = new Point(31, 14);
+            iconCurrentChildFrm.Location = new Point(21, 14);
             iconCurrentChildFrm.Name = "iconCurrentChildFrm";
             iconCurrentChildFrm.Size = new Size(60, 52);
             iconCurrentChildFrm.TabIndex = 0;

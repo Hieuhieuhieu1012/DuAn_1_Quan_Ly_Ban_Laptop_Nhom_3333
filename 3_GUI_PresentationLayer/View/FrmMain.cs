@@ -188,8 +188,11 @@ namespace _3_GUI_PresentationLayer.View
                 {
                     btnNhanVien.Enabled = false;
                     btnKhuyenMai.Enabled = false;
+                    btnSanPham.Enabled = false;
                 }
             }
         }
+
+       
     }
 }
