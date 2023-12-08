@@ -308,6 +308,21 @@ namespace _3_GUI_PresentationLayer.View
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            string txtGiaNhapcheck = txtGiaNhap.Texts;
+            string txtGiaBancheck = txtGiaBan.Texts;
+            if (int.Parse(txtGiaNhapcheck)  < 0)
+            {
+                MessageBox.Show("Giá nhập phải lớn hơn 0 đ !!!");
+                txtGiaNhap.Focus();
+                return;
+            }
+            
+            if (int.Parse(txtGiaBancheck) < 0)
+            {
+                MessageBox.Show("Giá Bán phải lớn hơn 0 đ !!!");
+                txtGiaBan.Focus();
+                return;
+            }
             if (checkNhap())
             {
                 MessageBox.Show("Bạn đã bị trùng tên, mời nhập lại !!!");
@@ -349,6 +364,21 @@ namespace _3_GUI_PresentationLayer.View
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtFalse();
+            string txtGiaNhapcheck = txtGiaNhap.Texts;
+            string txtGiaBancheck = txtGiaBan.Texts;
+            if (int.Parse(txtGiaNhapcheck) < 0)
+            {
+                MessageBox.Show("Giá nhập phải lớn hơn 0 đ !!!");
+                txtGiaNhap.Focus();
+                return;
+            }
+
+            if (int.Parse(txtGiaBancheck) < 0)
+            {
+                MessageBox.Show("Giá Bán phải lớn hơn 0 đ !!!");
+                txtGiaBan.Focus();
+                return;
+            }
             if (checkNhap1())
             {
                 MessageBox.Show("Không được để trống");
